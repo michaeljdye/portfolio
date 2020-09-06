@@ -25,6 +25,7 @@ const Bio = () => (
 const BioSection = styled.section`
   display: flex;
   max-width: 900px;
+  padding: 80px 0;
   margin: 0 auto;
 `
 
@@ -34,6 +35,10 @@ const BioImg = styled.img`
 
 const BioContent = styled.div`
   width: 50%;
+
+  h2 {
+    text
+  }
 
   span {
     display: block;
