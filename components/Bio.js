@@ -1,8 +1,12 @@
+import styled from '@emotion/styled'
+
 const Bio = () => (
-  <div>
-    <img src='' alt='Joey Dye' />
-    <div>
-      <h2>Hi, I'm Joey</h2>
+  <BioSection>
+    <BioImg src='' alt='Joey Dye' />
+    <BioContent>
+      <h2>
+        Hello, my name is <span>Joey Dye</span>
+      </h2>
       <p>
         I use modern web technologies to build excellent user interfaces. While
         I specialize in the frontend, I also have strong knowledge of the
@@ -14,8 +18,26 @@ const Bio = () => (
         I also have plenty of experience building marketing sites for clients on
         popular CMSs, such as WordPress and Drupal.
       </p>
-    </div>
-  </div>
+    </BioContent>
+  </BioSection>
 )
+
+const BioSection = styled.section`
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+`
+
+const BioImg = styled.img`
+  width: 50%;
+`
+
+const BioContent = styled.div`
+  width: 50%;
+
+  span {
+    display: block;
+  }
+`
 
 export default Bio
