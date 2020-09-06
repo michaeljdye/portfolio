@@ -1,4 +1,4 @@
-export default () => (
+const Nav = () => (
   <nav>
     <ul>
       <li>
@@ -16,3 +16,5 @@ export default () => (
     </ul>
   </nav>
 )
+
+export default Nav

@@ -6,7 +6,7 @@ import Sites from '../components/Sites'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
-export default () => (
+const Home = () => (
   <Layout>
     <Hero />
     <Bio />
@@ -16,3 +16,5 @@ export default () => (
     <Footer />
   </Layout>
 )
+
+export default Home

@@ -1,4 +1,4 @@
-export default () => (
+const Sites = () => (
   <div>
     <h2>Marketing Sites</h2>
     <div>
@@ -12,3 +12,5 @@ export default () => (
     </div>
   </div>
 )
+
+export default Sites

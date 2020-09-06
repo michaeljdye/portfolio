@@ -1,4 +1,4 @@
-export default () => (
+const Apps = () => (
   <div>
     <h2>Web Apps</h2>
     <div>
@@ -14,3 +14,5 @@ export default () => (
     </div>
   </div>
 )
+
+export default Apps

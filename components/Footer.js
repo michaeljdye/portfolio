@@ -1,4 +1,4 @@
-export default () => (
+const Footer = () => (
   <div>
     <div>
       <div>
@@ -22,3 +22,5 @@ export default () => (
     <div>© {new Date().getFullYear()} Joey Dye. | All Rights Reserved.</div>
   </div>
 )
+
+export default Footer

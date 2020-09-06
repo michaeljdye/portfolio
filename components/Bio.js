@@ -1,4 +1,4 @@
-export default () => (
+const Bio = () => (
   <div>
     <img src='' alt='Joey Dye' />
     <div>
@@ -17,3 +17,5 @@ export default () => (
     </div>
   </div>
 )
+
+export default Bio

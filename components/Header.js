@@ -1,6 +1,6 @@
 import Nav from './Nav'
 
-export default () => (
+const Header = () => (
   <div>
     <div>
       <p>Joey Dye</p>
@@ -8,3 +8,5 @@ export default () => (
     <Nav />
   </div>
 )
+
+export default Header
