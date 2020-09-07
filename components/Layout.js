@@ -20,7 +20,6 @@ const Layout = ({ children }) => (
         h3,
         h4,
         h5 {
-          margin: 2.75rem 0 1.05rem;
           font-weight: 400;
           line-height: 1.15;
         }
