@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "title": "My Reads",
+    "description": "The MyReads app provides a simple way to find new books and track your latest reads. Features include search books, add to bookshelf, track reads, and bulk move.",
+    "stack": ["React", "React Router", "JS", "CSS"],
+    "demo": "https://myreads-5icjs7wez.now.sh/",
+    "source": "https://github.com/JoeyDye/my-reads"
+  },
+  {
+    "id": 1,
+    "title": "Explore the Nations",
+    "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location. In addition, Styled Components are used for applying custom styles.",
+    "stack": ["React", "Google Maps API", "Yelp API", "Styled Components"],
+    "demo": "https://explorethenations-86j0hrveh.now.sh/",
+    "source": "https://github.com/JoeyDye/explore-the-nations"
+  },
+  {
+    "id": 2,
+    "title": "Space Explorer",
+    "description": "Explore stars, planets and other astronomical objects from the NASA database.",
+    "stack": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    "demo": "http://joeydye.rocks/",
+    "source": "https://github.com/JoeyDye/space-explorer"
+  }
+]
