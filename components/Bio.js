@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 const Bio = () => (
   <BioSection>
-    <BioImg src='' alt='Joey Dye' />
+    <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='Joey Dye' />
     <BioContent>
       <h2>
         Hello, my name is <span>Joey Dye</span>

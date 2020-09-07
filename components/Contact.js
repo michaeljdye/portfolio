@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import styled from '@emotion/styled'
 
 const Contact = () => {
   const { register, handleSubmit } = useForm()
@@ -16,7 +17,7 @@ const Contact = () => {
   }
 
   return (
-    <div>
+    <ContactSection>
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
@@ -32,8 +33,13 @@ const Contact = () => {
         </div>
         <button>Submit</button>
       </form>
-    </div>
+    </ContactSection>
   )
 }
+
+const ContactSection = styled.section`
+  background: url(/images/pattern-light-triangle.jpg);
+  padding: 80px 0;
+`
 
 export default Contact

@@ -5,6 +5,14 @@ const Layout = ({ children }) => (
   <>
     <Global
       styles={css`
+        :root {
+          --colorPrimary: #04f5ca;
+          --colorSecondary: #05caa7;
+          --colorDark: #111111;
+          --colorGray: #262626;
+          --colorLight: #ffffff;
+        }
+
         ${emotionNormalize}
         html,
     body {

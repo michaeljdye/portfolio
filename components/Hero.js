@@ -12,9 +12,9 @@ const Hero = () => (
 )
 
 const HeroSection = styled.section`
-  background: black;
+  background: url(/images/pattern-dark-triangle.jpg);
   height: 55vh;
-  border-bottom: 5px solid aqua;
+  border-bottom: 6px solid var(--colorPrimary);
 `
 
 const HeroContent = styled.div`

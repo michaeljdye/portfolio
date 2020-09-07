@@ -11,7 +11,7 @@ const Nav = () => (
         <NavLink href='#projects'>Apps</NavLink>
       </NavItem>
       <NavItem>
-        <Logo>Joey Dye</Logo>
+        <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
       </NavItem>
       <NavItem>
         <NavLink href='#websites'>Websites</NavLink>
@@ -46,9 +46,8 @@ const NavLink = styled.a`
   color: white;
 `
 
-const Logo = styled.p`
-  font-size: 24px;
-  color: white;
+const Logo = styled.img`
+  width: 200px;
 `
 
 export default Nav
