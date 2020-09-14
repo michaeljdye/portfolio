@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
           --colorSecondary: #05caa7;
           --colorDark: #111111;
           --colorGray: #262626;
-          --colorLight: #ffffff;
+          --colorWhite: #ffffff;
         }
 
         ${emotionNormalize}
@@ -33,7 +33,13 @@ const Layout = ({ children }) => (
         }
 
         h1 {
-          margin-top: 0;
+          margin: 0;
+          text-transform: uppercase;
+          font-size: 3.5rem;
+        }
+
+        p {
+          font-size: 1rem;
         }
       `}
     />

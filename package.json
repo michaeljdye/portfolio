@@ -9,6 +9,9 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@sendgrid/mail": "^7.2.5",
     "emotion-normalize": "^10.1.0",
     "mailgun-js": "^0.22.0",

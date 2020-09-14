@@ -5,6 +5,7 @@ const Bio = () => (
     <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='Joey Dye' />
     <BioContent>
       <h2>
+        <img src='/images/squiggly-line.png' alt='Squiggly line' />
         Hello, my name is <span>Joey Dye</span>
       </h2>
       <p>

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import Carousel from './Carousel'
+import Carousel from '../sliders/Carousel'
 
 const Apps = () => (
   <AppsSection>

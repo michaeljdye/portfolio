@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import scenes from '../data/scenes.json'
+import scenes from '../../data/scenes.json'
 
 const Carousel = () => {
   const [activeScene, setActiveScene] = useState(0)
