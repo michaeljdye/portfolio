@@ -16,12 +16,17 @@ const AppsSection = styled.section`
 `
 
 const AppHeader = styled.div`
-  margin: 0 auto;
+  margin: 0 auto 100px;
 
   p,
   h2 {
     margin-top: 0;
     text-align: center;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
   }
 `
 

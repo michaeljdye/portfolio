@@ -10,6 +10,7 @@ const Layout = ({ children }) => (
           --colorSecondary: #05caa7;
           --colorDark: #111111;
           --colorGray: #262626;
+          --colorLightGray: #eee;
           --colorWhite: #ffffff;
         }
 
@@ -20,7 +21,7 @@ const Layout = ({ children }) => (
           margin: 0;
           background: white;
           min-height: 100%;
-          font-family: Helvetica, Arial, sans-serif;
+          font-family: Avenir, Arial, sans-serif;
         }
 
         h1,
@@ -35,11 +36,26 @@ const Layout = ({ children }) => (
         h1 {
           margin: 0;
           text-transform: uppercase;
-          font-size: 3.5rem;
+          font-size: 4.5rem;
+          font-weight: 700;
+        }
+
+        h2 {
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
         }
 
         p {
           font-size: 1rem;
+          line-height: 1.2;
         }
       `}
     />

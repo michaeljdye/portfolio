@@ -4,10 +4,10 @@ const Bio = () => (
   <BioSection>
     <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='Joey Dye' />
     <BioContent>
-      <h2>
+      <BioHeader>
         <img src='/images/squiggly-line.png' alt='Squiggly line' />
-        Hello, my name is <span>Joey Dye</span>
-      </h2>
+        Hello, my name is <h2>Joey Dye</h2>
+      </BioHeader>
       <p>
         I use modern web technologies to build excellent user interfaces. While
         I specialize in the frontend, I also have strong knowledge of the
@@ -36,13 +36,29 @@ const BioImg = styled.img`
 
 const BioContent = styled.div`
   width: 50%;
-
-  h2 {
-    text
-  }
+  margin-left: 60px;
 
   span {
     display: block;
+  }
+`
+
+const BioHeader = styled.p`
+  text-align: right;
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  img {
+    width: 80px;
+    margin-right: 10px;
+  }
+
+  h2 {
+    display: block;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
   }
 `
 

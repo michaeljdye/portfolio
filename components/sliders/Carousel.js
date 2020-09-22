@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
 import scenes from '../../data/scenes.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Carousel = () => {
   const [activeScene, setActiveScene] = useState(0)
@@ -24,26 +25,44 @@ const Carousel = () => {
   return (
     <Slider>
       <SliderItems>
-        <LeftArrow onClick={handlePrevScene}>Left</LeftArrow>
-        <ul>
+        <LeftArrow onClick={handlePrevScene}>
+          <FontAwesomeIcon
+            icon='chevron-left'
+            size='2x'
+            className='left-arrow'
+          />
+        </LeftArrow>
+        <Slides>
           {scenes
             .filter((scene, index) => index === activeScene)
             .map(({ id, title, description, stack, demo, source }) => (
               <Slide key={id}>
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <Stack>
-                  {stack.map(stackItem => (
-                    <li key={stackItem}>{stackItem}</li>
-                  ))}
-                </Stack>
-                <a href={demo}>View Demo</a>
-                <a href={source}>View Source</a>
+                <SlideContent>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <Stack>
+                    {stack.map(stackItem => (
+                      <li key={stackItem}>{stackItem}</li>
+                    ))}
+                  </Stack>
+                  <a href={demo}>View Demo</a>
+                  <a href={source}>View Source</a>
+                </SlideContent>
+                <SlideImg
+                  src='/images/joey-dye-fullstack-developer.jpg'
+                  alt='Joey Dye'
+                />
               </Slide>
             ))}
-        </ul>
+        </Slides>
 
-        <RightArrow onClick={handleNextScene}>Right</RightArrow>
+        <RightArrow onClick={handleNextScene}>
+          <FontAwesomeIcon
+            icon='chevron-right'
+            size='2x'
+            className='right-arrow'
+          />
+        </RightArrow>
       </SliderItems>
     </Slider>
   )
@@ -51,13 +70,50 @@ const Carousel = () => {
 
 const Slider = styled.div``
 
-const SliderItems = styled.div``
+const SliderItems = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--colorLightGray);
+  padding: 20px 0;
+`
+
+const Slides = styled.ul`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`
 
 const Slide = styled.div``
 
-const LeftArrow = styled.button``
+const SlideContent = styled.div`
+  width: 350px;
+  max-width: 90%;
+  margin-right: 600px;
+`
 
-const RightArrow = styled.button``
+const SlideImg = styled.img`
+  position: absolute;
+  right: 300px;
+  top: -60px;
+`
+
+const arrow = styled.button`
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  .right-arrow,
+  .left-arrow {
+    color: var(--colorPrimary);
+  }
+`
+
+const LeftArrow = styled(arrow)``
+
+const RightArrow = styled(arrow)``
 
 const Stack = styled.ul`
   display: flex;
