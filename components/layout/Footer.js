@@ -1,6 +1,8 @@
+import styled from '@emotion/styled'
+
 const Footer = () => (
-  <div>
-    <div>
+  <FooterSection>
+    <FooterContact>
       <div>
         <h3>Joey Dye</h3>
         <ul>
@@ -18,9 +20,16 @@ const Footer = () => (
           <li>Nashville, TN</li>
         </ul>
       </div>
-    </div>
+    </FooterContact>
     <div>© {new Date().getFullYear()} Joey Dye. | All Rights Reserved.</div>
-  </div>
+  </FooterSection>
 )
+
+const FooterSection = styled.div``
+
+const FooterContact = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
 
 export default Footer

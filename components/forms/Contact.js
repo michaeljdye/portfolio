@@ -38,6 +38,9 @@ const Contact = () => {
 }
 
 const ContactSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url(/images/pattern-light-triangle.jpg);
   padding: 80px 0;
 `

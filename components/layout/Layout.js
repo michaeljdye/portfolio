@@ -1,8 +1,16 @@
+import Head from 'next/head'
 import { css, Global } from '@emotion/core'
 import emotionNormalize from 'emotion-normalize'
 
 const Layout = ({ children }) => (
   <>
+    <Head>
+      <title>Joey Dye | Fullstack Developer</title>
+      <meta
+        name='description'
+        content='I am a fullstack developer from Nashville, TN.'
+      />
+    </Head>
     <Global
       styles={css`
         :root {
