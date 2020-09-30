@@ -3,8 +3,9 @@ import Hero from '../components/sections/Hero'
 import Bio from '../components/sections/Bio'
 import Apps from '../components/sections/Apps'
 import Sites from '../components/sections/Sites'
-import Contact from '../components/forms/Contact'
+import Skills from '../components/sections/Skills'
 import Footer from '../components/layout/Footer'
+import Contact from '../components/forms/Contact'
 
 const Home = () => (
   <Layout>
@@ -12,6 +13,7 @@ const Home = () => (
     <Bio />
     <Apps />
     <Sites />
+    <Skills />
     <Contact />
     <Footer />
   </Layout>

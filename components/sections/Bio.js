@@ -1,13 +1,14 @@
 import styled from '@emotion/styled'
+import { SectionHeading } from '../headings'
 
 const Bio = () => (
   <BioSection>
     <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='Joey Dye' />
     <BioContent>
-      <BioHeader>
+      <SectionHeading align='right' isImage={true}>
         <img src='/images/squiggly-line.png' alt='Squiggly line' />
         Hello, my name is <h2>Joey Dye</h2>
-      </BioHeader>
+      </SectionHeading>
       <p>
         I use modern web technologies to build excellent user interfaces. While
         I specialize in the frontend, I also have strong knowledge of the
@@ -40,25 +41,6 @@ const BioContent = styled.div`
 
   span {
     display: block;
-  }
-`
-
-const BioHeader = styled.p`
-  text-align: right;
-  font-weight: 300;
-  font-size: 1.5rem;
-
-  img {
-    width: 80px;
-    margin-right: 10px;
-  }
-
-  h2 {
-    display: block;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3rem;
   }
 `
 
