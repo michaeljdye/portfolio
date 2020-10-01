@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import Carousel from '../sliders/Carousel'
+import { SectionHeading } from '../headings'
 
 const Apps = () => (
   <AppsSection>
-    <AppHeader>
-      <p>Lorem Ipsum dolor</p>
-      <h2>Web Apps</h2>
-    </AppHeader>
+    <SectionHeading>
+      Lorem Ipsum dolor <h2>Web Apps</h2>
+    </SectionHeading>
     <Carousel />
   </AppsSection>
 )
