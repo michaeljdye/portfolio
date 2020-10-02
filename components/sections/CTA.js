@@ -20,6 +20,7 @@ const CTASection = styled.div`
   flex-direction: column;
   align-items: center;
   align-items: center;
+  background: var(--colorLightGray);
   padding: 60px 0;
 `
 

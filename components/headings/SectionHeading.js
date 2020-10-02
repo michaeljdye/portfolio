@@ -9,9 +9,10 @@ const imageStyles = css`
 `
 
 export const SectionHeading = styled.p`
+  margin-bottom: ${({ marginBottom = 20 }) => `${marginBottom}px`};
   text-align: right;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: ${({ align = 'center' }) => align};
 
   ${({ isImage }) => {
@@ -25,6 +26,7 @@ export const SectionHeading = styled.p`
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
+    letter-spacing: 1.5px;
   }
 `

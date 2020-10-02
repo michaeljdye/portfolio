@@ -16,6 +16,7 @@ const Button = styled.button`
   color: ${({ color }) =>
     color === 'light' ? 'var(--colorWhite)' : 'var(--colorDark)'};
   font-size: 1rem;
+  font-weight: 500;
   text-transform: uppercase;
 
   svg {

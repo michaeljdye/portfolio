@@ -26,7 +26,7 @@ const Bio = () => (
 
 const BioSection = styled.section`
   display: flex;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 80px 0;
   margin: 0 auto;
 `

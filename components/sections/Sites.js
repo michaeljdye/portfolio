@@ -48,6 +48,7 @@ const Sites = () => (
 )
 
 const SitesSection = styled.section`
+  background: var(--colorLightGray);
   padding: 80px 0;
 `
 

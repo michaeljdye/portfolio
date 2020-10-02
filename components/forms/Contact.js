@@ -63,7 +63,7 @@ const ContactSection = styled.section`
   flex-direction: column;
   align-items: center;
   background: url(/images/pattern-light-triangle.jpg);
-  padding: 80px 0;
+  padding: 20px 0;
 
   label {
     display: block;

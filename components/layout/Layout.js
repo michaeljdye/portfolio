@@ -44,7 +44,7 @@ const Layout = ({ children }) => (
         h1 {
           margin: 0;
           text-transform: uppercase;
-          font-size: 4.5rem;
+          font-size: 6rem;
           font-weight: 700;
         }
 
@@ -62,7 +62,7 @@ const Layout = ({ children }) => (
         }
 
         p {
-          font-size: 1rem;
+          font-size: 1.25rem;
           line-height: 1.2;
         }
       `}
