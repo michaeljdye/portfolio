@@ -11,7 +11,7 @@ const Sites = () => (
     </SectionHeading>
     <SitesList>
       <Site>
-        <img src='https://via.placeholder.com/450' alt='Placeholder' />
+        <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
         <SiteDescription>
           <button>
             <FontAwesomeIcon icon={faPlus} size='2x' />
@@ -22,7 +22,7 @@ const Sites = () => (
         </SiteDescription>
       </Site>
       <Site>
-        <img src='https://via.placeholder.com/500' alt='Placeholder' />
+        <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
         <SiteDescription>
           <button>
             <FontAwesomeIcon icon={faPlus} size='2x' />
@@ -33,7 +33,7 @@ const Sites = () => (
         </SiteDescription>
       </Site>
       <Site>
-        <img src='https://via.placeholder.com/500' alt='Placeholder' />
+        <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
         <SiteDescription>
           <button>
             <FontAwesomeIcon icon={faPlus} size='2x' />
@@ -49,7 +49,7 @@ const Sites = () => (
 
 const SitesSection = styled.section`
   background: var(--colorLightGray);
-  padding: 80px 0;
+  padding: 80px 0 0;
 `
 
 const SitesList = styled.ul`

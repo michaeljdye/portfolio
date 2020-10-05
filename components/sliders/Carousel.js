@@ -2,6 +2,7 @@ import { useState } from 'react'
 import styled from '@emotion/styled'
 import scenes from '../../data/scenes.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ButtonPrimary } from '../buttons'
 
 const Carousel = () => {
   const [activeScene, setActiveScene] = useState(0)
@@ -38,20 +39,28 @@ const Carousel = () => {
             .map(({ id, title, description, stack, demo, source }) => (
               <Slide key={id}>
                 <SlideContent>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <Stack>
-                    {stack.map(stackItem => (
-                      <li key={stackItem}>{stackItem}</li>
-                    ))}
-                  </Stack>
-                  <a href={demo}>View Demo</a>
-                  <a href={source}>View Source</a>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                    <Stack>
+                      {stack.map(stackItem => (
+                        <li key={stackItem}>{stackItem}</li>
+                      ))}
+                    </Stack>
+                  </div>
+                  <SlideImg
+                    src='/images/joey-dye-fullstack-developer.jpg'
+                    alt='Joey Dye'
+                  />
                 </SlideContent>
-                <SlideImg
-                  src='/images/joey-dye-fullstack-developer.jpg'
-                  alt='Joey Dye'
-                />
+                <SlideButtons>
+                  <ButtonPrimary as='a' dark href={demo}>
+                    View Demo
+                  </ButtonPrimary>
+                  <ButtonPrimary as='a' dark href={source}>
+                    View Source
+                  </ButtonPrimary>
+                </SlideButtons>
               </Slide>
             ))}
         </Slides>
@@ -68,18 +77,21 @@ const Carousel = () => {
   )
 }
 
-const Slider = styled.div``
+const Slider = styled.div`
+  position: relative;
+`
 
 const SliderItems = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: var(--colorLightGray);
+  width: 100%:
   padding: 20px 0;
 `
 
 const Slides = styled.ul`
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -88,32 +100,44 @@ const Slides = styled.ul`
 const Slide = styled.div``
 
 const SlideContent = styled.div`
-  width: 350px;
-  max-width: 90%;
-  margin-right: 600px;
+  position: relative;
+  background: var(--colorMediumGray);
+
+  div {
+    display: inline-block;
+    width: 400px;
+    margin-left: 150px;
+    padding: 40px 0;
+  }
 `
 
 const SlideImg = styled.img`
   position: absolute;
+  top: -40px;
   right: 300px;
-  top: -60px;
+  display: inline-block;
+  width: 350px;
+  margin: 0 auto;
 `
 
 const arrow = styled.button`
+  position: absolute;
+  top: 125px;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
-
-  .right-arrow,
-  .left-arrow {
-    color: var(--colorPrimary);
-  }
+  color: var(--colorPrimary);
+  z-index: 100;
 `
 
-const LeftArrow = styled(arrow)``
+const LeftArrow = styled(arrow)`
+  left: 50px;
+`
 
-const RightArrow = styled(arrow)``
+const RightArrow = styled(arrow)`
+  right: 50px;
+`
 
 const Stack = styled.ul`
   display: flex;
@@ -126,6 +150,14 @@ const Stack = styled.ul`
     border-left: 1px solid black;
     margin-left: 10px;
     padding-left: 10px;
+  }
+`
+
+const SlideButtons = styled.div`
+  margin: 20px 0 0 150px;
+
+  a + a {
+    margin-left: 10px;
   }
 `
 

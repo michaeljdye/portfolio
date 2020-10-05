@@ -1,5 +1,11 @@
 import styled from '@emotion/styled'
-import { faCentercode } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faTwitter,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => (
   <FooterSection>
@@ -11,18 +17,33 @@ const Footer = () => (
       <div>
         <h3>Joey Dye</h3>
         <ul>
-          <li>Github</li>
-          <li>LinkedIn</li>
-          <li>Twitter</li>
+          <li>
+            <FontAwesomeIcon icon={faGithub} />
+            Github
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faLinkedinIn} />
+            LinkedIn
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faTwitter} />
+            Twitter
+          </li>
         </ul>
       </div>
       <div>
         <h3>Contact</h3>
         <ul>
           <li>
-            <a href='mailto:joey@gmail.com'>joey@gmail.com</a>
+            <a href='mailto:joey@gmail.com'>
+              <FontAwesomeIcon icon={faEnvelope} />
+              joey@gmail.com
+            </a>
           </li>
-          <li>Nashville, TN</li>
+          <li>
+            <FontAwesomeIcon icon={faLocationArrow} />
+            Nashville, TN
+          </li>
         </ul>
       </div>
     </FooterContact>
@@ -63,6 +84,10 @@ const FooterContact = styled.div`
 
     li {
       margin-bottom: 10px;
+    }
+
+    svg {
+      margin-right: 5px;
     }
   }
 

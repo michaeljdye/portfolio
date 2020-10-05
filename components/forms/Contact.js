@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form'
 import styled from '@emotion/styled'
 import { SectionHeading } from '../headings'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
   const { register, handleSubmit } = useForm()
@@ -52,7 +54,9 @@ const Contact = () => {
             ref={register}
           ></textarea>
         </div>
-        <button>Submit</button>
+        <button>
+          Submit <FontAwesomeIcon icon={faPaperPlane} />
+        </button>
       </form>
     </ContactSection>
   )
@@ -62,8 +66,13 @@ const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(/images/pattern-light-triangle.jpg);
-  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.1) url(/images/pattern-light-triangle.jpg);
+  background-blend-mode: overlay;
+  padding: 60px 0;
+
+  form {
+    width: 750px;
+  }
 
   label {
     display: block;
@@ -74,9 +83,11 @@ const ContactSection = styled.section`
   input,
   textarea {
     background: var(--colorWhite);
+    width: 100% !important;
     border: none;
     border-top: 2px solid var(--colorPrimary);
     margin-bottom: 10px;
+    padding: 10px 0 10px 20px;
   }
 
   .form-input {

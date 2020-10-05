@@ -18,7 +18,8 @@ const Layout = ({ children }) => (
           --colorSecondary: #05caa7;
           --colorDark: #111111;
           --colorGray: #262626;
-          --colorLightGray: #eee;
+          --colorMediumGray: #eee;
+          --colorLightGray: #fefefe;
           --colorWhite: #ffffff;
         }
 
@@ -61,7 +62,8 @@ const Layout = ({ children }) => (
           text-transform: uppercase;
         }
 
-        p {
+        p,
+        li {
           font-size: 1.25rem;
           line-height: 1.2;
         }
