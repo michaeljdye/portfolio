@@ -9,6 +9,7 @@ import {
   faPhp,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { below } from '../../utils'
 
 const Skills = () => {
   return (
@@ -49,9 +50,19 @@ const SkillsList = styled.ul`
   justify-content: center;
   width: 100%;
   list-style: none;
+  padding: 0;
+
+  ${below.phone`
+    flex-direction: column;
+    align-items: center;
+  `}
 
   li + li {
     margin-left: 100px;
+
+    ${below.phone`
+      margin-left: 0;
+    `}
   }
 `
 

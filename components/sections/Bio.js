@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { SectionHeading } from '../headings'
+import { below } from '../../utils'
 
 const Bio = () => (
   <BioSection>
@@ -26,18 +27,29 @@ const Bio = () => (
 
 const BioSection = styled.section`
   display: flex;
-  max-width: 1000px;
+  width: 1000px;
+  max-width: 90%;
   padding: 80px 0;
   margin: 0 auto;
+
+  ${below.phone`
+    flex-direction: column;
+  `}
 `
 
 const BioImg = styled.img`
-  width: 50%;
+  width: 400px;
+  max-width: 100%;
 `
 
 const BioContent = styled.div`
-  width: 50%;
+  width: 500px;
+  max-width: 100%;
   margin-left: 60px;
+
+  ${below.phone`
+    margin-left: 0;
+  `}
 
   span {
     display: block;

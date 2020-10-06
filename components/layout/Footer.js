@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { below } from '../../utils'
 
 const Footer = () => (
   <FooterSection>
@@ -15,7 +16,7 @@ const Footer = () => (
         alt='Joey Dye Fullstack Developer'
       />
       <div>
-        <h3>Joey Dye</h3>
+        <h3>Links</h3>
         <ul>
           <li>
             <FontAwesomeIcon icon={faGithub} />
@@ -63,7 +64,14 @@ const FooterContact = styled.div`
   justify-content: space-around;
   padding: 60px 0;
 
+  ${below.phone`
+    flex-direction: column;
+    justify-content: center;
+  `}
+
   h3 {
+    text-align: center;
+
     &:after {
       content: '';
       display: block;
@@ -98,6 +106,10 @@ const FooterContact = styled.div`
 
 const FooterLogo = styled.img`
   width: 300px;
+
+  ${below.phone`
+    margin: 0 auto;
+  `}
 `
 
 const FooterCopyright = styled.div`
@@ -109,6 +121,8 @@ const FooterCopyright = styled.div`
 
   p {
     letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: center;
   }
 `
 

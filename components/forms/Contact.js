@@ -68,10 +68,11 @@ const ContactSection = styled.section`
   align-items: center;
   background: rgba(0, 0, 0, 0.1) url(/images/pattern-light-triangle.jpg);
   background-blend-mode: overlay;
-  padding: 60px 0;
+  padding: 40px 0 60px;
 
   form {
     width: 750px;
+    max-width: 90%;
   }
 
   label {
@@ -86,8 +87,13 @@ const ContactSection = styled.section`
     width: 100% !important;
     border: none;
     border-top: 2px solid var(--colorPrimary);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px 0 10px 20px;
+
+    &::placeholder {
+      font-size: 1.2rem;
+      color: var(--colorTextLight);
+    }
   }
 
   .form-input {
@@ -101,6 +107,7 @@ const ContactSection = styled.section`
   }
 
   textarea {
+    height: 50px;
     width: 100%;
   }
 

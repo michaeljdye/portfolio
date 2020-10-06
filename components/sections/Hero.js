@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import Header from '../layout/Header'
 import ButtonPrimary from '../buttons/ButtonPrimary'
+import { below } from '../../utils/breakpoints'
 
 const Hero = () => (
   <HeroSection>

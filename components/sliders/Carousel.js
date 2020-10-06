@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import scenes from '../../data/scenes.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ButtonPrimary } from '../buttons'
+import { below } from '../../utils'
 
-const Carousel = () => {
+const Carousel = ({ scenes }) => {
   const [activeScene, setActiveScene] = useState(0)
 
   const handlePrevScene = () => {
@@ -37,7 +37,7 @@ const Carousel = () => {
           {scenes
             .filter((scene, index) => index === activeScene)
             .map(({ id, title, description, stack, demo, source }) => (
-              <Slide key={id}>
+              <Slide>
                 <SlideContent>
                   <div>
                     <h3>{title}</h3>
@@ -49,7 +49,7 @@ const Carousel = () => {
                     </Stack>
                   </div>
                   <SlideImg
-                    src='/images/joey-dye-fullstack-developer.jpg'
+                    src='https://placeimg.com/500/500/tech'
                     alt='Joey Dye'
                   />
                 </SlideContent>
@@ -103,11 +103,21 @@ const SlideContent = styled.div`
   position: relative;
   background: var(--colorMediumGray);
 
+  ${below.phone`
+    display: flex;
+    justify-content: center;
+  `}
+
   div {
     display: inline-block;
     width: 400px;
+    max-width: 90%;
     margin-left: 150px;
     padding: 40px 0;
+
+    ${below.phone`
+      margin-left: 0;
+    `}
   }
 `
 
@@ -116,8 +126,12 @@ const SlideImg = styled.img`
   top: -40px;
   right: 300px;
   display: inline-block;
-  width: 350px;
+  width: 500px;
   margin: 0 auto;
+
+  ${below.phone`
+    display: none; 
+  `}
 `
 
 const arrow = styled.button`
@@ -155,6 +169,10 @@ const Stack = styled.ul`
 
 const SlideButtons = styled.div`
   margin: 20px 0 0 150px;
+
+  ${below.phone`
+    margin-left: 0;
+  `}
 
   a + a {
     margin-left: 10px;

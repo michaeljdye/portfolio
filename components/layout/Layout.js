@@ -21,6 +21,7 @@ const Layout = ({ children }) => (
           --colorMediumGray: #eee;
           --colorLightGray: #fefefe;
           --colorWhite: #ffffff;
+          --colorTextLight: #bbb;
         }
 
         ${emotionNormalize}
@@ -45,7 +46,7 @@ const Layout = ({ children }) => (
         h1 {
           margin: 0;
           text-transform: uppercase;
-          font-size: 6rem;
+          font-size: max(6vw, 2rem);
           font-weight: 700;
         }
 
@@ -53,18 +54,18 @@ const Layout = ({ children }) => (
           margin: 0;
           text-transform: uppercase;
           font-weight: 700;
-          font-size: 3rem;
+          font-size: max(3vw, 1.5rem);
         }
 
         h3 {
-          font-size: 1.75rem;
+          font-size: max(2vw, 1.25rem);
           font-weight: 700;
           text-transform: uppercase;
         }
 
         p,
         li {
-          font-size: 1.25rem;
+          font-size: max(1vw, 1rem);
           line-height: 1.2;
         }
       `}

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { SectionHeading } from '../headings'
 import { ButtonPrimary } from '../buttons'
+import { below } from '../../utils'
 
 const Sites = () => (
   <SitesSection>
@@ -58,6 +59,10 @@ const SitesList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+
+  ${below.phone`
+    flex-direction: column;
+  `}
 `
 
 const Site = styled.li`
@@ -70,6 +75,10 @@ const Site = styled.li`
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  ${below.phone`
+    --gap: 0;
+  `}
 
   & + li {
     margin-left: var(--gap);
