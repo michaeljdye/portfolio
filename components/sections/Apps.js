@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 import scenes from '../../data/scenes.json'
 import { SectionHeading } from '../headings'
-import Carousel from '../sliders/Carousel'
+import Slideshow from '../sliders/Slideshow'
 
 const Apps = () => (
   <AppsSection>
     <SectionHeading marginBottom='120'>
       Lorem Ipsum dolor <h2>Web Apps</h2>
     </SectionHeading>
-    <Carousel scenes={scenes} />
+    <Slideshow scenes={scenes} />
   </AppsSection>
 )
 

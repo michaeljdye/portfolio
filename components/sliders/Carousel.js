@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ButtonPrimary } from '../buttons'
@@ -37,7 +37,7 @@ const Carousel = ({ scenes }) => {
           {scenes
             .filter((scene, index) => index === activeScene)
             .map(({ id, title, description, stack, demo, source }) => (
-              <Slide>
+              <Slide key={id}>
                 <SlideContent>
                   <div>
                     <h3>{title}</h3>
@@ -97,7 +97,9 @@ const Slides = styled.ul`
   list-style: none;
 `
 
-const Slide = styled.div``
+const Slide = styled.div`
+  transition: all 0.5s ease-out;
+`
 
 const SlideContent = styled.div`
   position: relative;
