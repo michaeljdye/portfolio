@@ -11,15 +11,18 @@ const Contact = () => {
 
   const onSubmit = async formData => {
     try {
-      const { success } = await fetch('/api/send-mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      }).then(response => response.json())
+      const { next, ok } = await fetch(
+        'https://formspree.io/p/1529852799980928026/f/contactForm',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }
+      ).then(response => response.json())
 
-      if (success) return setSubmissionState('submitted')
+      if (ok) return setSubmissionState('submitted')
 
       return setSubmissionState('failed')
     } catch (error) {
@@ -33,7 +36,11 @@ const Contact = () => {
         Ready, set, <h2>Contact</h2>
       </SectionHeading>
       {submissionState === 'pending' ? (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form
+          method='POST'
+          onSubmit={handleSubmit(onSubmit)}
+          action='https://formspree.io/p/1529852799980928026/f/contactForm'
+        >
           <div className='form-input'>
             <label htmlFor='name'>Full Name</label>
             <input
