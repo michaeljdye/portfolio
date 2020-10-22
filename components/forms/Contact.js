@@ -61,7 +61,7 @@ const Contact = () => {
               ref={register}
             />
           </div>
-          <div>
+          <div className='form-textarea'>
             <label htmlFor='message'>Message</label>
             <textarea
               id='message'
@@ -123,13 +123,16 @@ const ContactSection = styled.section`
     width: calc(50% - var(--gap));
 
     & + .form-input {
-      margin-left: var(--gap);
+      margin-left: calc(var(--gap) * 2);
     }
   }
 
+  .form-textarea {
+  }
+
   textarea {
+    display: inline-block;
     height: 50px;
-    width: 100%;
   }
 
   button {
