@@ -64,7 +64,7 @@ const Nav = () => {
         </NavItem>
       </NavItems>
 
-      <Menu onClick={() => setIsNavOpen(true)} />
+      <MenuBtn onClick={() => setIsNavOpen(true)} />
 
       <MobileNav
         variants={variants}
@@ -86,6 +86,7 @@ const Nav = () => {
 }
 
 const Navigation = styled.nav`
+  position: relative;
   width: 1200px;
   max-width: 90%;
   margin: 0 auto;
@@ -165,6 +166,17 @@ const NavLink = styled.a`
 
 const Logo = styled.img`
   width: 275px;
+`
+
+const MenuBtn = styled(Menu)`
+  display: none;
+
+  ${below.phone`
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+    `}
 `
 
 export default Nav
