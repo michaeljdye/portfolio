@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
           margin: 0;
           background: white;
           min-height: 100%;
-          font-family: Avenir, Arial, sans-serif;
+          font-family: 'Montserrat', sans-serif;
         }
 
         h1,
@@ -39,6 +39,7 @@ const Layout = ({ children }) => (
         h3,
         h4,
         h5 {
+          font-family: 'Roboto Slab', serif;
           font-weight: 400;
           line-height: 1.15;
         }
@@ -65,8 +66,8 @@ const Layout = ({ children }) => (
 
         p,
         li {
-          font-size: max(1vw, 1rem);
-          line-height: 1.2;
+          font-size: max(1vw, 1.125rem);
+          line-height: 1.4;
         }
       `}
     />

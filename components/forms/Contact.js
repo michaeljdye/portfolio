@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import styled from '@emotion/styled'
 import { SectionHeading } from '../headings'
@@ -5,18 +6,25 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
+  const [submissionState, setSubmissionState] = useState('pending')
   const { register, handleSubmit } = useForm()
 
   const onSubmit = async formData => {
-    const data = await fetch('/api/send-mail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    }).then(response => response.json())
+    try {
+      const { success } = await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      }).then(response => response.json())
 
-    console.log(data)
+      if (success) return setSubmissionState('submitted')
+
+      return setSubmissionState('failed')
+    } catch (error) {
+      return setSubmissionState('failed')
+    }
   }
 
   return (
@@ -24,40 +32,46 @@ const Contact = () => {
       <SectionHeading>
         Ready, set, <h2>Contact</h2>
       </SectionHeading>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='form-input'>
-          <label htmlFor='name'>Full Name</label>
-          <input
-            type='text'
-            name='name'
-            id='name'
-            placeholder='John Smith'
-            ref={register}
-          />
-        </div>
-        <div className='form-input'>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='text'
-            name='email'
-            id='email'
-            placeholder='John@Email.com'
-            ref={register}
-          />
-        </div>
-        <div>
-          <label htmlFor='message'>Message</label>
-          <textarea
-            id='message'
-            name='message'
-            placeholder='Lorem ipsum dolor sit amet.'
-            ref={register}
-          ></textarea>
-        </div>
-        <button>
-          Submit <FontAwesomeIcon icon={faPaperPlane} />
-        </button>
-      </form>
+      {submissionState === 'pending' ? (
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className='form-input'>
+            <label htmlFor='name'>Full Name</label>
+            <input
+              type='text'
+              name='name'
+              id='name'
+              placeholder='John Smith'
+              ref={register}
+            />
+          </div>
+          <div className='form-input'>
+            <label htmlFor='email'>Email</label>
+            <input
+              type='text'
+              name='email'
+              id='email'
+              placeholder='John@Email.com'
+              ref={register}
+            />
+          </div>
+          <div>
+            <label htmlFor='message'>Message</label>
+            <textarea
+              id='message'
+              name='message'
+              placeholder='Lorem ipsum dolor sit amet.'
+              ref={register}
+            ></textarea>
+          </div>
+          <button>
+            Submit <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
+        </form>
+      ) : submissionState === 'submitted' ? (
+        'Thanks!'
+      ) : (
+        'Something went wrong.'
+      )}
     </ContactSection>
   )
 }

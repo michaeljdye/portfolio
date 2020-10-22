@@ -26,7 +26,7 @@ const Slideshow = ({ scenes }) => {
   return (
     <div style={{ marginBottom: 500 }}>
       <div style={{ position: 'relative' }}>
-        <LeftArrow onClick={() => paginate(-1)}>
+        <LeftArrow onClick={() => paginate(1)}>
           <FontAwesomeIcon
             icon='chevron-left'
             size='2x'
@@ -79,7 +79,7 @@ const Slideshow = ({ scenes }) => {
           </motion.div>
         </AnimatePresence>
 
-        <RightArrow onClick={() => paginate(1)}>
+        <RightArrow onClick={() => paginate(-1)}>
           <FontAwesomeIcon
             icon='chevron-right'
             size='2x'
