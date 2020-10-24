@@ -74,10 +74,7 @@ const Slideshow = ({ scenes }) => {
                   ))}
                 </Stack>
               </div>
-              <SlideImg
-                src='https://placeimg.com/500/500/tech'
-                alt='Joey Dye'
-              />
+              <SlideImg src={scenes[index].image} alt='Joey Dye' />
               <ButtonContainer>
                 <ButtonPrimary dark>View Source</ButtonPrimary>
                 <ButtonPrimary dark>View Demo</ButtonPrimary>

@@ -27,7 +27,7 @@ const ulVariants = {
     transition: {
       staggerChildren: 0.3,
       delayChildren: 0.2,
-      staggerDirection: -1, // 1 forward, -1 backward,
+      staggerDirection: 1, // 1 forward, -1 backward,
       when: 'afterChildren',
     },
   },

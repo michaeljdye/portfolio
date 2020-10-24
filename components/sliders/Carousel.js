@@ -36,7 +36,7 @@ const Carousel = ({ scenes }) => {
         <Slides>
           {scenes
             .filter((scene, index) => index === activeScene)
-            .map(({ id, title, description, stack, demo, source }) => (
+            .map(({ id, title, description, stack, demo, source, image }) => (
               <Slide key={id}>
                 <SlideContent>
                   <div>
@@ -48,10 +48,7 @@ const Carousel = ({ scenes }) => {
                       ))}
                     </Stack>
                   </div>
-                  <SlideImg
-                    src='https://placeimg.com/500/500/tech'
-                    alt='Joey Dye'
-                  />
+                  <SlideImg src={image} alt='Joey Dye' />
                 </SlideContent>
                 <SlideButtons>
                   <ButtonPrimary as='a' dark href={demo}>

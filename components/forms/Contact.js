@@ -141,6 +141,7 @@ const ContactSection = styled.section`
     border: 1px solid var(--colorPrimary);
     text-transform: uppercase;
     font-weight: 500;
+    cursor: pointer;
   }
 `
 

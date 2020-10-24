@@ -19,6 +19,7 @@ const Button = styled.button`
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 
   svg {
     margin-left: 5px;

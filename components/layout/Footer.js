@@ -19,16 +19,22 @@ const Footer = () => (
         <h3>Links</h3>
         <ul>
           <li>
-            <FontAwesomeIcon icon={faGithub} />
-            Github
+            <a href='https://github.com/JoeyDye'>
+              <FontAwesomeIcon icon={faGithub} />
+              Github
+            </a>
           </li>
           <li>
-            <FontAwesomeIcon icon={faLinkedinIn} />
-            LinkedIn
+            <a href='https://www.linkedin.com/in/dyejoey/'>
+              <FontAwesomeIcon icon={faLinkedinIn} />
+              LinkedIn
+            </a>
           </li>
           <li>
-            <FontAwesomeIcon icon={faTwitter} />
-            Twitter
+            <a href='https://twitter.com/joey_m_dye'>
+              <FontAwesomeIcon icon={faTwitter} />
+              Twitter
+            </a>
           </li>
         </ul>
       </div>
@@ -36,9 +42,12 @@ const Footer = () => (
         <h3>Contact</h3>
         <ul>
           <li>
-            <a href='mailto:joey@gmail.com'>
+            <a href="javascript:location='mailto:\u006a\u006f\u0065\u0079\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0">
+              <script type='text/javascript'>
+                document.write('\u006a\u006f\u0065\u0079\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')
+              </script>
               <FontAwesomeIcon icon={faEnvelope} />
-              joey@gmail.com
+              Email me
             </a>
           </li>
           <li>
@@ -49,7 +58,7 @@ const Footer = () => (
       </div>
     </FooterContact>
     <FooterCopyright>
-      <p>© {new Date().getFullYear()} Joey Dye. | All Rights Reserved.</p>
+      <p>© {new Date().getFullYear()} Joey Dye | All Rights Reserved.</p>
     </FooterCopyright>
   </FooterSection>
 )
@@ -101,6 +110,7 @@ const FooterContact = styled.div`
 
   a {
     color: var(--colorWhite);
+    text-decoration: none;
   }
 `
 
@@ -122,8 +132,10 @@ const FooterCopyright = styled.div`
   text-transform: uppercase;
 
   p {
+    margin: 0;
     letter-spacing: 2px;
     line-height: 1.5;
+    font-size: 0.875rem;
     text-align: center;
   }
 `
