@@ -106,6 +106,8 @@ const FooterContact = styled.div`
 
 const FooterLogo = styled.img`
   width: 300px;
+  max-width: 100%;
+  object-fit: contain;
 
   ${below.phone`
     margin: 0 auto;
