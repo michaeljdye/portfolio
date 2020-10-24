@@ -8,7 +8,7 @@ import { below } from '../../utils'
 const Sites = () => (
   <SitesSection>
     <SectionHeading>
-      Lorem ipsum delor <h2>Marketing Sites</h2>
+      Grow your business <h2>Marketing Sites</h2>
     </SectionHeading>
     <SitesList>
       <Site>
@@ -99,7 +99,8 @@ const SiteDescription = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  transform: translate3d(0, 90px, 0);
+  padding: 20px;
+  transform: translate3d(0, 100px, 0);
   transition: all 0.5s;
 
   &:hover {

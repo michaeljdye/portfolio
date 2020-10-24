@@ -6,7 +6,7 @@ import Slideshow from '../sliders/Slideshow'
 const Apps = () => (
   <AppsSection>
     <SectionHeading marginBottom='120'>
-      Lorem Ipsum dolor <h2>Web Apps</h2>
+      Engage your users <h2>Web Apps</h2>
     </SectionHeading>
     <Slideshow scenes={scenes} />
   </AppsSection>

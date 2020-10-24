@@ -7,7 +7,7 @@ const Hero = () => (
   <HeroSection>
     <Header />
     <HeroContent>
-      <h1>Lorem. Ipsum. Dolor.</h1>
+      <h1>Build. Ship. Repeat.</h1>
       <p>I am a growth-driven developer dedicated to building a better web.</p>
       <ButtonContainer>
         <ButtonPrimary>View Resume</ButtonPrimary>

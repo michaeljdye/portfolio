@@ -38,8 +38,9 @@ const BioSection = styled.section`
 `
 
 const BioImg = styled.img`
-  width: 400px;
+  width: 450px;
   max-width: 100%;
+  object-fit: cover;
 `
 
 const BioContent = styled.div`

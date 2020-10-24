@@ -13,7 +13,7 @@ const Button = styled.button`
   display: inline-block;
   background: transparent;
   border: 1px solid var(--colorPrimary);
-  padding: 10px 8px;
+  padding: 10px;
   color: ${({ dark }) => (dark ? 'var(--colorDark)' : 'var(--colorWhite)')};
   font-size: 1rem;
   font-weight: 500;

@@ -165,7 +165,7 @@ const NavLink = styled.a`
 `
 
 const Logo = styled.img`
-  width: 275px;
+  width: 260px;
 `
 
 const MenuBtn = styled(Menu)`
