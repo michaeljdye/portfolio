@@ -25,7 +25,7 @@ const Slideshow = ({ scenes }) => {
   const index = wrap(0, scenes.length, scene)
 
   return (
-    <div style={{ marginBottom: 500 }}>
+    <div>
       <div style={{ position: 'relative' }}>
         <LeftArrow onClick={() => paginate(1)}>
           <FontAwesomeIcon
@@ -58,6 +58,8 @@ const Slideshow = ({ scenes }) => {
                 opacity: { duration: 0.2 },
               }}
               style={{
+                display: 'flex',
+                alignItems: 'center',
                 position: 'absolute',
                 height: 300,
                 width: '100%',
