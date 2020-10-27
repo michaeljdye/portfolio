@@ -27,6 +27,7 @@ const Layout = ({ children }) => (
         ${emotionNormalize}
 
         html {
+          box-sizing: border-box;
           scroll-behavior: smooth;
         }
 
@@ -37,6 +38,12 @@ const Layout = ({ children }) => (
           background: white;
           min-height: 100%;
           font-family: 'Montserrat', sans-serif;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
         }
 
         h1,

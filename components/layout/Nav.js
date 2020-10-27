@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import { Link } from 'next/link'
+import { useRouter } from 'next/router'
 import { Menu } from '../svgs'
 import { below } from '../../utils'
 
 const links = [
   { title: 'About', href: '#about' },
-  { title: 'Apps', href: '#about' },
+  { title: 'Apps', href: '#apps' },
   { title: 'Websites', href: '#websites' },
   { title: 'Contact', href: '#contact' },
 ]
@@ -43,6 +44,7 @@ const liVariants = {
 
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const router = useRouter()
 
   return (
     <Navigation>
@@ -72,14 +74,20 @@ const Nav = () => {
         animate={isNavOpen ? 'open' : 'closed'}
         transition={{ damping: 300 }}
       >
-        <button onClick={() => setIsNavOpen(false)}>X</button>
         <motion.ul variants={ulVariants}>
           {links.map(({ title, href }) => (
             <motion.li variants={liVariants}>
-              <a href={href}>{title}</a>
+              <a
+                onClick={e => {
+                  setIsNavOpen(false, router.push(href))
+                }}
+              >
+                {title}
+              </a>
             </motion.li>
           ))}
         </motion.ul>
+        <CloseButton onClick={() => setIsNavOpen(false)}>X</CloseButton>
       </MobileNav>
     </Navigation>
   )
@@ -102,11 +110,12 @@ const NavItems = styled.ul`
 `
 
 const MobileNav = styled(motion.nav)`
-  display: block;
+  display: flex;
+  align-items: flex-start;
   position: fixed;
   top: 0;
   left: 0;
-  background: black;
+  background: var(--colorDark);
   width: 100vw;
   height: 100vh;
   padding: 40px;
@@ -117,15 +126,20 @@ const MobileNav = styled(motion.nav)`
     padding: 0;
   }
 
+  li {
+    margin-bottom: 5px;
+  }
+
   a {
     border-bottom: 2px transparent solid;
     color: white;
     font-size: 2rem;
     text-decoration: none;
     transition: border 0.3s ease;
+    cursor: pointer;
 
     &:hover {
-      border-bottom: 2px blue solid;
+      border-bottom: 2px var(--colorPrimary) solid;
     }
   }
 
@@ -177,6 +191,10 @@ const MenuBtn = styled(Menu)`
       top: 40px;
       right: 10px;
     `}
+`
+
+const CloseButton = styled.button`
+  margin-left: auto;
 `
 
 export default Nav

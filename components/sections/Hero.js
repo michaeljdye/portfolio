@@ -10,7 +10,7 @@ const Hero = () => (
       <h1>Build. Ship. Repeat.</h1>
       <p>I am a growth-driven developer dedicated to building a better web.</p>
       <ButtonContainer>
-        <ButtonPrimary as='a' href='/images/resume.jpg'>
+        <ButtonPrimary as='a' href='/pdfs/resume.pdf'>
           View Resume
         </ButtonPrimary>
         <ButtonPrimary as='a' href='#contact'>
@@ -23,7 +23,7 @@ const Hero = () => (
 
 const HeroSection = styled.section`
   background: url(/images/pattern-dark-triangle.jpg);
-  height: 55vh;
+  height: 65vh;
   padding: 10px 0 100px;
   border-bottom: 6px solid var(--colorPrimary);
 `
