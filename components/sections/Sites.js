@@ -1,49 +1,35 @@
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faMinus } from '@fortawesome/free-solid-svg-icons'
 import { SectionHeading } from '../headings'
 import { ButtonPrimary } from '../buttons'
 import { below } from '../../utils'
+import sites from '../../data/sites.json'
+
+console.log(faPlus)
 
 const Sites = () => (
-  <SitesSection>
+  <SitesSection id='websites'>
     <SectionHeading>
       Grow your business <h2>Marketing Sites</h2>
     </SectionHeading>
     <SitesList>
-      <Site>
-        <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
-        <SiteDescription>
-          <button>
-            <FontAwesomeIcon icon={faPlus} size='2x' />
-          </button>
-          <h3>Nissan Stadium</h3>
-          <p>This is a description about the site.</p>
-          <ButtonPrimary>Learn More</ButtonPrimary>
-        </SiteDescription>
-      </Site>
-      <Site>
-        <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
-        <SiteDescription>
-          <button>
-            <FontAwesomeIcon icon={faPlus} size='2x' />
-          </button>
-          <h3>Roger's Group</h3>
-          <p>This is a description about the site.</p>
-          <ButtonPrimary>Learn More</ButtonPrimary>
-        </SiteDescription>
-      </Site>
-      <Site>
-        <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
-        <SiteDescription>
-          <button>
-            <FontAwesomeIcon icon={faPlus} size='2x' />
-          </button>
-          <h3>Outback Concerts</h3>
-          <p>This is a description about the site.</p>
-          <ButtonPrimary>Learn More</ButtonPrimary>
-        </SiteDescription>
-      </Site>
+      {sites.map(({ title, description, link }) => (
+        <Site>
+          <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
+          <SiteDescription>
+            <button>
+              <FontAwesomeIcon icon={faPlus} size='2x' />
+            </button>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ButtonPrimary as='a' href={link}>
+              Learn More
+            </ButtonPrimary>
+          </SiteDescription>
+        </Site>
+      ))}
     </SitesList>
   </SitesSection>
 )
@@ -100,7 +86,7 @@ const SiteDescription = styled.div`
   right: 0;
   left: 0;
   padding: 20px;
-  transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 110px, 0);
   transition: all 0.5s;
 
   &:hover {

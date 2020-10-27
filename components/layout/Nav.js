@@ -51,7 +51,7 @@ const Nav = () => {
           <NavLink href='#about'>About</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#projects'>Apps</NavLink>
+          <NavLink href='#apps'>Apps</NavLink>
         </NavItem>
         <NavItem className='logo'>
           <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />

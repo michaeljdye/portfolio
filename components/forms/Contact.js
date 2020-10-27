@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { ErrorMessage as ErrMessage } from '@hookform/error-message'
 import styled from '@emotion/styled'
 import { SectionHeading } from '../headings'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
   const [submissionState, setSubmissionState] = useState('pending')
-  const { register, handleSubmit } = useForm()
+  const { register, errors, handleSubmit } = useForm()
 
   const onSubmit = async formData => {
     try {
@@ -31,7 +32,7 @@ const Contact = () => {
   }
 
   return (
-    <ContactSection>
+    <ContactSection id='contact'>
       <SectionHeading>
         Ready, set, <h2>Contact</h2>
       </SectionHeading>
@@ -48,7 +49,13 @@ const Contact = () => {
               name='name'
               id='name'
               placeholder='John Smith'
-              ref={register}
+              ref={register({ required: 'This is required' })}
+            />
+            <ErrorMessage
+              errors={errors}
+              name='name'
+              render={({ message }) => <p>{message}</p>}
+              as='small'
             />
           </div>
           <div className='form-input'>
@@ -58,8 +65,14 @@ const Contact = () => {
               name='email'
               id='email'
               placeholder='John@Email.com'
-              ref={register}
+              ref={register({ required: 'This is required' })}
             />
+            <ErrorMessage
+              errors={errors}
+              name='name'
+              render={({ message }) => <p>{message}</p>}
+              as='small'
+            />{' '}
           </div>
           <div className='form-textarea'>
             <label htmlFor='message'>Message</label>
@@ -67,8 +80,14 @@ const Contact = () => {
               id='message'
               name='message'
               placeholder='Lorem ipsum dolor sit amet.'
-              ref={register}
+              ref={register({ required: 'This is required' })}
             ></textarea>
+            <ErrorMessage
+              errors={errors}
+              name='name'
+              render={({ message }) => <p>{message}</p>}
+              as='small'
+            />{' '}
           </div>
           <button>
             Submit <FontAwesomeIcon icon={faPaperPlane} />
@@ -108,7 +127,6 @@ const ContactSection = styled.section`
     width: 100% !important;
     border: none;
     border-top: 2px solid var(--colorPrimary);
-    margin-bottom: 20px;
     padding: 10px 0 10px 20px;
 
     &::placeholder {
@@ -121,6 +139,7 @@ const ContactSection = styled.section`
     --gap: 40px;
     display: inline-block;
     width: calc(50% - var(--gap));
+    margin-bottom: 20px;
 
     & + .form-input {
       margin-left: calc(var(--gap) * 2);
@@ -128,6 +147,7 @@ const ContactSection = styled.section`
   }
 
   .form-textarea {
+    margin-bottom: 20px;
   }
 
   textarea {
@@ -143,6 +163,10 @@ const ContactSection = styled.section`
     font-weight: 500;
     cursor: pointer;
   }
+`
+
+const ErrorMessage = styled(ErrMessage)`
+  color: red;
 `
 
 export default Contact

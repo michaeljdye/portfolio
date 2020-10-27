@@ -10,8 +10,12 @@ const Hero = () => (
       <h1>Build. Ship. Repeat.</h1>
       <p>I am a growth-driven developer dedicated to building a better web.</p>
       <ButtonContainer>
-        <ButtonPrimary>View Resume</ButtonPrimary>
-        <ButtonPrimary>Contact Me</ButtonPrimary>
+        <ButtonPrimary as='a' href='/images/resume.jpg'>
+          View Resume
+        </ButtonPrimary>
+        <ButtonPrimary as='a' href='#contact'>
+          Contact Me
+        </ButtonPrimary>
       </ButtonContainer>
     </HeroContent>
   </HeroSection>
@@ -46,7 +50,7 @@ const HeroContent = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
 
-  button + button {
+  a + a {
     margin-left: 20px;
   }
 `

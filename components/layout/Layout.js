@@ -25,8 +25,13 @@ const Layout = ({ children }) => (
         }
 
         ${emotionNormalize}
+
+        html {
+          scroll-behavior: smooth;
+        }
+
         html,
-    body {
+        body {
           padding: 0;
           margin: 0;
           background: white;

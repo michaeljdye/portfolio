@@ -4,7 +4,7 @@ import { SectionHeading } from '../headings'
 import Slideshow from '../sliders/Slideshow'
 
 const Apps = () => (
-  <AppsSection>
+  <AppsSection id='apps'>
     <SectionHeading marginBottom='120'>
       Engage your users <h2>Web Apps</h2>
     </SectionHeading>
