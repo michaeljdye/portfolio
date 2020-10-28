@@ -1,9 +1,14 @@
+import styled from '@emotion/styled'
 import Nav from './Nav'
 
 const Header = () => (
-  <div>
+  <HeaderSection>
     <Nav />
-  </div>
+  </HeaderSection>
 )
+
+const HeaderSection = styled.section`
+  width: 100%;
+`
 
 export default Header

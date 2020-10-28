@@ -8,7 +8,7 @@ import { below } from '../../utils'
 
 const links = [
   { title: 'About', href: '#about' },
-  { title: 'Apps', href: '#apps' },
+  { title: 'Web Apps', href: '#apps' },
   { title: 'Websites', href: '#websites' },
   { title: 'Contact', href: '#contact' },
 ]
@@ -50,19 +50,19 @@ const Nav = () => {
     <Navigation>
       <NavItems>
         <NavItem>
-          <NavLink href='#about'>About</NavLink>
+          <NavLink href='#about'>Web Apps</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#apps'>Apps</NavLink>
+          <NavLink href='#apps'>Websites</NavLink>
         </NavItem>
         <NavItem className='logo'>
           <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
         </NavItem>
         <NavItem>
-          <NavLink href='#websites'>Websites</NavLink>
+          <NavLink href='#websites'>Resume</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#contact'>Contact</NavLink>
+          <NavLink href='#contact'>Portfolio</NavLink>
         </NavItem>
       </NavItems>
 
@@ -76,7 +76,7 @@ const Nav = () => {
       >
         <motion.ul variants={ulVariants}>
           {links.map(({ title, href }) => (
-            <motion.li variants={liVariants}>
+            <motion.li key={title} variants={liVariants}>
               <a
                 onClick={e => {
                   setIsNavOpen(false, router.push(href))
@@ -102,7 +102,7 @@ const Navigation = styled.nav`
 
 const NavItems = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -164,13 +164,6 @@ const NavItem = styled.li`
       display: none;
     }
   `}
-
-  & + li {
-    margin-left: 60px;
-
-    ${below.phone`
-      margin-left: 0;
-    `}
 `
 
 const NavLink = styled.a`
@@ -179,7 +172,7 @@ const NavLink = styled.a`
 `
 
 const Logo = styled.img`
-  width: 260px;
+  width: 300px;
 `
 
 const MenuBtn = styled(Menu)`

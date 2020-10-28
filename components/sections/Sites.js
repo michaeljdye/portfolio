@@ -7,8 +7,6 @@ import { ButtonPrimary } from '../buttons'
 import { below } from '../../utils'
 import sites from '../../data/sites.json'
 
-console.log(faPlus)
-
 const Sites = () => (
   <SitesSection id='websites'>
     <SectionHeading>
@@ -16,7 +14,7 @@ const Sites = () => (
     </SectionHeading>
     <SitesList>
       {sites.map(({ title, description, link }) => (
-        <Site>
+        <Site key={title}>
           <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
           <SiteDescription>
             <button>

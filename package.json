@@ -21,7 +21,8 @@
     "next": "^9.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hook-form": "^6.7.2"
+    "react-hook-form": "^6.7.2",
+    "react-obfuscate": "^3.6.8"
   },
   "license": "ISC"
 }

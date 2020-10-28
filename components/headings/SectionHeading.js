@@ -8,7 +8,7 @@ const imageStyles = css`
   }
 `
 
-export const SectionHeading = styled.p`
+export const SectionHeading = styled.div`
   margin-bottom: ${({ marginBottom = 20 }) => `${marginBottom}px`};
   text-align: right;
   font-weight: 300;

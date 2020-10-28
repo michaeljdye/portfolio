@@ -4,6 +4,7 @@ import {
   faTwitter,
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons'
+import Obfuscate from 'react-obfuscate'
 import { faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { below } from '../../utils'
@@ -42,13 +43,8 @@ const Footer = () => (
         <h3>Contact</h3>
         <ul>
           <li>
-            <a href="javascript:location='mailto:\u006a\u006f\u0065\u0079\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0">
-              <script type='text/javascript'>
-                document.write('\u006a\u006f\u0065\u0079\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')
-              </script>
-              <FontAwesomeIcon icon={faEnvelope} />
-              Email me
-            </a>
+            <FontAwesomeIcon icon={faEnvelope} />
+            <Obfuscate email='joeymdye@gmail.com'>Email me</Obfuscate>
           </li>
           <li>
             <FontAwesomeIcon icon={faLocationArrow} />

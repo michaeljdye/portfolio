@@ -15,7 +15,7 @@ const Button = styled.button`
   border: 1px solid var(--colorPrimary);
   padding: 10px;
   color: ${({ dark }) => (dark ? 'var(--colorDark)' : 'var(--colorWhite)')};
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;

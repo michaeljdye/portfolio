@@ -59,7 +59,7 @@ const Layout = ({ children }) => (
         h1 {
           margin: 0;
           text-transform: uppercase;
-          font-size: max(6vw, 2rem);
+          font-size: max(7vw, 2rem);
           font-weight: 700;
         }
 

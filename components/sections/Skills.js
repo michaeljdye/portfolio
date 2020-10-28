@@ -47,7 +47,7 @@ const SkillsSection = styled.div`
 
 const SkillsList = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   list-style: none;
   padding: 0;
@@ -56,14 +56,6 @@ const SkillsList = styled.ul`
     flex-direction: column;
     align-items: center;
   `}
-
-  li + li {
-    margin-left: 100px;
-
-    ${below.phone`
-      margin-left: 0;
-    `}
-  }
 `
 
 export default Skills

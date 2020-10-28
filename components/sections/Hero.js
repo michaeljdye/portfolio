@@ -22,8 +22,8 @@ const Hero = () => (
 )
 
 const HeroSection = styled.section`
-  background: url(/images/pattern-dark-triangle.jpg);
-  height: 65vh;
+  background: url(/images/pattern-dark-triangle.jpg) center center;
+  height: 75vh;
   padding: 10px 0 100px;
   border-bottom: 6px solid var(--colorPrimary);
 `
@@ -41,7 +41,12 @@ const HeroContent = styled.div`
     text-align: center;
   }
 
+  h1 {
+    margin-bottom: 5px;
+  }
+
   p {
+    max-width: 90%;
     margin: 0 0 20px;
     font-size: 2rem;
   }
