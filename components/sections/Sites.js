@@ -44,7 +44,7 @@ const SitesList = styled.ul`
   margin: 0;
   padding: 0;
 
-  ${below.phone`
+  ${below.tablet`
     flex-direction: column;
   `}
 `
@@ -60,7 +60,7 @@ const Site = styled.li`
   padding: 0;
   overflow: hidden;
 
-  ${below.phone`
+  ${below.tablet`
     --gap: 0;
   `}
 
@@ -69,8 +69,9 @@ const Site = styled.li`
   }
 
   img {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `
 

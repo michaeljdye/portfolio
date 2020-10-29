@@ -32,15 +32,20 @@ const BioSection = styled.section`
   padding: 80px 0;
   margin: 0 auto;
 
-  ${below.phone`
+  ${below.tablet`
     flex-direction: column;
+    align-items: center;
   `}
 `
 
 const BioImg = styled.img`
   width: 450px;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+
+  ${below.tablet`
+    margin-bottom: 60px;
+  `}
 `
 
 const BioContent = styled.div`
@@ -48,7 +53,7 @@ const BioContent = styled.div`
   max-width: 100%;
   margin-left: 60px;
 
-  ${below.phone`
+  ${below.tablet`
     margin-left: 0;
   `}
 

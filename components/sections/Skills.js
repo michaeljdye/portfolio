@@ -56,6 +56,12 @@ const SkillsList = styled.ul`
     flex-direction: column;
     align-items: center;
   `}
+
+  svg {
+    ${below.tablet`
+      font-size: 5rem;
+    `}
+  }
 `
 
 export default Skills
