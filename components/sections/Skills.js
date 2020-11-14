@@ -12,27 +12,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { below } from '../../utils'
 
 const Skills = () => {
+  const icons = [faNodeJs, faPython, faPhp, faReact, faCss3, faHtml5]
+
   return (
     <SkillsSection>
       <SkillsList>
-        <li>
-          <FontAwesomeIcon icon={faNodeJs} size='7x' />
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faPython} size='7x' />
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faPhp} size='7x' />
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faReact} size='7x' />
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faCss3} size='7x' />
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faHtml5} size='7x' />
-        </li>
+        {icons.map(icon => (
+          <li>
+            <FontAwesomeIcon icon={icon} size='6x' />
+          </li>
+        ))}
       </SkillsList>
     </SkillsSection>
   )
@@ -47,10 +36,14 @@ const SkillsSection = styled.div`
 
 const SkillsList = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   list-style: none;
   padding: 0;
+
+  > * + * {
+    margin-left: 100px;
+  }
 
   ${below.phone`
     flex-direction: column;

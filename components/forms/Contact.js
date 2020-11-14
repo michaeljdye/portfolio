@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <ContactSection id='contact'>
       <SectionHeading>
-        Ready, set, <h2>Contact</h2>
+        ready, set, <h2>Contact</h2>
       </SectionHeading>
       {submissionState === 'pending' ? (
         <form
@@ -90,7 +90,7 @@ const Contact = () => {
             />{' '}
           </div>
           <button>
-            Submit <FontAwesomeIcon icon={faPaperPlane} />
+            Send <FontAwesomeIcon icon={faPaperPlane} />
           </button>
         </form>
       ) : submissionState === 'submitted' ? (
@@ -157,7 +157,7 @@ const ContactSection = styled.section`
 
   button {
     background: none;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border: 1px solid var(--colorPrimary);
     text-transform: uppercase;
     font-weight: 500;

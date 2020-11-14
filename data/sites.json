@@ -1,17 +1,24 @@
 [
     {
+        "id": 1,
         "title": "Nissan Stadium",
         "description": "This is a description about the site.",
-        "link": ""
+        "link": "",
+        "open": false
     },
-    {
+    {  
+        "id": 2,
         "title": "Roger's Group",
         "description": "This is a description about the site.",
-        "link": ""
+        "link": "",
+        "open": false
+
     },
     {
+        "id": 3,
         "title": "Outback Concerts",
         "description": "This is a description about the site.",
-        "link": ""
+        "link": "",
+        "open": false
     }
 ]

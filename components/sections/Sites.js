@@ -1,36 +1,51 @@
+import { useState } from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faMinus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import { SectionHeading } from '../headings'
 import { ButtonPrimary } from '../buttons'
 import { below } from '../../utils'
 import sites from '../../data/sites.json'
 
-const Sites = () => (
-  <SitesSection id='websites'>
-    <SectionHeading>
-      Grow your business <h2>Marketing Sites</h2>
-    </SectionHeading>
-    <SitesList>
-      {sites.map(({ title, description, link }) => (
-        <Site key={title}>
-          <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
-          <SiteDescription>
-            <button>
-              <FontAwesomeIcon icon={faPlus} size='2x' />
-            </button>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ButtonPrimary as='a' href={link}>
-              Learn More
-            </ButtonPrimary>
-          </SiteDescription>
-        </Site>
-      ))}
-    </SitesList>
-  </SitesSection>
-)
+const Sites = () => {
+  const [mktSites, setMktSites] = useState(sites)
+
+  const handleUpdateIcon = currentId => {
+    setMktSites(prevSites =>
+      prevSites.map(({ open, id, ...rest }) =>
+        id === currentId ? { ...rest, id, open: !open } : { ...rest, id, open }
+      )
+    )
+  }
+
+  return (
+    <SitesSection id='websites'>
+      <SectionHeading>
+        grow your business <h2>Marketing Sites</h2>
+      </SectionHeading>
+      <SitesList>
+        {mktSites.map(({ id, title, description, link, open }) => (
+          <Site key={id}>
+            <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
+            <SiteDescription
+              onMouseEnter={() => handleUpdateIcon(id)}
+              onMouseLeave={() => handleUpdateIcon(id)}
+            >
+              <Circle>
+                <FontAwesomeIcon icon={open ? faMinus : faPlus} size='2x' />
+              </Circle>
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <ButtonPrimary as='a' href={link}>
+                Learn More
+              </ButtonPrimary>
+            </SiteDescription>
+          </Site>
+        ))}
+      </SitesList>
+    </SitesSection>
+  )
+}
 
 const SitesSection = styled.section`
   background: var(--colorLightGray);
@@ -105,16 +120,16 @@ const SiteDescription = styled.div`
   p {
     font-size: 1.2rem;
   }
+`
 
-  button:first-of-type {
-    position: absolute;
-    top: -26px;
-    background: var(--colorPrimary);
-    border-radius: 50%;
-    border: none;
-    padding: 10px;
-    color: var(--colorWhite);
-  }
+const Circle = styled.div`
+  position: absolute;
+  top: -26px;
+  background: var(--colorPrimary);
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+  color: var(--colorWhite);
 `
 
 export default Sites

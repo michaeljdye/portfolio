@@ -11,8 +11,8 @@
   {
     "id": 1,
     "title": "Explore the Nations",
-    "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location. In addition, Styled Components are used for applying custom styles.",
-    "stack": ["React", "Google Maps API", "Yelp API", "Styled Components"],
+    "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location.",
+    "stack": ["React", "Styled Components"],
     "demo": "https://explorethenations-86j0hrveh.now.sh/",
     "source": "https://github.com/JoeyDye/explore-the-nations",
     "image": "https://placeimg.com/500/500/nature"

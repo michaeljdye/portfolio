@@ -107,6 +107,10 @@ const NavItems = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+
+  ${below.phone`
+    justify-content: center;
+  `}
 `
 
 const MobileNav = styled(motion.nav)`
@@ -119,6 +123,7 @@ const MobileNav = styled(motion.nav)`
   width: 100vw;
   height: 100vh;
   padding: 40px;
+  z-index: 2000;
 
   ul,
   ll {
@@ -169,6 +174,12 @@ const NavItem = styled.li`
 const NavLink = styled.a`
   text-decoration: none;
   color: white;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-bottom: 3px solid var(--colorPrimary);
+    padding-bottom: 5px;
+  }
 `
 
 const Logo = styled.img`
@@ -182,7 +193,7 @@ const MenuBtn = styled(Menu)`
       display: block;
       position: absolute;
       top: 40px;
-      right: 10px;
+      right: 5px;
     `}
 `
 

@@ -8,7 +8,7 @@ const Bio = () => (
     <BioContent>
       <SectionHeading align='right' isImage={true}>
         <img src='/images/squiggly-line.png' alt='Squiggly line' />
-        Hello, my name is <h2>Joey Dye</h2>
+        hello, my name is <h2>Joey Dye</h2>
       </SectionHeading>
       <p>
         I use modern web technologies to build excellent user interfaces. While

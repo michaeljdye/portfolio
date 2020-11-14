@@ -11,7 +11,7 @@ import { below } from '../../utils'
 
 const Footer = () => (
   <FooterSection>
-    <FooterContact>
+    <FooterContent>
       <FooterLogo
         src='/images/joey-dye-logo.png'
         alt='Joey Dye Fullstack Developer'
@@ -39,7 +39,7 @@ const Footer = () => (
           </li>
         </ul>
       </div>
-      <div>
+      <FooterContact>
         <h3>Contact</h3>
         <ul>
           <li>
@@ -51,8 +51,8 @@ const Footer = () => (
             Nashville, TN
           </li>
         </ul>
-      </div>
-    </FooterContact>
+      </FooterContact>
+    </FooterContent>
     <FooterCopyright>
       <p>© {new Date().getFullYear()} Joey Dye | All Rights Reserved.</p>
     </FooterCopyright>
@@ -64,7 +64,7 @@ const FooterSection = styled.div`
   color: var(--colorWhite);
 `
 
-const FooterContact = styled.div`
+const FooterContent = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 60px 0;
@@ -107,6 +107,11 @@ const FooterContact = styled.div`
   a {
     color: var(--colorWhite);
     text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--colorPrimary);
+    }
   }
 `
 
@@ -133,6 +138,16 @@ const FooterCopyright = styled.div`
     line-height: 1.5;
     font-size: 0.875rem;
     text-align: center;
+  }
+`
+
+const FooterContact = styled.div`
+  li:first-of-type {
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--colorPrimary);
+    }
   }
 `
 

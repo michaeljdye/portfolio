@@ -61,7 +61,7 @@ const Slideshow = ({ scenes }) => {
                 display: 'flex',
                 alignItems: 'center',
                 position: 'absolute',
-                height: 300,
+                height: 320,
                 width: '100%',
               }}
             >
@@ -100,7 +100,7 @@ const SlideContent = styled.div`
   align-items: center;
   position: relative;
   background: var(--colorMediumGray);
-  height: 300px;
+  height: 320px;
   padding: 40px 0;
 
   ${below.phone`
@@ -108,10 +108,14 @@ const SlideContent = styled.div`
     justify-content: center;
   `}
 
+  h3 {
+    margin-top: 0;
+  }
+
   .slide-text {
     display: inline-block;
-    width: 400px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 300px;
     margin-left: 150px;
 
     ${below.phone`
@@ -137,12 +141,13 @@ const Stack = styled.ul`
   display: flex;
   padding: 0;
   list-style: none;
+  margin: 0;
 
   li {
     display: flex;
     align-items: center;
-    font-weight: 700;
-    font-size: 0.875rem;
+    font-weight: 600;
+    font-size: 1.125rem;
     text-align: center;
   }
 
@@ -174,7 +179,7 @@ const RightArrow = styled(arrow)`
 
 const ButtonContainer = styled.div`
   position: absolute;
-  bottom: -100px;
+  bottom: -60px;
   left: 150px;
 
   button + button {
