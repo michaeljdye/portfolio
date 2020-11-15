@@ -17,8 +17,8 @@ const Skills = () => {
   return (
     <SkillsSection>
       <SkillsList>
-        {icons.map(icon => (
-          <li>
+        {icons.map((icon, i) => (
+          <li key={i}>
             <FontAwesomeIcon icon={icon} size='6x' />
           </li>
         ))}

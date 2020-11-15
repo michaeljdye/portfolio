@@ -19,7 +19,7 @@ const Sites = () => {
   }
 
   return (
-    <SitesSection id='websites'>
+    <SitesSection id='sites'>
       <SectionHeading>
         grow your business <h2>Marketing Sites</h2>
       </SectionHeading>

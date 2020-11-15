@@ -10,7 +10,15 @@ const CTA = props => {
         Here goes some text to engage the user and get them to take some sort of
         action by clicking the button below
       </p>
-      <ButtonPrimary dark>View Portfolio</ButtonPrimary>
+      <ButtonPrimary
+        dark
+        as='a'
+        href='https://github.com/JoeyDye'
+        target='_blank'
+        rel='noreferrer nofollow'
+      >
+        View GitHub
+      </ButtonPrimary>
     </CTASection>
   )
 }

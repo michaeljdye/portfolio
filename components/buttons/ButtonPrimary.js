@@ -2,10 +2,15 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-export const ButtonPrimary = ({ color = 'light', children, ...rest }) => (
+export const ButtonPrimary = ({
+  color = 'light',
+  icon = faChevronRight,
+  children,
+  ...rest
+}) => (
   <Button {...rest} color={color}>
     {children}
-    <FontAwesomeIcon icon={faChevronRight} />
+    <FontAwesomeIcon icon={icon} />
   </Button>
 )
 

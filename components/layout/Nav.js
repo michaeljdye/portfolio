@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
-import { Link } from 'next/link'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menu } from '../svgs'
 import { below } from '../../utils'
 
 const links = [
-  { title: 'About', href: '#about' },
   { title: 'Web Apps', href: '#apps' },
-  { title: 'Websites', href: '#websites' },
+  { title: 'Websites', href: '#sites' },
+  { title: 'Resume', href: '/pdfs/resume.pdf' },
   { title: 'Contact', href: '#contact' },
 ]
 
@@ -50,19 +50,23 @@ const Nav = () => {
     <Navigation>
       <NavItems>
         <NavItem>
-          <NavLink href='#about'>Web Apps</NavLink>
+          <NavLink href='/#apps'>Web Apps</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#apps'>Websites</NavLink>
+          <NavLink href='/#sites'>Websites</NavLink>
         </NavItem>
         <NavItem className='logo'>
-          <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
+          <Link href='/'>
+            <a>
+              <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
+            </a>
+          </Link>
         </NavItem>
         <NavItem>
-          <NavLink href='#websites'>Resume</NavLink>
+          <NavLink href='/pdfs/resume.pdf'>Resume</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#contact'>Portfolio</NavLink>
+          <NavLink href='/#contact'>Contact</NavLink>
         </NavItem>
       </NavItems>
 
@@ -124,6 +128,10 @@ const MobileNav = styled(motion.nav)`
   height: 100vh;
   padding: 40px;
   z-index: 2000;
+
+  ul {
+    list-style: none;
+  }
 
   ul,
   ll {
@@ -193,7 +201,7 @@ const MenuBtn = styled(Menu)`
       display: block;
       position: absolute;
       top: 40px;
-      right: 5px;
+      left: 0;
     `}
 `
 

@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import { SectionHeading } from '../headings'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ButtonPrimary } from '../buttons'
 
 const Contact = () => {
   const [submissionState, setSubmissionState] = useState('pending')
@@ -89,9 +90,9 @@ const Contact = () => {
               as='small'
             />{' '}
           </div>
-          <button>
-            Send <FontAwesomeIcon icon={faPaperPlane} />
-          </button>
+          <ButtonPrimary dark icon={faPaperPlane}>
+            Send
+          </ButtonPrimary>
         </form>
       ) : submissionState === 'submitted' ? (
         'Thanks!'
