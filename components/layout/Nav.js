@@ -49,25 +49,26 @@ const Nav = () => {
   return (
     <Navigation>
       <NavItems>
-        <NavItem>
-          <NavLink href='/#apps'>Web Apps</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href='/#sites'>Websites</NavLink>
-        </NavItem>
-        <NavItem className='logo'>
-          <Link href='/'>
-            <a>
-              <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
-            </a>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <NavLink href='/pdfs/resume.pdf'>Resume</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href='/#contact'>Contact</NavLink>
-        </NavItem>
+        {links.map(({ title, href }, i) =>
+          i === 1 ? (
+            <>
+              <NavItem>
+                <NavLink href={href}>{title}</NavLink>
+              </NavItem>
+              <NavItem className='logo'>
+                <Link href='/'>
+                  <a>
+                    <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
+                  </a>
+                </Link>
+              </NavItem>
+            </>
+          ) : (
+            <NavItem>
+              <NavLink href={href}>{title}</NavLink>
+            </NavItem>
+          )
+        )}
       </NavItems>
 
       <MenuBtn onClick={() => setIsNavOpen(true)} />
