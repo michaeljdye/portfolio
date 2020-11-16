@@ -59,7 +59,7 @@ const SitesList = styled.ul`
   margin: 0;
   padding: 0;
 
-  ${below.tablet`
+  ${below.phone`
     flex-direction: column;
   `}
 `

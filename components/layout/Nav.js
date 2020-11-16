@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import Link from 'next/link'
@@ -51,7 +51,7 @@ const Nav = () => {
       <NavItems>
         {links.map(({ title, href }, i) =>
           i === 1 ? (
-            <>
+            <Fragment key={title}>
               <NavItem>
                 <NavLink href={href}>{title}</NavLink>
               </NavItem>
@@ -62,9 +62,9 @@ const Nav = () => {
                   </a>
                 </Link>
               </NavItem>
-            </>
+            </Fragment>
           ) : (
-            <NavItem>
+            <NavItem key={title}>
               <NavLink href={href}>{title}</NavLink>
             </NavItem>
           )
