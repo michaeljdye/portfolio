@@ -57,7 +57,6 @@ const Slideshow = ({ scenes }) => {
                 x: { type: 'spring', stiffness: 100, bounce: 0, damping: 20 },
                 opacity: { duration: 0.2 },
               }}
-              style={{}}
             >
               <div className='slide-text'>
                 <h3>{scenes[index].title}</h3>
@@ -67,12 +66,12 @@ const Slideshow = ({ scenes }) => {
                     <li key={stackItem}>{stackItem}</li>
                   ))}
                 </Stack>
+                <ButtonContainer>
+                  <ButtonPrimary dark>View Source</ButtonPrimary>
+                  <ButtonPrimary dark>View Demo</ButtonPrimary>
+                </ButtonContainer>
               </div>
               <SlideImg src={scenes[index].image} alt='Joey Dye' />
-              <ButtonContainer>
-                <ButtonPrimary dark>View Source</ButtonPrimary>
-                <ButtonPrimary dark>View Demo</ButtonPrimary>
-              </ButtonContainer>
             </SlideInner>
           </SlideContent>
         </AnimatePresence>
@@ -92,7 +91,6 @@ const Slideshow = ({ scenes }) => {
 const SlideContent = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
   background: var(--colorMediumGray);
   height: 320px;
   padding: 40px 0;
@@ -113,7 +111,7 @@ const SlideContent = styled.div`
     margin-left: 150px;
 
     ${below.phone`
-      margin-left: 0;
+      margin: 0 auto;
       text-align: center;
     `}
   }
@@ -122,13 +120,8 @@ const SlideContent = styled.div`
 const SlideInner = styled(motion.div)`
   display: flex;
   align-items: center;
-  position: absolute;
   height: 320px;
   width: 100%;
-
-  ${below.phone`
-    justify-content: center;
-  `}
 `
 
 const SlideImg = styled.img`
@@ -194,8 +187,7 @@ const RightArrow = styled(arrow)`
 
 const ButtonContainer = styled.div`
   position: absolute;
-  bottom: -60px;
-  left: 150px;
+  bottom: -20%;
 
   button + button {
     margin-left: 20px;

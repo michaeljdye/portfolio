@@ -21,7 +21,7 @@
     "id": 2,
     "title": "Space Explorer",
     "description": "Explore stars, planets and other astronomical objects from the NASA database.",
-    "stack": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    "stack": ["React", "Node.js", "Express", "MongoDB"],
     "demo": "http://joeydye.rocks/",
     "source": "https://github.com/JoeyDye/space-explorer",
     "image": "https://placeimg.com/500/500/people"
