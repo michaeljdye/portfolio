@@ -36,7 +36,7 @@ const Slideshow = ({ scenes }) => {
         </LeftArrow>
         <AnimatePresence custom={direction}>
           <SlideContent>
-            <motion.div
+            <SlideInner
               key={scene}
               custom={direction}
               variants={variants}
@@ -57,6 +57,7 @@ const Slideshow = ({ scenes }) => {
                 x: { type: 'spring', stiffness: 100, bounce: 0, damping: 20 },
                 opacity: { duration: 0.2 },
               }}
+              style={{}}
             >
               <div className='slide-text'>
                 <h3>{scenes[index].title}</h3>
@@ -72,7 +73,7 @@ const Slideshow = ({ scenes }) => {
                 <ButtonPrimary dark>View Source</ButtonPrimary>
                 <ButtonPrimary dark>View Demo</ButtonPrimary>
               </ButtonContainer>
-            </motion.div>
+            </SlideInner>
           </SlideContent>
         </AnimatePresence>
 
@@ -118,16 +119,16 @@ const SlideContent = styled.div`
   }
 `
 
-const SlideContentInner = styled(motion.div)`
-    display: 'flex',
-    alignItems: 'center',
-    position: 'absolute',
-    height: 320,
-    width: '100%',
+const SlideInner = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 320px;
+  width: 100%;
 
-    ${below.phone`
-      justify-content: center;
-    `}
+  ${below.phone`
+    justify-content: center;
+  `}
 `
 
 const SlideImg = styled.img`
@@ -192,17 +193,9 @@ const RightArrow = styled(arrow)`
 `
 
 const ButtonContainer = styled.div`
-  display: flex;
-  margin: 50px 0 -100px 0;
-
-  > button {
-    margin-left: 150px;
-
-    ${below.phone`
-    margin-left: auto;
-      
-      `}
-  }
+  position: absolute;
+  bottom: -60px;
+  left: 150px;
 
   button + button {
     margin-left: 20px;
