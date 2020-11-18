@@ -14,7 +14,7 @@ const Apps = () => (
 
 const AppsSection = styled.section`
   background: var(--colorLightGray);
-  padding: 0 0 60px;
+  padding: 0 0 var(--defaultPadding);
 `
 
 export default Apps

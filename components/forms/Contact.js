@@ -6,6 +6,7 @@ import { SectionHeading } from '../headings'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ButtonPrimary } from '../buttons'
+import { below } from '../../utils/breakpoints'
 
 const Contact = () => {
   const [submissionState, setSubmissionState] = useState('pending')
@@ -109,7 +110,7 @@ const ContactSection = styled.section`
   align-items: center;
   background: rgba(0, 0, 0, 0.1) url(/images/pattern-light-triangle.jpg);
   background-blend-mode: overlay;
-  padding: 40px 0 60px;
+  padding: 40px 0 var(--defaultPadding);
 
   form {
     width: 750px;
@@ -125,7 +126,7 @@ const ContactSection = styled.section`
   input,
   textarea {
     background: var(--colorWhite);
-    width: 100% !important;
+    width: 100%;
     border: none;
     border-top: 2px solid var(--colorPrimary);
     padding: 10px 0 10px 20px;
@@ -141,6 +142,11 @@ const ContactSection = styled.section`
     display: inline-block;
     width: calc(50% - var(--gap));
     margin-bottom: 20px;
+
+    ${below.phone`
+      --gap: 0;
+      width: 100%;
+    `}
 
     & + .form-input {
       margin-left: calc(var(--gap) * 2);

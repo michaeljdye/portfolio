@@ -3,7 +3,7 @@
     "id": 0,
     "title": "My Reads",
     "description": "The MyReads app provides a simple way to find new books and track your latest reads. Features include search books, add to bookshelf, track reads, and bulk move.",
-    "stack": ["React", "React Router", "JS", "CSS"],
+    "stack": ["React", "JS", "CSS"],
     "demo": "https://myreads-5icjs7wez.now.sh/",
     "source": "https://github.com/JoeyDye/my-reads",
     "image": "https://placeimg.com/500/500/tech"

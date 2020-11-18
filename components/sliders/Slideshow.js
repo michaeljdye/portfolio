@@ -57,13 +57,6 @@ const Slideshow = ({ scenes }) => {
                 x: { type: 'spring', stiffness: 100, bounce: 0, damping: 20 },
                 opacity: { duration: 0.2 },
               }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                position: 'absolute',
-                height: 320,
-                width: '100%',
-              }}
             >
               <div className='slide-text'>
                 <h3>{scenes[index].title}</h3>
@@ -120,8 +113,21 @@ const SlideContent = styled.div`
 
     ${below.phone`
       margin-left: 0;
+      text-align: center;
     `}
   }
+`
+
+const SlideContentInner = styled(motion.div)`
+    display: 'flex',
+    alignItems: 'center',
+    position: 'absolute',
+    height: 320,
+    width: '100%',
+
+    ${below.phone`
+      justify-content: center;
+    `}
 `
 
 const SlideImg = styled.img`
@@ -142,6 +148,10 @@ const Stack = styled.ul`
   padding: 0;
   list-style: none;
   margin: 0;
+
+  ${below.phone`
+    justify-content: center;
+  `}
 
   li {
     display: flex;
@@ -167,6 +177,10 @@ const arrow = styled.button`
   cursor: pointer;
   color: var(--colorPrimary);
   z-index: 100;
+
+  ${below.phone`
+    display: none;
+  `}
 `
 
 const LeftArrow = styled(arrow)`
@@ -178,9 +192,17 @@ const RightArrow = styled(arrow)`
 `
 
 const ButtonContainer = styled.div`
-  position: absolute;
-  bottom: -60px;
-  left: 150px;
+  display: flex;
+  margin: 50px 0 -100px 0;
+
+  > button {
+    margin-left: 150px;
+
+    ${below.phone`
+    margin-left: auto;
+      
+      `}
+  }
 
   button + button {
     margin-left: 20px;

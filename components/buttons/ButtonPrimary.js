@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { below } from '../../utils/breakpoints'
 
 export const ButtonPrimary = ({
   color = 'light',
@@ -20,8 +21,9 @@ const Button = styled.button`
   border: 1px solid var(--colorPrimary);
   padding: 10px;
   color: ${({ dark }) => (dark ? 'var(--colorDark)' : 'var(--colorWhite)')};
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   font-weight: 500;
+  font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -31,6 +33,10 @@ const Button = styled.button`
   position: relative;
   transition-property: color;
   transition-duration: 0.3s;
+
+  ${below.tablet`
+    font-size: 1rem;
+  `}
 
   &:before {
     content: '';

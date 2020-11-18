@@ -23,8 +23,8 @@ const Hero = () => (
 
 const HeroSection = styled.section`
   background: url(/images/pattern-dark-triangle.jpg) center center;
-  height: 75vh;
-  padding: 10px 0 100px;
+  height: fit-content;
+  padding: 10px 0 var(--defaultPadding);
   border-bottom: 6px solid var(--colorPrimary);
 `
 
@@ -48,7 +48,7 @@ const HeroContent = styled.div`
   p {
     max-width: 90%;
     margin: 0 0 20px;
-    font-size: 2rem;
+    font-size: max(2.5vw, 1.3rem);
   }
 `
 

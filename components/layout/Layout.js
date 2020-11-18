@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { css, Global } from '@emotion/core'
 import emotionNormalize from 'emotion-normalize'
+import { below } from '../../utils/breakpoints'
 
 const Layout = ({ children }) => (
   <>
@@ -22,6 +23,11 @@ const Layout = ({ children }) => (
           --colorLightGray: #fefefe;
           --colorWhite: #ffffff;
           --colorTextLight: #bbb;
+          --defaultPadding: 80px;
+
+          ${below.phone`
+            --defaultPadding: 60px;
+          `}
         }
 
         ${emotionNormalize}
@@ -67,7 +73,7 @@ const Layout = ({ children }) => (
           margin: 0;
           text-transform: uppercase;
           font-weight: 700;
-          font-size: max(3vw, 1.5rem);
+          font-size: max(4vw, 2.5rem);
         }
 
         h3 {

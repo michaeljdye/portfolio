@@ -118,6 +118,58 @@ const NavItems = styled.ul`
   `}
 `
 
+const NavItem = styled.li`
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 2.3px;
+
+  ${below.tablet`
+    font-size: 1rem;
+  `}
+
+  ${below.phone`
+    &:not(.logo) {
+      display: none;
+    }
+  `}
+`
+
+const NavLink = styled.a`
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-bottom: 3px solid var(--colorPrimary);
+    padding-bottom: 5px;
+  }
+`
+
+const Logo = styled.img`
+  max-width: 300px;
+  margin: 0 auto;
+
+  ${below.tablet`
+    max-width: 180px;
+  `}
+`
+
+const MenuBtn = styled(Menu)`
+  display: none;
+
+  ${below.phone`
+      display: block;
+      position: absolute;
+      top: 40px;
+      left: 20px;
+    `}
+`
+
+const CloseButton = styled.button`
+  margin-left: auto;
+`
+
 const MobileNav = styled(motion.nav)`
   display: flex;
   align-items: flex-start;
@@ -147,10 +199,14 @@ const MobileNav = styled(motion.nav)`
   a {
     border-bottom: 2px transparent solid;
     color: white;
-    font-size: 2rem;
+    font-size: 1.75rem !important;
     text-decoration: none;
     transition: border 0.3s ease;
     cursor: pointer;
+
+    ${below.tablet`
+    font-size: 1rem;
+  `}
 
     &:hover {
       border-bottom: 2px var(--colorPrimary) solid;
@@ -165,49 +221,6 @@ const MobileNav = styled(motion.nav)`
     font-size: 2rem;
     cursor: pointer;
   }
-`
-
-const NavItem = styled.li`
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 2.3px;
-
-  ${below.phone`
-    &:not(.logo) {
-      display: none;
-    }
-  `}
-`
-
-const NavLink = styled.a`
-  text-decoration: none;
-  color: white;
-  transition: all 0.3s ease;
-
-  &:hover {
-    border-bottom: 3px solid var(--colorPrimary);
-    padding-bottom: 5px;
-  }
-`
-
-const Logo = styled.img`
-  width: 300px;
-`
-
-const MenuBtn = styled(Menu)`
-  display: none;
-
-  ${below.phone`
-      display: block;
-      position: absolute;
-      top: 40px;
-      left: 0;
-    `}
-`
-
-const CloseButton = styled.button`
-  margin-left: auto;
 `
 
 export default Nav

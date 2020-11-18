@@ -29,7 +29,7 @@ const BioSection = styled.section`
   display: flex;
   width: 1000px;
   max-width: 90%;
-  padding: 80px 0;
+  padding: var(--defaultPadding) 0;
   margin: 0 auto;
 
   ${below.tablet`
@@ -56,6 +56,10 @@ const BioContent = styled.div`
   ${below.tablet`
     margin-left: 0;
   `}
+
+  p {
+    margin-bottom: 0;
+  }
 
   span {
     display: block;

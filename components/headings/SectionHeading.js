@@ -1,5 +1,6 @@
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
+import { below } from '../../utils/breakpoints'
 
 const imageStyles = css`
   img {
@@ -21,12 +22,16 @@ export const SectionHeading = styled.div`
     }
   }}
 
+  ${below.phone`
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  `}
+
   h2 {
     display: block;
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 4rem;
     letter-spacing: 1.5px;
   }
 `

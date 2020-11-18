@@ -29,7 +29,7 @@ const CTASection = styled.div`
   align-items: center;
   align-items: center;
   background: var(--colorLightGray);
-  padding: 60px 0;
+  padding: var(--defaultPadding) 0;
 
   h3 {
     margin-bottom: 20px;

@@ -49,7 +49,7 @@ const Sites = () => {
 
 const SitesSection = styled.section`
   background: var(--colorLightGray);
-  padding: 80px 0 0;
+  padding: var(--defaultPadding) 0 0;
 `
 
 const SitesList = styled.ul`
@@ -75,12 +75,12 @@ const Site = styled.li`
   padding: 0;
   overflow: hidden;
 
-  ${below.tablet`
-    --gap: 0;
-  `}
-
   & + li {
-    margin-left: var(--gap);
+    margin: 0 0 0 var(--gap);
+
+    ${below.phone`
+      margin: var(--gap) 0 0 0;
+    `}
   }
 
   img {
@@ -102,6 +102,14 @@ const SiteDescription = styled.div`
   padding: 20px;
   transform: translate3d(0, 110px, 0);
   transition: all 0.5s;
+
+  ${below.tablet`
+    bottom: -20px;
+  `}
+
+  ${below.phone`
+    bottom: 0;
+  `}
 
   &:hover {
     cursor: pointer;

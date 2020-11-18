@@ -35,20 +35,38 @@ const SkillsSection = styled.div`
 `
 
 const SkillsList = styled.ul`
+  --gap: 100px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   list-style: none;
   padding: 0;
 
-  > * + * {
-    margin-left: 100px;
-  }
-
   ${below.phone`
-    flex-direction: column;
-    align-items: center;
+    --gap: 20px;
   `}
+
+  li {
+    text-align: center;
+
+    ${below.tablet`    
+      {
+        width: calc(33.33% - var(--gap));
+      }
+    `}
+
+    & + li {
+    margin: 0 0 0 var(--gap);
+
+    ${below.tablet`
+      margin: var(--gap) 0 0 0;
+    `}
+    }
+
+    ${below.tablet`
+      margin: var(--gap) 0 0 0;
+    `}
 
   svg {
     ${below.tablet`

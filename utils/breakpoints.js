@@ -2,8 +2,8 @@ import { css } from '@emotion/core'
 
 const sizes = {
   desktop: 992,
-  tablet: 1120,
-  phone: 650,
+  tablet: 1200,
+  phone: 800,
 }
 
 // Media Queries
