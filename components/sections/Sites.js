@@ -24,9 +24,9 @@ const Sites = () => {
         grow your business <h2>Marketing Sites</h2>
       </SectionHeading>
       <SitesList>
-        {mktSites.map(({ id, title, description, link, open }) => (
+        {mktSites.map(({ id, title, description, link, image, open }) => (
           <Site key={id}>
-            <img src='https://placeimg.com/500/500/tech' alt='Placeholder' />
+            <img src={image} alt='Placeholder' />
             <SiteDescription
               onMouseEnter={() => handleUpdateIcon(id)}
               onMouseLeave={() => handleUpdateIcon(id)}
@@ -36,8 +36,8 @@ const Sites = () => {
               </Circle>
               <h3>{title}</h3>
               <p>{description}</p>
-              <ButtonPrimary as='a' href={link}>
-                Learn More
+              <ButtonPrimary as='a' href='/#contact'>
+                Contact Me
               </ButtonPrimary>
             </SiteDescription>
           </Site>
@@ -68,7 +68,7 @@ const Site = styled.li`
   --gap: 15px;
   position: relative;
   height: 450px;
-  width: calc(100% - var(--gap))
+  width: calc(100% - var(--gap));
   border: 1px solid black;
   list-style: none;
   margin: 0;
@@ -76,8 +76,6 @@ const Site = styled.li`
   overflow: hidden;
 
   & + li {
-    margin: 0 0 0 var(--gap);
-
     ${below.phone`
       margin: var(--gap) 0 0 0;
     `}
@@ -87,6 +85,7 @@ const Site = styled.li`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
   }
 `
 
@@ -100,8 +99,9 @@ const SiteDescription = styled.div`
   right: 0;
   left: 0;
   padding: 20px;
-  transform: translate3d(0, 110px, 0);
+  transform: translate3d(0, 150px, 0);
   transition: all 0.5s;
+  text-align: center;
 
   ${below.tablet`
     bottom: -20px;

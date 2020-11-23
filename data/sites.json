@@ -1,24 +1,28 @@
 [
-    {
-        "id": 1,
-        "title": "Nissan Stadium",
-        "description": "This is a description about the site.",
-        "link": "",
-        "open": false
-    },
     {  
         "id": 2,
-        "title": "Roger's Group",
-        "description": "This is a description about the site.",
+        "title": "Emma",
+        "description": "Lead dev strategy & build for universities campaign.",
+        "image": "/images/emmau.png",
         "link": "",
         "open": false
 
     },
     {
-        "id": 3,
-        "title": "Outback Concerts",
-        "description": "This is a description about the site.",
+        "id": 1,
+        "title": "Nissan Stadium",
+        "description": "Developed Nissan Stadium site from ground up.",
         "link": "",
+        "image": "/images/nissan-stadium.png",
+        "open": false
+    },
+
+    {
+        "id": 3,
+        "title": "Campaign Monitor",
+        "description": "Maintained site, built landing pages, fixed bugs & migrated site to new hosting.",
+        "link": "",
+        "image": "/images/cm-lp-2.png",
         "open": false
     }
 ]

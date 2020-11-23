@@ -67,8 +67,20 @@ const Slideshow = ({ scenes }) => {
                   ))}
                 </Stack>
                 <ButtonContainer>
-                  <ButtonPrimary dark>View Source</ButtonPrimary>
-                  <ButtonPrimary dark>View Demo</ButtonPrimary>
+                  {scenes[index].source && (
+                    <ButtonPrimary dark as='a' href={scenes[index].source}>
+                      View Source
+                    </ButtonPrimary>
+                  )}
+                  <ButtonPrimary
+                    dark
+                    as='a'
+                    target='_blank'
+                    rel='nofollow noopenner'
+                    href={scenes[index].demo}
+                  >
+                    View App
+                  </ButtonPrimary>
                 </ButtonContainer>
               </div>
               <SlideImg src={scenes[index].image} alt='Joey Dye' />
@@ -126,10 +138,11 @@ const SlideInner = styled(motion.div)`
 
 const SlideImg = styled.img`
   position: absolute;
-  top: -100px;
-  right: 150px;
+  bottom: 50%;
+  right: 50px;
   display: inline-block;
-  width: 500px;
+  width: 900px;
+  transform: translateY(50%);
   margin: 0 auto;
 
   ${below.phone`
@@ -189,7 +202,7 @@ const ButtonContainer = styled.div`
   position: absolute;
   bottom: -20%;
 
-  button + button {
+  a + a {
     margin-left: 20px;
   }
 `

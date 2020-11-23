@@ -1,29 +1,20 @@
 [
   {
     "id": 0,
-    "title": "My Reads",
-    "description": "The MyReads app provides a simple way to find new books and track your latest reads. Features include search books, add to bookshelf, track reads, and bulk move.",
+    "title": "OkMoveMe",
+    "description": "OkMoveMe allows you to manage your move from one centralized dashboard, which includes checklists, moving resources and more.",
     "stack": ["React", "JS", "CSS"],
-    "demo": "https://myreads-5icjs7wez.now.sh/",
-    "source": "https://github.com/JoeyDye/my-reads",
-    "image": "https://placeimg.com/500/500/tech"
+    "demo": "https://www.okmoveme.com/",
+    "source": "",
+    "image": "/images/okmoveme.png"
   },
   {
     "id": 1,
     "title": "Explore the Nations",
     "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location.",
-    "stack": ["React", "Styled Components"],
+    "stack": ["React", "JS", "CSS"],
     "demo": "https://explorethenations-86j0hrveh.now.sh/",
     "source": "https://github.com/JoeyDye/explore-the-nations",
-    "image": "https://placeimg.com/500/500/nature"
-  },
-  {
-    "id": 2,
-    "title": "Space Explorer",
-    "description": "Explore stars, planets and other astronomical objects from the NASA database.",
-    "stack": ["React", "Node.js", "Express", "MongoDB"],
-    "demo": "http://joeydye.rocks/",
-    "source": "https://github.com/JoeyDye/space-explorer",
-    "image": "https://placeimg.com/500/500/people"
+    "image": "/images/explore-the-nations.png"
   }
 ]
