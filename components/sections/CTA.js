@@ -5,10 +5,10 @@ import { ButtonPrimary } from '../buttons'
 const CTA = props => {
   return (
     <CTASection>
-      <h3>Catchy Question Goes Here?</h3>
+      <h3>Want to see more source code?</h3>
       <p>
-        Here goes some text to engage the user and get them to take some sort of
-        action by clicking the button below
+        Check out my GitHub to see all of my personal projects and
+        contributions.
       </p>
       <ButtonPrimary
         dark
