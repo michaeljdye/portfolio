@@ -4,11 +4,11 @@ import { below } from '../../utils'
 
 const Bio = () => (
   <BioSection id='about'>
-    <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='Joey Dye' />
+    <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='MIchael Dye' />
     <BioContent>
       <SectionHeading align='right' isImage={true}>
         <img src='/images/squiggly-line.png' alt='Squiggly line' />
-        hello, my name is <h2>Joey Dye</h2>
+        hello, my name is <h2>MIchael Dye</h2>
       </SectionHeading>
       <p>
         I use modern web technologies to build excellent user interfaces. While

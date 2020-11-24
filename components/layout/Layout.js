@@ -6,7 +6,7 @@ import { below } from '../../utils/breakpoints'
 const Layout = ({ children }) => (
   <>
     <Head>
-      <title>Joey Dye | Fullstack Developer</title>
+      <title>MIchael Dye | Fullstack Developer</title>
       <meta
         name='description'
         content='I am a fullstack developer from Nashville, TN.'

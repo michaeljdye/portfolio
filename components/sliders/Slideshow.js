@@ -83,7 +83,7 @@ const Slideshow = ({ scenes }) => {
                   </ButtonPrimary>
                 </ButtonContainer>
               </div>
-              <SlideImg src={scenes[index].image} alt='Joey Dye' />
+              <SlideImg src={scenes[index].image} alt='MIchael Dye' />
             </SlideInner>
           </SlideContent>
         </AnimatePresence>

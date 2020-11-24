@@ -13,8 +13,8 @@ const Footer = () => (
   <FooterSection>
     <FooterContent>
       <FooterLogo
-        src='/images/joey-dye-logo.png'
-        alt='Joey Dye Fullstack Developer'
+        src='/images/michael-dye-logo.png'
+        alt='MIchael Dye Fullstack Developer'
       />
       <div>
         <h3>Links</h3>
@@ -54,7 +54,7 @@ const Footer = () => (
       </FooterContact>
     </FooterContent>
     <FooterCopyright>
-      <p>© {new Date().getFullYear()} Joey Dye | All Rights Reserved.</p>
+      <p>© {new Date().getFullYear()} MIchael Dye | All Rights Reserved.</p>
     </FooterCopyright>
   </FooterSection>
 )

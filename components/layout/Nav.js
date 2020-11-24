@@ -58,7 +58,10 @@ const Nav = () => {
               <NavItem className='logo'>
                 <Link href='/'>
                   <a>
-                    <Logo src='/images/joey-dye-logo.png' alt='Joey Dye' />
+                    <Logo
+                      src='/images/michael-dye-logo.png'
+                      alt='MIchael Dye'
+                    />
                   </a>
                 </Link>
               </NavItem>
