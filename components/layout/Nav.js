@@ -7,7 +7,7 @@ import { Menu } from '../svgs'
 import { below } from '../../utils'
 
 const links = [
-  { title: 'bio', href: '/#bio' },
+  { title: 'about', href: '/#about' },
   { title: 'Web Apps', href: '#apps' },
   { title: 'Websites', href: '#sites' },
   { title: 'Contact', href: '#contact' },

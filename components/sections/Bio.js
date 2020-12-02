@@ -3,7 +3,7 @@ import { SectionHeading } from '../headings'
 import { below } from '../../utils'
 
 const Bio = () => (
-  <BioSection id='bio'>
+  <BioSection id='about'>
     <BioImg
       src='/images/michael-dye-fullstack-developer.jpg'
       alt='MIchael Dye'
