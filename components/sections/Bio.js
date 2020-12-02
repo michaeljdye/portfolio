@@ -3,8 +3,11 @@ import { SectionHeading } from '../headings'
 import { below } from '../../utils'
 
 const Bio = () => (
-  <BioSection id='about'>
-    <BioImg src='/images/joey-dye-fullstack-developer.jpg' alt='MIchael Dye' />
+  <BioSection id='bio'>
+    <BioImg
+      src='/images/michael-dye-fullstack-developer.jpg'
+      alt='MIchael Dye'
+    />
     <BioContent>
       <SectionHeading align='right' isImage={true}>
         <img src='/images/squiggly-line.png' alt='Squiggly line' />

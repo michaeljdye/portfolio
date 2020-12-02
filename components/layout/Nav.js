@@ -7,9 +7,9 @@ import { Menu } from '../svgs'
 import { below } from '../../utils'
 
 const links = [
+  { title: 'bio', href: '/#bio' },
   { title: 'Web Apps', href: '#apps' },
   { title: 'Websites', href: '#sites' },
-  { title: 'Resume', href: '/pdfs/resume.pdf' },
   { title: 'Contact', href: '#contact' },
 ]
 
@@ -60,7 +60,7 @@ const Nav = () => {
                   <a>
                     <Logo
                       src='/images/michael-dye-logo.png'
-                      alt='MIchael Dye'
+                      alt='Michael Dye'
                     />
                   </a>
                 </Link>
