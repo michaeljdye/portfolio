@@ -1,16 +1,24 @@
 import { useState } from 'react'
+import Head from 'next/head'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage as ErrMessage } from '@hookform/error-message'
 import styled from '@emotion/styled'
 import { SectionHeading } from '../headings'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Recaptcha from 'react-google-recaptcha'
 import { ButtonPrimary } from '../buttons'
 import { below } from '../../utils/breakpoints'
 
 const Contact = () => {
   const [submissionState, setSubmissionState] = useState('pending')
   const { register, errors, handleSubmit } = useForm()
+
+  let recaptchaInstance
+  const executeCaptcha = e => {
+    e.preventDefault()
+    recaptchaInstance.execute()
+  }
 
   const onSubmit = async formData => {
     try {
@@ -35,13 +43,19 @@ const Contact = () => {
 
   return (
     <ContactSection id='contact'>
+      <Head>
+        <script
+          src='https://www.google.com/recaptcha/api.js'
+          async
+          defer
+        ></script>
+      </Head>
       <SectionHeading>
         ready, set, <h2>Contact</h2>
       </SectionHeading>
       {submissionState === 'pending' ? (
         <form
           method='POST'
-          onSubmit={handleSubmit(onSubmit)}
           action='https://formspree.io/p/1529852799980928026/f/contactForm'
         >
           <div className='form-input'>
@@ -94,6 +108,12 @@ const Contact = () => {
           <ButtonPrimary dark icon={faPaperPlane}>
             Send
           </ButtonPrimary>
+          <Recaptcha
+            ref={e => (recaptchaInstance = e)}
+            sitekey='6LcWIvsZAAAAAGcTrG0Uv7QEKiAcJ01otF0EBQ_h'
+            size='normal'
+            onChange={handleSubmit(onSubmit)}
+          />
         </form>
       ) : submissionState === 'submitted' ? (
         'Thanks!'
@@ -164,6 +184,7 @@ const ContactSection = styled.section`
 
   button {
     background: none;
+    margin-bottom: 20px;
     padding: 8px 15px;
     border: 1px solid var(--colorPrimary);
     text-transform: uppercase;
