@@ -2,11 +2,15 @@ import Head from 'next/head'
 import { css, Global } from '@emotion/core'
 import emotionNormalize from 'emotion-normalize'
 import { below } from '../../utils/breakpoints'
+import Hero from '../sections/Hero'
+import Footer from './Footer'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageTitle, siteTitle }) => (
   <>
     <Head>
-      <title>MIchael Dye | Fullstack Developer</title>
+      <title>
+        {pageTitle} | {siteTitle}
+      </title>
       <meta
         name='description'
         content='I am a fullstack developer from Nashville, TN.'
@@ -89,7 +93,9 @@ const Layout = ({ children }) => (
         }
       `}
     />
+    <Hero />
     {children}
+    <Footer />
   </>
 )
 
