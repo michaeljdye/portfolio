@@ -16,5 +16,12 @@
     "demo": "https://explorethenations-86j0hrveh.now.sh/",
     "source": "https://github.com/JoeyDye/explore-the-nations",
     "image": "/images/explore-the-nations.png"
+  },{
+    "id": 2,
+    "title": "Send2Win",
+    "description": "Send2Win give users the chance to test their email knowledge by designing the perfect send.",
+    "stack": ["React", "JS", "Firebase"],
+    "image": "/images/send2win.png",
+    "width": 550
   }
 ]

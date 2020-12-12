@@ -72,18 +72,24 @@ const Slideshow = ({ scenes }) => {
                       View Source
                     </ButtonPrimary>
                   )}
-                  <ButtonPrimary
-                    dark
-                    as='a'
-                    target='_blank'
-                    rel='nofollow noopenner'
-                    href={scenes[index].demo}
-                  >
-                    View App
-                  </ButtonPrimary>
+                  {scenes[index].demo && (
+                    <ButtonPrimary
+                      dark
+                      as='a'
+                      target='_blank'
+                      rel='nofollow noopenner'
+                      href={scenes[index].demo}
+                    >
+                      View App
+                    </ButtonPrimary>
+                  )}
                 </ButtonContainer>
               </div>
-              <SlideImg src={scenes[index].image} alt='MIchael Dye' />
+              <SlideImg
+                src={scenes[index].image}
+                alt='MIchael Dye'
+                width={scenes[index].width || 900}
+              />
             </SlideInner>
           </SlideContent>
         </AnimatePresence>
@@ -137,13 +143,9 @@ const SlideInner = styled(motion.div)`
 `
 
 const SlideImg = styled.img`
-  position: absolute;
-  bottom: 50%;
-  right: 50px;
   display: inline-block;
-  width: 900px;
   transform: translateY(50%);
-  margin: 0 auto;
+  margin: 0 auto 650px;
 
   ${below.phone`
     display: none; 
