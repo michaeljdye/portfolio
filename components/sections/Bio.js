@@ -52,7 +52,7 @@ const BioImg = styled.img`
 `
 
 const BioContent = styled.div`
-  width: 500px;
+  width: 420px;
   max-width: 100%;
   margin-left: 60px;
 
@@ -62,6 +62,7 @@ const BioContent = styled.div`
 
   p {
     margin-bottom: 0;
+    text-align: left;
   }
 
   span {

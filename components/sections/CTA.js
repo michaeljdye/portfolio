@@ -5,9 +5,9 @@ import { ButtonPrimary } from '../buttons'
 const CTA = props => {
   return (
     <CTASection>
-      <h3>Can't get enough code?</h3>
+      <h3>Check out what I've been working on.</h3>
       <p>
-        Check out my GitHub to see all of my personal projects and
+        Visit my GitHub page to see all of my personal projects and
         contributions.
       </p>
       <ButtonPrimary
