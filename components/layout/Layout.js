@@ -5,7 +5,7 @@ import { below } from '../../utils/breakpoints'
 import Hero from '../sections/Hero'
 import Footer from './Footer'
 
-const Layout = ({ children, pageTitle, siteTitle }) => (
+const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => (
   <>
     <Head>
       <title>
@@ -93,7 +93,7 @@ const Layout = ({ children, pageTitle, siteTitle }) => (
         }
       `}
     />
-    <Hero />
+    <Hero heading={heading} subheading={subheading} />
     {children}
     <Footer />
   </>

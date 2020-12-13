@@ -9,7 +9,12 @@ import Footer from '../components/layout/Footer'
 import Contact from '../components/forms/Contact'
 
 const Home = () => (
-  <Layout pageTitle='Michael Dye' siteTitle='Full Stack Developer'>
+  <Layout
+    pageTitle='Michael Dye'
+    siteTitle='Full Stack Developer'
+    heading='Build. Ship. Repeat'
+    subheading=' am a growth-driven developer dedicated to building a better web.'
+  >
     <Bio />
     <Apps />
     <Sites />
