@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from 'next/image'
 import { below } from '../../utils'
 import { ButtonPrimary } from '../buttons'
 
@@ -79,17 +80,21 @@ const Slideshow = ({ scenes }) => {
                       target='_blank'
                       rel='nofollow noopenner'
                       href={scenes[index].demo}
+                      priority={true}
                     >
                       View App
                     </ButtonPrimary>
                   )}
                 </ButtonContainer>
               </div>
-              <SlideImg
-                src={scenes[index].image}
-                alt='MIchael Dye'
-                width={scenes[index].width || 900}
-              />
+              <SlideImgContainer>
+                <SlideImg
+                  src={scenes[index].image}
+                  alt='MIchael Dye'
+                  layout='fill'
+                  priority={true}
+                />
+              </SlideImgContainer>
             </SlideInner>
           </SlideContent>
         </AnimatePresence>
@@ -142,14 +147,20 @@ const SlideInner = styled(motion.div)`
   width: 100%;
 `
 
-const SlideImg = styled.img`
+const SlideImg = styled(Image)`
   display: inline-block;
-  transform: translateY(50%);
-  margin: 0 auto 650px;
+  object-fit: contain;
 
   ${below.phone`
     display: none; 
   `}
+`
+
+const SlideImgContainer = styled.div`
+  width: 900px;
+  height: 650px;
+  margin: 0 auto 650px;
+  transform: translateY(50%);
 `
 
 const Stack = styled.ul`
