@@ -6,7 +6,9 @@
     "stack": ["React", "JS", "CSS"],
     "demo": "https://www.okmoveme.com/",
     "source": "",
-    "image": "/images/okmoveme.png"
+    "image": "/images/okmoveme.png",
+    "width": 900,
+    "height": 900
   },
   {
     "id": 1,
@@ -15,13 +17,16 @@
     "stack": ["React", "JS", "CSS"],
     "demo": "https://explorethenations-86j0hrveh.now.sh/",
     "source": "https://github.com/JoeyDye/explore-the-nations",
-    "image": "/images/explore-the-nations.png"
+    "image": "/images/explore-the-nations.png",
+    "width": 900,
+    "height": 900
   },{
     "id": 2,
     "title": "Send2Win",
     "description": "Send2Win give users the chance to test their email knowledge by designing the perfect send.",
     "stack": ["React", "JS", "Firebase"],
     "image": "/images/send2win.png",
-    "width": 550
+    "width": 475,
+    "height": 600
   }
 ]

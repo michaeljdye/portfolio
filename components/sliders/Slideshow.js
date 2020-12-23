@@ -14,11 +14,14 @@ const Slideshow = ({ scenes }) => {
   }
 
   const variants = {
-    enter: direction => ({ x: direction > 0 ? 1000 : -1000, opacity: 0 }),
+    enter: direction => ({
+      x: direction > 0 ? 100 : -100,
+      opacity: 0,
+    }),
     center: { zIndex: 1, x: 0, opacity: 1 },
     exit: direction => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 100 : -100,
       opacity: 0,
     }),
   }
@@ -90,7 +93,7 @@ const Slideshow = ({ scenes }) => {
               <SlideImgContainer>
                 <SlideImg
                   src={scenes[index].image}
-                  alt='MIchael Dye'
+                  alt='Michael Dye'
                   layout='fill'
                   priority={true}
                 />
@@ -115,16 +118,23 @@ const SlideContent = styled.div`
   display: flex;
   align-items: center;
   background: var(--colorMediumGray);
-  height: 320px;
+  height: 350px;
   padding: 40px 0;
 
   ${below.phone`
     display: flex;
     justify-content: center;
+    overflow: hidden;
   `}
 
   h3 {
     margin-top: 0;
+  }
+
+  p {
+    ${below.phone`
+      display: none;
+    `}
   }
 
   .slide-text {
@@ -145,22 +155,28 @@ const SlideInner = styled(motion.div)`
   align-items: center;
   height: 320px;
   width: 100%;
+
+  ${below.phone`
+     flex-direction: column-reverse;
+  `}
 `
 
 const SlideImg = styled(Image)`
   display: inline-block;
   object-fit: contain;
-
-  ${below.phone`
-    display: none; 
-  `}
 `
 
 const SlideImgContainer = styled.div`
   width: 900px;
+  max-width: 100%;
   height: 650px;
-  margin: 0 auto 650px;
+  margin: 0 auto 675px;
   transform: translateY(50%);
+
+  ${below.phone`
+      margin: 0 auto 10px;
+      transform: translateY(0);
+  `}
 `
 
 const Stack = styled.ul`
