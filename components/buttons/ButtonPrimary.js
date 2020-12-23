@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { below } from '../../utils/breakpoints'
@@ -21,7 +22,6 @@ const Button = styled.button`
   border: 1px solid var(--colorPrimary);
   padding: 10px;
   color: ${({ dark }) => (dark ? 'var(--colorDark)' : 'var(--colorWhite)')};
-  /* font-size: 1.125rem; */
   font-weight: 500;
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -35,7 +35,7 @@ const Button = styled.button`
   transition-duration: 0.3s;
 
   ${below.tablet`
-    font-size: 1rem;
+    font-size: 0.875rem;
   `}
 
   &:before {
@@ -47,15 +47,10 @@ const Button = styled.button`
     right: 0;
     bottom: 0;
     background: var(--colorPrimary);
-    -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
     transform-origin: 0 50%;
-    -webkit-transition-property: transform;
     transition-property: transform;
-    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
 
@@ -68,7 +63,6 @@ const Button = styled.button`
   &:hover:before,
   &:focus:before,
   &:active:before {
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
 

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ButtonPrimary } from '../buttons'
+import { below } from '../../utils/breakpoints'
 
 const CTA = props => {
   return (
@@ -33,6 +34,10 @@ const CTASection = styled.div`
 
   h3 {
     margin-bottom: 20px;
+
+    ${below.phone`
+      text-align: center;
+    `}
   }
 
   p {
