@@ -17,6 +17,7 @@
     "@hookform/error-message": "^0.0.4",
     "@popmotion/popcorn": "^0.4.4",
     "@sendgrid/mail": "^7.2.5",
+    "critters": "^0.0.6",
     "emotion-normalize": "^10.1.0",
     "framer-motion": "^2.7.7",
     "gray-matter": "^4.0.2",
