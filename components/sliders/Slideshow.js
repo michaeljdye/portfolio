@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Image from 'next/image'
 import { below } from '../../utils'
 import { ButtonPrimary } from '../buttons'
 
@@ -94,7 +93,7 @@ const Slideshow = ({ scenes }) => {
                 <SlideImg
                   src={scenes[index].image}
                   alt='Michael Dye'
-                  layout='fill'
+                  width={scenes[index].width}
                   priority={true}
                 />
               </SlideImgContainer>
@@ -124,17 +123,12 @@ const SlideContent = styled.div`
   ${below.phone`
     display: flex;
     justify-content: center;
+    height: auto;
     overflow: hidden;
   `}
 
   h3 {
     margin-top: 0;
-  }
-
-  p {
-    ${below.phone`
-      display: none;
-    `}
   }
 
   .slide-text {
@@ -153,7 +147,6 @@ const SlideContent = styled.div`
 const SlideInner = styled(motion.div)`
   display: flex;
   align-items: center;
-  height: 320px;
   width: 100%;
 
   ${below.phone`
@@ -161,16 +154,13 @@ const SlideInner = styled(motion.div)`
   `}
 `
 
-const SlideImg = styled(Image)`
+const SlideImg = styled.img`
   display: inline-block;
-  object-fit: contain;
+  max-width: 100%;
 `
 
 const SlideImgContainer = styled.div`
-  width: 900px;
-  max-width: 100%;
-  height: 650px;
-  margin: 0 auto 675px;
+  margin: 0 auto 650px;
   transform: translateY(50%);
 
   ${below.phone`
