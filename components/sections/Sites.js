@@ -75,9 +75,13 @@ const Site = styled.li`
   padding: 0;
   overflow: hidden;
 
+  ${below.phone`
+    width: 100%;
+  `}
+
   & + li {
     ${below.phone`
-      margin: var(--gap) 0 0 0;
+      margin: 0;
     `}
   }
 
