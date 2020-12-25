@@ -107,7 +107,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
       />
       <div ref={containerRef} className='theme'>
         <Hero heading={heading} subheading={subheading} />
-        <button onClick={handleThemeChange}>Change theme</button>
+        {/* <button onClick={handleThemeChange}>Change theme</button> */}
         {children}
         <Footer />
       </div>
