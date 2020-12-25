@@ -112,7 +112,7 @@ const SiteDescription = styled.div`
   `}
 
   ${below.phone`
-    bottom: 0;
+    bottom: 10px;
   `}
 
   &:hover {
