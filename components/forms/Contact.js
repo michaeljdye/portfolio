@@ -8,7 +8,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Recaptcha from 'react-google-recaptcha'
 import { ButtonPrimary } from '../buttons'
-import { below } from '../../utils/breakpoints'
+import { above } from '../../utils/breakpoints'
 
 const Contact = () => {
   const [submissionState, setSubmissionState] = useState('pending')
@@ -113,6 +113,7 @@ const Contact = () => {
             sitekey='6LcWIvsZAAAAAGcTrG0Uv7QEKiAcJ01otF0EBQ_h'
             size='normal'
             onChange={handleSubmit(onSubmit)}
+            style={{ marginTop: '1.25rem' }}
           />
         </form>
       ) : submissionState === 'submitted' ? (
@@ -130,17 +131,17 @@ const ContactSection = styled.section`
   align-items: center;
   background: rgba(0, 0, 0, 0.1) url(/images/pattern-light-triangle.jpg);
   background-blend-mode: overlay;
-  padding: 40px 0 var(--defaultPadding);
+  padding: 2.5rem 0 var(--defaultPadding);
 
   form {
-    width: 750px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 750px;
   }
 
   label {
     display: block;
     text-transform: uppercase;
-    padding: 0 0 10px;
+    padding: 0 0 0.625rem;
   }
 
   input,
@@ -149,7 +150,7 @@ const ContactSection = styled.section`
     width: 100%;
     border: none;
     border-top: 2px solid var(--colorPrimary);
-    padding: 10px 0 10px 20px;
+    padding: 0.625rem 0 0.625rem 1.25rem;
 
     &::placeholder {
       font-size: 1.2rem;
@@ -158,38 +159,28 @@ const ContactSection = styled.section`
   }
 
   .form-input {
-    --gap: 40px;
+    --gap: 0;
     display: inline-block;
-    width: calc(50% - var(--gap));
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 1.25rem;
 
-    ${below.phone`
-      --gap: 0;
-      width: 100%;
+    ${above.desktop`
+      --gap: 2.5rem;
+      width: calc(50% - var(--gap));
     `}
 
     & + .form-input {
       margin-left: calc(var(--gap) * 2);
     }
-  }
+
 
   .form-textarea {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   textarea {
     display: inline-block;
-    height: 50px;
-  }
-
-  button {
-    background: none;
-    margin-bottom: 20px;
-    padding: 8px 15px;
-    border: 1px solid var(--colorPrimary);
-    text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
+    height: 3.125rem;
   }
 `
 

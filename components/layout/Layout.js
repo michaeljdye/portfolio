@@ -35,11 +35,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --colorLightGray: #fefefe;
             --colorWhite: #ffffff;
             --colorTextLight: #bbb;
-            --defaultPadding: 80px;
-
-            ${below.phone`
-            --defaultPadding: 60px;
-          `}
+            --defaultPadding: min(10vw, 80px);
           }
 
           .theme.dark {

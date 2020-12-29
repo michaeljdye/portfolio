@@ -9,7 +9,7 @@ import {
   faPhp,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { below } from '../../utils'
+import { above, below } from '../../utils'
 
 const Skills = () => {
   const icons = [faNodeJs, faPython, faPhp, faReact, faCss3, faHtml5]
@@ -19,7 +19,7 @@ const Skills = () => {
       <SkillsList>
         {icons.map((icon, i) => (
           <li key={i}>
-            <FontAwesomeIcon icon={icon} size='6x' />
+            <FontAwesomeIcon icon={icon} />
           </li>
         ))}
       </SkillsList>
@@ -30,47 +30,40 @@ const Skills = () => {
 const SkillsSection = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
 `
 
 const SkillsList = styled.ul`
-  --gap: 100px;
+  --gap: 1.25rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  width: 70%;
   list-style: none;
   padding: 0;
 
-  ${below.phone`
-    --gap: 20px;
+  ${above.desktop`
+    --gap: 6.25rem;
   `}
 
   li {
+    width: 50%;
     text-align: center;
 
-    ${below.tablet`    
-      {
-        width: calc(33.33% - var(--gap));
-      }
+    ${above.mini`    
+      width: 33.33%
     `}
 
-    & + li {
-    margin: 0 0 0 var(--gap);
-
-    ${below.tablet`
-      margin: var(--gap) 0 0 0;
-    `}
-    }
-
-    ${below.tablet`
-      margin: var(--gap) 0 0 0;
+    ${above.desktop`    
+      width: auto;
     `}
 
   svg {
-    ${below.tablet`
-      font-size: 5rem;
+    font-size: 5rem;
+
+    ${above.desktop`
+      font-size: 6rem;
     `}
   }
 `

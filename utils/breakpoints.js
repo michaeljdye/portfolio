@@ -4,6 +4,7 @@ const sizes = {
   desktop: 992,
   tablet: 1200,
   phone: 800,
+  mini: 350,
 }
 
 // Media Queries

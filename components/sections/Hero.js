@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import Header from '../layout/Header'
 import ButtonPrimary from '../buttons/ButtonPrimary'
-import { below } from '../../utils/breakpoints'
 
 const Hero = ({ heading, subheading }) => (
   <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
@@ -25,9 +24,8 @@ const Hero = ({ heading, subheading }) => (
 
 const HeroSection = styled.section`
   background: url(/images/pattern-dark-triangle.jpg) center center;
-  height: fit-content;
-  padding: 10px 0 ${({ bottomPadding = '10px' }) => bottomPadding};
-  border-bottom: 6px solid var(--colorPrimary);
+  padding: 2vw 0 ${({ bottomPadding = '2vw' }) => bottomPadding};
+  border-bottom: 0.375rem solid var(--colorPrimary);
 `
 
 const HeroContent = styled.div`
@@ -35,7 +33,7 @@ const HeroContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 3.75rem;
 
   h1,
   p {
@@ -44,12 +42,12 @@ const HeroContent = styled.div`
   }
 
   h1 {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
   }
 
   p {
     max-width: 90%;
-    margin: 0 0 20px;
+    margin: 0 0 1.25rem;
     font-size: max(2.5vw, 1.3rem);
   }
 `
@@ -58,7 +56,7 @@ const ButtonContainer = styled.div`
   display: flex;
 
   a + a {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 `
 

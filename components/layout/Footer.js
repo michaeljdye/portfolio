@@ -7,7 +7,7 @@ import {
 import Obfuscate from 'react-obfuscate'
 import { faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { below } from '../../utils'
+import { above } from '../../utils'
 
 const Footer = () => (
   <FooterSection>
@@ -66,12 +66,13 @@ const FooterSection = styled.div`
 
 const FooterContent = styled.div`
   display: flex;
-  justify-content: space-around;
-  padding: 60px 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.75rem 0;
 
-  ${below.phone`
-    flex-direction: column;
-    justify-content: center;
+  ${above.tablet`
+    flex-direction: row;
+    justify-content: space-around;
   `}
 
   h3 {
@@ -81,9 +82,9 @@ const FooterContent = styled.div`
       content: '';
       display: block;
       background: var(--colorPrimary);
-      width: 30px;
+      width: 30%;
       height: 2px;
-      margin: 10px auto 0;
+      margin: 0.625rem auto 0;
     }
   }
 
@@ -96,11 +97,11 @@ const FooterContent = styled.div`
     padding: 0;
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
 
     svg {
-      margin-right: 5px;
+      margin-right: 0.3125rem;
     }
   }
 
@@ -116,12 +117,13 @@ const FooterContent = styled.div`
 `
 
 const FooterLogo = styled.img`
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
   object-fit: contain;
+  margin: 0 auto;
 
-  ${below.phone`
-    margin: 0 auto;
+  ${above.tablet`
+    margin: 0;
   `}
 `
 
@@ -129,7 +131,7 @@ const FooterCopyright = styled.div`
   background: var(--colorDark);
   display flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   text-transform: uppercase;
 
   p {

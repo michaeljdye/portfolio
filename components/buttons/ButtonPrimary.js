@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { below } from '../../utils/breakpoints'
+import { above } from '../../utils/breakpoints'
 
 export const ButtonPrimary = ({
   color = 'light',
@@ -20,10 +20,10 @@ const Button = styled.button`
   display: inline-block;
   background: transparent;
   border: 1px solid var(--colorPrimary);
-  padding: 10px;
+  padding: 0.6em;
   color: ${({ dark }) => (dark ? 'var(--colorDark)' : 'var(--colorWhite)')};
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -34,8 +34,8 @@ const Button = styled.button`
   transition-property: color;
   transition-duration: 0.3s;
 
-  ${below.tablet`
-    font-size: 0.875rem;
+  ${above.desktop`
+    font-size: 1.125rem;
   `}
 
   &:before {
