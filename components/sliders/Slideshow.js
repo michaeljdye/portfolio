@@ -69,25 +69,6 @@ const Slideshow = ({ scenes }) => {
                     <li key={stackItem}>{stackItem}</li>
                   ))}
                 </Stack>
-                <ButtonContainer>
-                  {scenes[index].source && (
-                    <ButtonPrimary dark as='a' href={scenes[index].source}>
-                      View Source
-                    </ButtonPrimary>
-                  )}
-                  {scenes[index].demo && (
-                    <ButtonPrimary
-                      dark
-                      as='a'
-                      target='_blank'
-                      rel='nofollow noopenner'
-                      href={scenes[index].demo}
-                      priority={true}
-                    >
-                      View App
-                    </ButtonPrimary>
-                  )}
-                </ButtonContainer>
               </div>
               <SlideImgContainer>
                 <SlideImg
@@ -97,6 +78,24 @@ const Slideshow = ({ scenes }) => {
                   priority={true}
                 />
               </SlideImgContainer>
+              <ButtonContainer>
+                {scenes[index].source && (
+                  <ButtonPrimary dark as='a' href={scenes[index].source}>
+                    View Source
+                  </ButtonPrimary>
+                )}
+                {scenes[index].demo && (
+                  <ButtonPrimary
+                    dark
+                    as='a'
+                    target='_blank'
+                    rel='nofollow noopenner'
+                    href={scenes[index].demo}
+                  >
+                    View App
+                  </ButtonPrimary>
+                )}
+              </ButtonContainer>
             </SlideInner>
           </SlideContent>
         </AnimatePresence>
@@ -147,10 +146,12 @@ const SlideContent = styled.div`
 `
 
 const SlideInner = styled(motion.div)`
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
+  height: 350px;
 
   ${above.phone`
      flex-direction: row;
@@ -227,6 +228,7 @@ const RightArrow = styled(arrow)`
 
 const ButtonContainer = styled.div`
   position: absolute;
+  left: 9.375rem;
   bottom: -20%;
 
   a + a {
