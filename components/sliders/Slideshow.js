@@ -151,10 +151,11 @@ const SlideInner = styled(motion.div)`
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
-  height: 350px;
+  height: auto;
 
   ${above.phone`
      flex-direction: row;
+     height: 350px;
   `}
 `
 
