@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import scenes from '../../data/scenes.json'
 import { SectionHeading } from '../headings'
 import Slideshow from '../sliders/Slideshow'
+import { above } from '../../utils'
 
 const Apps = () => (
   <AppsSection id='apps'>
@@ -15,6 +16,11 @@ const Apps = () => (
 const AppsSection = styled.section`
   background: var(--colorLightGray);
   padding: 0 0 var(--defaultPadding);
+  margin-bottom: 20px;
+
+  ${above.tablet`
+      margin-bottom: 0;
+    `}
 `
 
 export default Apps

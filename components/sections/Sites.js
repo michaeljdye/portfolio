@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import { SectionHeading } from '../headings'
 import { ButtonPrimary } from '../buttons'
-import { below } from '../../utils'
+import { below, above } from '../../utils'
 import sites from '../../data/sites.json'
 
 const Sites = () => {
@@ -54,36 +54,31 @@ const SitesSection = styled.section`
 
 const SitesList = styled.ul`
   display: flex;
+  flex-direction: column;
   width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 
-  ${below.phone`
-    flex-direction: column;
+  ${above.phone`
+    flex-direction: row;
   `}
 `
 
 const Site = styled.li`
-  --gap: 15px;
+  --gap: 0.9375rem;
   position: relative;
-  height: 450px;
-  width: calc(100% - var(--gap));
+  height: 28.125rem;
+  width: 100%;
   border: 1px solid black;
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 
-  ${below.phone`
-    width: 100%;
+  ${above.phone`  
+    width: calc(100% - var(--gap));
   `}
-
-  & + li {
-    ${below.phone`
-      margin: 0;
-    `}
-  }
 
   img {
     width: 100%;
@@ -102,18 +97,10 @@ const SiteDescription = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 20px;
-  transform: translate3d(0, 150px, 0);
+  padding: 1.25rem;
+  transform: translate3d(0, 60%, 0);
   transition: all 0.5s;
   text-align: center;
-
-  ${below.tablet`
-    bottom: -20px;
-  `}
-
-  ${below.phone`
-    bottom: 10px;
-  `}
 
   &:hover {
     cursor: pointer;
@@ -136,11 +123,11 @@ const SiteDescription = styled.div`
 
 const Circle = styled.div`
   position: absolute;
-  top: -26px;
+  top: -1.625rem;
   background: var(--colorPrimary);
   border-radius: 50%;
   border: none;
-  padding: 10px;
+  padding: 0.625rem;
   color: var(--colorWhite);
 `
 

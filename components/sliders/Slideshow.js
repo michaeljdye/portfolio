@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { below, above } from '../../utils'
+import { above } from '../../utils'
 import { ButtonPrimary } from '../buttons'
 
 const Slideshow = ({ scenes }) => {
