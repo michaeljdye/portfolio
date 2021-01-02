@@ -14,13 +14,14 @@ const Slideshow = ({ scenes }) => {
 
   const variants = {
     enter: direction => ({
+      x: direction > 0 ? 100 : -100,
       opacity: 0,
       zIndex: 0,
     }),
-    center: { zIndex: 1, opacity: 1 },
+    center: { zIndex: 1, x: 0, opacity: 1 },
     exit: direction => ({
       zIndex: 0,
-
+      x: direction > 0 ? -100 : 100,
       opacity: 0,
     }),
   }
@@ -76,12 +77,11 @@ const Slideshow = ({ scenes }) => {
                   ))}
                 </Stack>
               </div>
-              <SlideImgContainer>
+              <SlideImgContainer leftOffset={scenes[index].offset}>
                 <SlideImg
                   src={scenes[index].image}
                   alt='Michael Dye'
                   width={scenes[index].width}
-                  priority={true}
                 />
               </SlideImgContainer>
               <ButtonContainer>
@@ -126,7 +126,7 @@ const SlideContent = styled.div`
   height: auto;
   padding: 2.5rem 0;
 
-  ${above.phone`
+  ${above.tablet`
     justify-content: flex-start;
     height: 21.875rem;
   `}
@@ -142,7 +142,7 @@ const SlideContent = styled.div`
     margin: 0 auto;
     text-align: center;
 
-    ${above.phone`
+    ${above.tablet`
       margin-left: 9.375rem;
       text-align: left;
     `}
@@ -157,7 +157,7 @@ const SlideInner = styled(motion.div)`
   width: 100%;
   height: auto;
 
-  ${above.phone`
+  ${above.tablet`
      flex-direction: row;
      height: 350px;
   `}
@@ -172,10 +172,10 @@ const SlideImgContainer = styled.div`
   position: static;
   margin: 0 auto 0.625rem;
   transform: translateY(0);
+  left: ${({ leftOffset }) => `${leftOffset}%`};
 
-  ${above.phone`
+  ${above.tablet`
       position: absolute;
-      left: 40%;
       top: 50%;
       transform: translateY(-50%);
   `}
@@ -188,7 +188,7 @@ const Stack = styled.ul`
   list-style: none;
   margin: 0;
 
-  ${above.phone`
+  ${above.tablet`
     justify-content: start;
   `}
 
@@ -208,33 +208,46 @@ const Stack = styled.ul`
 `
 
 const arrow = styled.button`
-  display: none;
   position: absolute;
-  top: 10.9375rem;
+  bottom: 50%;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
   color: var(--colorPrimary);
   z-index: 100;
-
-  ${above.phone`
-    display: block;
-  `}
 `
 
 const LeftArrow = styled(arrow)`
-  left: 3.125rem;
+  left: 0;
+
+  ${above.tablet`
+      left: 3.125rem;
+  `}
 `
 
 const RightArrow = styled(arrow)`
-  right: 3.125rem;
+  right: 0;
+
+  ${above.tablet`
+    right: 3.125rem;
+  `}
 `
 
 const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
   position: absolute;
-  left: 9.375rem;
+  left: 50%;
   bottom: -20%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  ${above.tablet`
+      justify-content: flex-start;
+      left: 9.375rem;
+      transform: translateX(0);
+  `}
 
   a + a {
     margin-left: 1.25rem;
