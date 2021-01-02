@@ -14,13 +14,13 @@ const Slideshow = ({ scenes }) => {
 
   const variants = {
     enter: direction => ({
-      x: direction > 0 ? 100 : -100,
       opacity: 0,
+      zIndex: 0,
     }),
-    center: { zIndex: 1, x: 0, opacity: 1 },
+    center: { zIndex: 1, opacity: 1 },
     exit: direction => ({
       zIndex: 0,
-      x: direction < 0 ? 100 : -100,
+
       opacity: 0,
     }),
   }
@@ -37,7 +37,7 @@ const Slideshow = ({ scenes }) => {
             className='left-arrow'
           />
         </LeftArrow>
-        <AnimatePresence custom={direction}>
+        <AnimatePresence custom={direction} exitBeforeEnter initial={false}>
           <SlideContent>
             <SlideInner
               key={scene}
@@ -57,7 +57,13 @@ const Slideshow = ({ scenes }) => {
                 }
               }}
               transition={{
-                x: { type: 'spring', stiffness: 100, bounce: 0, damping: 20 },
+                x: {
+                  type: 'spring',
+                  stiffness: 100,
+                  bounce: 0,
+                  damping: 20,
+                  duration: 0.1,
+                },
                 opacity: { duration: 0.2 },
               }}
             >
@@ -119,11 +125,9 @@ const SlideContent = styled.div`
   background: var(--colorMediumGray);
   height: auto;
   padding: 2.5rem 0;
-  overflow: hidden;
 
   ${above.phone`
     justify-content: flex-start;
-    overflow: visible;
     height: 21.875rem;
   `}
 
