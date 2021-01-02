@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { below } from '../../utils'
+import { below, above } from '../../utils'
 import { ButtonPrimary } from '../buttons'
 
 const Slideshow = ({ scenes }) => {
@@ -115,16 +115,17 @@ const Slideshow = ({ scenes }) => {
 
 const SlideContent = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   background: var(--colorMediumGray);
-  height: 350px;
-  padding: 40px 0;
+  height: auto;
+  padding: 2.5rem 0;
+  overflow: hidden;
 
-  ${below.phone`
-    display: flex;
-    justify-content: center;
-    height: auto;
-    overflow: hidden;
+  ${above.phone`
+    justify-content: flex-start;
+    overflow: visible;
+    height: 21.875rem;
   `}
 
   h3 {
@@ -135,22 +136,24 @@ const SlideContent = styled.div`
     display: inline-block;
     width: 90%;
     max-width: 300px;
-    margin-left: 150px;
+    margin: 0 auto;
+    text-align: center;
 
-    ${below.phone`
-      margin: 0 auto;
-      text-align: center;
+    ${above.phone`
+      margin-left: 9.375rem;
+      text-align: left;
     `}
   }
 `
 
 const SlideInner = styled(motion.div)`
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   width: 100%;
 
-  ${below.phone`
-     flex-direction: column-reverse;
+  ${above.phone`
+     flex-direction: row;
   `}
 `
 
@@ -160,23 +163,27 @@ const SlideImg = styled.img`
 `
 
 const SlideImgContainer = styled.div`
-  margin: 0 auto 650px;
-  transform: translateY(50%);
+  position: static;
+  margin: 0 auto 0.625rem;
+  transform: translateY(0);
 
-  ${below.phone`
-      margin: 0 auto 10px;
-      transform: translateY(0);
+  ${above.phone`
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      transform: translateY(-50%);
   `}
 `
 
 const Stack = styled.ul`
   display: flex;
+  justify-content: center;
   padding: 0;
   list-style: none;
   margin: 0;
 
-  ${below.phone`
-    justify-content: center;
+  ${above.phone`
+    justify-content: start;
   `}
 
   li {
@@ -189,14 +196,15 @@ const Stack = styled.ul`
 
   li + li {
     border-left: 1px solid black;
-    margin-left: 10px;
-    padding-left: 10px;
+    margin-left: 0.625rem;
+    padding-left: 0.625rem;
   }
 `
 
 const arrow = styled.button`
+  display: none;
   position: absolute;
-  top: 175px;
+  top: 10.9375rem;
   background: none;
   border: none;
   outline: none;
@@ -204,17 +212,17 @@ const arrow = styled.button`
   color: var(--colorPrimary);
   z-index: 100;
 
-  ${below.phone`
-    display: none;
+  ${above.phone`
+    display: block;
   `}
 `
 
 const LeftArrow = styled(arrow)`
-  left: 50px;
+  left: 3.125rem;
 `
 
 const RightArrow = styled(arrow)`
-  right: 50px;
+  right: 3.125rem;
 `
 
 const ButtonContainer = styled.div`
@@ -222,7 +230,7 @@ const ButtonContainer = styled.div`
   bottom: -20%;
 
   a + a {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 `
 
