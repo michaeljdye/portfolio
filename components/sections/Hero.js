@@ -23,7 +23,7 @@ const Hero = ({ heading, subheading }) => (
 )
 
 const HeroSection = styled.section`
-  background: url(/images/pattern-dark-triangle.jpg) center center;
+  background: var(--heroBackground);
   padding: 2vw 0 ${({ bottomPadding = '2vw' }) => bottomPadding};
   border-bottom: 0.375rem solid var(--colorPrimary);
 `
@@ -37,7 +37,7 @@ const HeroContent = styled.div`
 
   h1,
   p {
-    color: white;
+    color: var(--colorWhite);
     text-align: center;
   }
 

@@ -86,7 +86,13 @@ const Slideshow = ({ scenes }) => {
               </SlideImgContainer>
               <ButtonContainer>
                 {scenes[index].source && (
-                  <ButtonPrimary dark as='a' href={scenes[index].source}>
+                  <ButtonPrimary
+                    dark
+                    as='a'
+                    target='_blank'
+                    rel='nofollow noopenner'
+                    href={scenes[index].source}
+                  >
                     View Source
                   </ButtonPrimary>
                 )}
@@ -122,7 +128,7 @@ const SlideContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--colorMediumGray);
+  background: var(--slideshowBackground);
   height: auto;
   padding: 2.5rem 0;
 

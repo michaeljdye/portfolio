@@ -36,10 +36,22 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --colorWhite: #ffffff;
             --colorTextLight: #bbb;
             --defaultPadding: min(10vw, 80px);
+            --heroBackground: url(/images/pattern-dark-triangle.jpg) center
+              center;
+            --bioBackground: var(----colorLightGray);
+            --bioColor: var(--colorDark);
+            --appsBackground: var(----colorLightGray);
+            --appsColor: var(--colorDark);
+            --slideshowBackground: var(----colorMediumGray);
           }
 
           .theme.dark {
-            --colorPrimary: #181818;
+            --heroBackground: var(--colorDark);
+            --bioBackground: var(--colorDark);
+            --bioColor: var(--colorWhite);
+            --appsBackground: var(--colorDark);
+            --appsColor: var(--colorWhite);
+            --slideshowBackground: var(--colorGray);
           }
 
           ${emotionNormalize}
@@ -103,7 +115,9 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
       />
       <div ref={containerRef} className='theme'>
         <Hero heading={heading} subheading={subheading} />
-        {/* <button onClick={handleThemeChange}>Change theme</button> */}
+        {/*  <button style={{ position: 'fixed' }} onClick={handleThemeChange}>
+          Change theme
+        </button> */}
         {children}
         <Footer />
       </div>
