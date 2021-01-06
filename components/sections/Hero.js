@@ -1,9 +1,23 @@
 import styled from '@emotion/styled'
+import { faLightbulb as faLight } from '@fortawesome/free-solid-svg-icons'
+import { faLightbulb } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Header from '../layout/Header'
 import ButtonPrimary from '../buttons/ButtonPrimary'
+import { ToggleButton } from '../buttons'
 
-const Hero = ({ heading, subheading }) => (
+const Hero = ({ heading, subheading, handleThemeChange }) => (
   <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
+    <div style={{ marginLeft: 20 }}>
+      <ToggleButton
+        onChange={handleThemeChange}
+        icons={{
+          checked: <FontAwesomeIcon icon={faLight} />,
+          unchecked: <FontAwesomeIcon icon={faLightbulb} />,
+        }}
+        defaultChecked={true}
+      />
+    </div>
     <Header />
     {heading && (
       <HeroContent>
