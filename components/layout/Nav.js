@@ -140,7 +140,7 @@ const NavItem = styled.li`
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: white;
+  color: var(--navTextColor);
   transition: all 0.3s ease;
 
   &:hover {

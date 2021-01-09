@@ -21,7 +21,8 @@ const Button = styled.button`
   background: transparent;
   border: 1px solid var(--colorPrimary);
   padding: 0.6em;
-  color: ${({ dark }) => (dark ? 'var(--colorDark)' : 'var(--colorWhite)')};
+  color: ${({ dark }) =>
+    dark ? 'var(--buttonColorDark)' : 'var(--colorWhite)'};
   font-weight: 500;
   font-size: 0.875rem;
   text-transform: uppercase;

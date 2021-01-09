@@ -29,9 +29,10 @@ const CTASection = styled.div`
   flex-direction: column;
   align-items: center;
   align-items: center;
-  background: var(--colorLightGray);
+  background: var(--ctaBackground);
   padding: var(--defaultPadding) 0;
   text-align: center;
+  color: var(--ctaTextColor);
 
   h3 {
     margin-bottom: 1.25rem;

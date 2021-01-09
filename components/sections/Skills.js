@@ -30,6 +30,7 @@ const Skills = () => {
 const SkillsSection = styled.div`
   display: flex;
   justify-content: center;
+  background: var(--skillsBackground);
   padding: 1.25rem 0;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
 `
@@ -61,6 +62,7 @@ const SkillsList = styled.ul`
 
   svg {
     font-size: 5rem;
+    color: var(--skillsIconColor);
 
     ${above.desktop`
       font-size: 6rem;

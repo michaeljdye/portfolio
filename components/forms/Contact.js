@@ -129,9 +129,10 @@ const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1) url(/images/pattern-light-triangle.jpg);
+  background: var(--contactBackground);
   background-blend-mode: overlay;
   padding: 2.5rem 0 var(--defaultPadding);
+  color: var(--contactTextColor);
 
   form {
     width: 90%;

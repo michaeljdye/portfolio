@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import { faLightbulb as faLight } from '@fortawesome/free-solid-svg-icons'
-import { faLightbulb } from '@fortawesome/free-regular-svg-icons'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Header from '../layout/Header'
 import ButtonPrimary from '../buttons/ButtonPrimary'
@@ -12,8 +11,8 @@ const Hero = ({ heading, subheading, handleThemeChange }) => (
       <ToggleButton
         onChange={handleThemeChange}
         icons={{
-          checked: <FontAwesomeIcon icon={faLight} />,
-          unchecked: <FontAwesomeIcon icon={faLightbulb} />,
+          checked: <FontAwesomeIcon icon={faSun} color='#fff' size='xs' />,
+          unchecked: <FontAwesomeIcon icon={faMoon} color='#fff' size='xs' />,
         }}
         defaultChecked={true}
       />
@@ -24,10 +23,10 @@ const Hero = ({ heading, subheading, handleThemeChange }) => (
         <h1>{heading}</h1>
         <p>{subheading}</p>
         <ButtonContainer>
-          <ButtonPrimary as='a' href='/pdfs/resume.pdf'>
+          <ButtonPrimary dark as='a' href='/pdfs/resume.pdf'>
             View Resume
           </ButtonPrimary>
-          <ButtonPrimary as='a' href='#contact'>
+          <ButtonPrimary dark as='a' href='#contact'>
             Contact Me
           </ButtonPrimary>
         </ButtonContainer>
@@ -51,7 +50,7 @@ const HeroContent = styled.div`
 
   h1,
   p {
-    color: var(--colorWhite);
+    color: var(--heroTextColor);
     text-align: center;
   }
 

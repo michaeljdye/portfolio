@@ -28,6 +28,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
         styles={css`
           .theme {
             --colorPrimary: #04f5ca;
+            --colorPrimaryDark: #1f1f1f;
             --colorSecondary: #05caa7;
             --colorDark: #111111;
             --colorGray: #262626;
@@ -36,22 +37,47 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --colorWhite: #ffffff;
             --colorTextLight: #bbb;
             --defaultPadding: min(10vw, 80px);
-            --heroBackground: url(/images/pattern-dark-triangle.jpg) center
-              center;
-            --bioBackground: var(----colorLightGray);
+            --heroBackground: url(/images/pattern-light-triangle.jpg);
+            --heroTextColor: var(--colorDark);
+            --bioBackground: var(--colorLightGray);
             --bioColor: var(--colorDark);
             --appsBackground: var(----colorLightGray);
             --appsColor: var(--colorDark);
-            --slideshowBackground: var(----colorMediumGray);
+            --slideshowBackground: var(--colorMediumGray);
+            --slideshowTextColor: var(--colorDark);
+            --sitesBackground: var(--colorWhite);
+            --sitesTextColor: var(--colorDark);
+            --ctaBackground: var(--colorWhite);
+            --ctaTextColor: var(--colorDark);
+            --skillsBackground: var(--colorWhite);
+            --skillsIconColor: var(--colorDark);
+            --contactBackground: rgba(0, 0, 0, 0.1)
+              url(/images/pattern-light-triangle.jpg);
+            --contactTextColor: var(--colorDark);
+            --buttonColorDark: var(--colorDark);
+            --navTextColor: var(--colorDark);
           }
 
           .theme.dark {
-            --heroBackground: var(--colorDark);
-            --bioBackground: var(--colorDark);
+            --heroBackground: url(/images/pattern-dark-triangle.jpg) center
+              center;
+            --heroTextColor: var(--colorWhite);
+            --bioBackground: var(--colorPrimaryDark);
             --bioColor: var(--colorWhite);
-            --appsBackground: var(--colorDark);
+            --appsBackground: var(--colorGray);
             --appsColor: var(--colorWhite);
-            --slideshowBackground: var(--colorGray);
+            --slideshowBackground: var(--colorPrimaryDark);
+            --slideshowTextColor: var(--colorWhite);
+            --sitesBackground: var(--colorGray);
+            --sitesTextColor: var(--colorWhite);
+            --ctaBackground: var(--colorGray);
+            --ctaTextColor: var(--colorWhite);
+            --skillsBackground: var(--colorPrimaryDark);
+            --skillsIconColor: var(--colorWhite);
+            --contactBackground: url(/images/pattern-dark-triangle.jpg);
+            --contactTextColor: var(--colorWhite);
+            --buttonColorDark: var(--colorWhite);
+            --navTextColor: var(--colorWhite);
           }
 
           ${emotionNormalize}

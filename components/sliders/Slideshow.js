@@ -131,6 +131,7 @@ const SlideContent = styled.div`
   background: var(--slideshowBackground);
   height: auto;
   padding: 2.5rem 0;
+  color: var(--slideshowTextColor);
 
   ${above.tablet`
     justify-content: flex-start;

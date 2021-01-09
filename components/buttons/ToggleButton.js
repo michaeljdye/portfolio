@@ -53,23 +53,23 @@ const ToggleS = styled.div`
     height: 24px;
     padding: 0;
     border-radius: 30px;
-    background-color: #fff;
+    background-color: rgb(110, 64, 201);
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
 
   .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background-color: #fff;
+    background-color: rgb(110, 64, 201);
   }
 
   .react-toggle--checked .react-toggle-track {
-    background-color: #fff;
+    background-color: #111;
   }
 
   .react-toggle--checked:hover:not(.react-toggle--disabled)
     .react-toggle-track {
-    background-color: #fff;
+    background-color: #111;
   }
 
   .react-toggle-track-check {
