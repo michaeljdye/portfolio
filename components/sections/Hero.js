@@ -7,7 +7,7 @@ import { ToggleButton } from '../buttons'
 
 const Hero = ({ heading, subheading, handleThemeChange }) => (
   <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
-    <div style={{ marginLeft: 20 }}>
+    <ToggleContainer>
       <ToggleButton
         onChange={handleThemeChange}
         icons={{
@@ -16,7 +16,7 @@ const Hero = ({ heading, subheading, handleThemeChange }) => (
         }}
         defaultChecked={true}
       />
-    </div>
+    </ToggleContainer>
     <Header />
     {heading && (
       <HeroContent>
@@ -71,6 +71,10 @@ const ButtonContainer = styled.div`
   a + a {
     margin-left: 1.25rem;
   }
+`
+
+const ToggleContainer = styled.div`
+  margin: 10px 0 0 20px;
 `
 
 export default Hero
