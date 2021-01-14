@@ -103,6 +103,10 @@ const SiteDescription = styled.div`
   transition: all 0.5s;
   text-align: center;
 
+  ${above.tablet`
+    transform: translate3d(0, 55%, 0);
+  `}
+
   &:hover {
     cursor: pointer;
     transform: translate3d(0, 0, 0);
