@@ -32,7 +32,7 @@ const Bio = () => (
 
 const BioSection = styled.section`
   background: var(--bioBackground);
-  padding: var(--defaultPadding) 0;
+  padding: var(--defaultPadding) 0 0 0;
   color: var(--bioColor);
 `
 

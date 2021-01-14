@@ -8,7 +8,7 @@ import { above } from '../../utils'
 
 const Apps = () => (
   <AppsSection id='apps'>
-    <SectionHeading marginBottom='120'>
+    <SectionHeading marginBottom='80'>
       engage your users <h2>Web Apps</h2>
     </SectionHeading>
     {scenes.map((scene, i) => {
@@ -61,7 +61,7 @@ const Apps = () => (
 
 const AppsSection = styled.section`
   background: var(--appsBackground);
-  padding: var(--defaultPadding) 0 var(--defaultPadding);
+  padding: var(--defaultPadding) 0 0 0;
   margin-bottom: 20px;
   color: var(--appsColor);
 
