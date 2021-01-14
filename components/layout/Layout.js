@@ -37,12 +37,16 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --colorWhite: #ffffff;
             --colorTextLight: #bbb;
             --defaultPadding: min(10vw, 80px);
-            --heroBackground: url(/images/pattern-light-triangle.jpg);
-            --heroTextColor: var(--colorDark);
+            --heroBackground: url(/images/pattern-dark-triangle.jpg) center
+              center;
+            --heroTextColor: var(--colorWhite);
             --bioBackground: var(--colorLightGray);
             --bioColor: var(--colorDark);
             --appsBackground: var(----colorLightGray);
             --appsColor: var(--colorDark);
+            --appSlideTextBackground: var(--colorMediumGray);
+            --appSlideText: var(--colorDark);
+            --appStackText: var(--colorDark);
             --slideshowBackground: var(--colorMediumGray);
             --slideshowTextColor: var(--colorDark);
             --sitesBackground: var(--colorWhite);
@@ -54,8 +58,8 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --contactBackground: rgba(0, 0, 0, 0.1)
               url(/images/pattern-light-triangle.jpg);
             --contactTextColor: var(--colorDark);
-            --buttonColorDark: var(--colorDark);
-            --navTextColor: var(--colorDark);
+            --buttonColorDark: var(--colordark);
+            --navTextColor: var(--colorWhite);
           }
 
           .theme.dark {
@@ -66,6 +70,9 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --bioColor: var(--colorWhite);
             --appsBackground: var(--colorGray);
             --appsColor: var(--colorWhite);
+            --appSlideTextBackground: var(--colorGray);
+            --appSlideText: var(--colorWhite);
+            --appStackText: var(--colorWhite);
             --slideshowBackground: var(--colorPrimaryDark);
             --slideshowTextColor: var(--colorWhite);
             --sitesBackground: var(--colorGray);

@@ -7,26 +7,34 @@ import { ToggleButton } from '../buttons'
 
 const Hero = ({ heading, subheading, handleThemeChange }) => (
   <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
-    <ToggleContainer>
+    {/* <ToggleContainer>
       <ToggleButton
         onChange={handleThemeChange}
         icons={{
-          checked: <FontAwesomeIcon icon={faSun} color='#fff' size='xs' />,
-          unchecked: <FontAwesomeIcon icon={faMoon} color='#fff' size='xs' />,
+          checked: (
+            <FontAwesomeIcon icon={faSun} color='var(--colorDark)' size='xs' />
+          ),
+          unchecked: (
+            <FontAwesomeIcon
+              icon={faMoon}
+              color='var(--colorWhite)'
+              size='xs'
+            />
+          ),
         }}
         defaultChecked={true}
       />
-    </ToggleContainer>
+    </ToggleContainer> */}
     <Header />
     {heading && (
       <HeroContent>
         <h1>{heading}</h1>
         <p>{subheading}</p>
         <ButtonContainer>
-          <ButtonPrimary dark as='a' href='/pdfs/resume.pdf'>
+          <ButtonPrimary as='a' href='/pdfs/resume.pdf'>
             View Resume
           </ButtonPrimary>
-          <ButtonPrimary dark as='a' href='#contact'>
+          <ButtonPrimary as='a' href='#contact'>
             Contact Me
           </ButtonPrimary>
         </ButtonContainer>
@@ -37,6 +45,7 @@ const Hero = ({ heading, subheading, handleThemeChange }) => (
 
 const HeroSection = styled.section`
   background: var(--heroBackground);
+  background-blend-mode: overlay;
   padding: 2vw 0 ${({ bottomPadding = '2vw' }) => bottomPadding};
   border-bottom: 0.375rem solid var(--colorPrimary);
 `

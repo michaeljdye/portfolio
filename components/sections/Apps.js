@@ -3,6 +3,7 @@ import scenes from '../../data/scenes.json'
 import { SectionHeading } from '../headings'
 import Slideshow from '../sliders/Slideshow'
 import { OneByTwo } from '../grids'
+import { ButtonPrimary } from '../buttons'
 import { above } from '../../utils'
 
 const Apps = () => (
@@ -18,11 +19,35 @@ const Apps = () => (
           <SlideText reverse={isReverse}>
             <h3>{scene.title}</h3>
             <p>{scene.description}</p>
-            <Stack>
+            <Stack reverse={isReverse}>
               {scene.stack.map(stackItem => (
                 <li key={stackItem}>{stackItem}</li>
               ))}
             </Stack>
+            <ButtonContainer>
+              {scene.source && (
+                <ButtonPrimary
+                  dark
+                  as='a'
+                  target='_blank'
+                  rel='nofollow noopenner'
+                  href={scene.source}
+                >
+                  View Source
+                </ButtonPrimary>
+              )}
+              {scene.demo && (
+                <ButtonPrimary
+                  dark
+                  as='a'
+                  target='_blank'
+                  rel='nofollow noopenner'
+                  href={scene.demo}
+                >
+                  View App
+                </ButtonPrimary>
+              )}
+            </ButtonContainer>
           </SlideText>
           <SlideImgContainer>
             <img src={scene.image} alt='' />
@@ -51,10 +76,16 @@ const SlideText = styled.div`
   justify-content: center;
   align-items: center;
   background: ${({ reverse }) =>
-    reverse ? 'var(--colorGray)' : 'var(--colorMediumGray)'};
-  width: 50%;
+    reverse ? 'var(--colorGray)' : 'var(--appSlideTextBackground)'};
+  width: 100%;
+  height: 400px;
   color: ${({ reverse }) =>
-    reverse ? 'var(--colorWhite)' : 'var(--colorDark)'};
+    reverse ? 'var(--colorWhite)' : 'var(--appSlideText)'};
+
+  ${above.phone`
+    width: 50%;
+    height: auto;
+  `}
 
   p {
     width: 90%;
@@ -64,10 +95,20 @@ const SlideText = styled.div`
 `
 
 const SlideImgContainer = styled.div`
-  width: 50%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+
+  ${above.phone`
+    display: block;
+    width: 50%;
+    height: auto
+  `}
 
   img {
-    width: 100%;
+    max-width: 100%;
   }
 `
 
@@ -86,9 +127,21 @@ const Stack = styled.div`
   }
 
   li + li {
-    border-left: 1px solid black;
+    border-left: 1px solid
+      ${({ reverse }) =>
+        reverse ? 'var(--colorWhite)' : 'var(--appStackText)'};
     margin-left: 0.625rem;
     padding-left: 0.625rem;
+  }
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  a + a {
+    margin-left: 1.25rem;
   }
 `
 
