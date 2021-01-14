@@ -26,6 +26,10 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
       </Head>
       <Global
         styles={css`
+          html {
+            font-size: 16px;
+          }
+
           .theme {
             --colorPrimary: #04f5ca;
             --colorPrimaryDark: #1f1f1f;
