@@ -24,7 +24,7 @@ const Sites = () => {
         grow your business <h2>Marketing Sites</h2>
       </SectionHeading>
       <SitesList>
-        {mktSites.map(({ id, title, description, link, image, open }) => (
+        {mktSites.map(({ id, title, description, slug, image, open }) => (
           <Site key={id}>
             <img src={image} alt='Placeholder' />
             <SiteDescription
@@ -36,8 +36,8 @@ const Sites = () => {
               </Circle>
               <h3>{title}</h3>
               <p>{description}</p>
-              <ButtonPrimary as='a' href='/#contact'>
-                Contact Me
+              <ButtonPrimary as='a' href={`/project/${slug}`}>
+                Learn More
               </ButtonPrimary>
             </SiteDescription>
           </Site>

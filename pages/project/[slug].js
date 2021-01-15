@@ -1,20 +1,27 @@
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-const glob = require('glob')
+import glob from 'glob'
+import styled from '@emotion/styled'
 import Layout from '../../components/layout/Layout'
 
 export default function BlogTemplate(props) {
   return (
     <Layout pageTitle={props.frontmatter.title} siteTitle={props.siteTitle}>
-      <article>
+      <ArticleS>
         <h1>{props.frontmatter.title}</h1>
         <div>
           <ReactMarkdown source={props.markdownBody} />
         </div>
-      </article>
+      </ArticleS>
     </Layout>
   )
 }
+
+const ArticleS = styled.article`
+  width: 88%;
+  max-width: 900px;
+  margin: 20px auto;
+`
 
 export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params
@@ -41,7 +48,7 @@ export async function getStaticPaths() {
   )
 
   // create paths with `slug` param
-  const paths = blogSlugs.map(slug => `/blog/${slug}`)
+  const paths = blogSlugs.map(slug => `/project/${slug}`)
 
   return {
     paths,

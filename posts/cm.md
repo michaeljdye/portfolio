@@ -1,5 +1,5 @@
 ---
-title: 'Test post'
+title: 'Campaign Monitor'
 author: Michael Dye
 date: '2020-12-12'
 hero_image: https://via.placeholder.com/1600x800/222
