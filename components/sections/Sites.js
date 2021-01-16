@@ -36,8 +36,8 @@ const Sites = () => {
               </Circle>
               <h3>{title}</h3>
               <p>{description}</p>
-              <ButtonPrimary as='a' href={`/project/${slug}`}>
-                Learn More
+              <ButtonPrimary as='a' href='/#contact'>
+                Contact Me
               </ButtonPrimary>
             </SiteDescription>
           </Site>
