@@ -75,12 +75,10 @@ const SlideText = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${({ reverse }) =>
-    reverse ? 'var(--colorGray)' : 'var(--appSlideTextBackground)'};
+  background: var(--appSlideTextBackground);
   width: 100%;
   height: 400px;
-  color: ${({ reverse }) =>
-    reverse ? 'var(--colorWhite)' : 'var(--appSlideText)'};
+  color: var(--appSlideText);
 
   ${above.phone`
     width: 50%;

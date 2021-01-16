@@ -19,7 +19,7 @@ export const ButtonPrimary = ({
 const Button = styled.button`
   display: inline-block;
   background: transparent;
-  border: 1px solid var(--colorPrimary);
+  border: 2px solid var(--colorPrimary);
   padding: 0.6em;
   color: ${({ dark }) =>
     dark ? 'var(--buttonColorDark)' : 'var(--colorWhite)'};

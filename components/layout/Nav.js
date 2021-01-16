@@ -42,7 +42,7 @@ const liVariants = {
   closed: { opacity: 0 },
 }
 
-const Nav = () => {
+const Nav = ({ isDark }) => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const router = useRouter()
 
@@ -59,7 +59,11 @@ const Nav = () => {
                 <Link href='/'>
                   <a>
                     <Logo
-                      src='/images/michael-dye-logo.png'
+                      src={
+                        isDark
+                          ? '/images/michael-dye-logo.png'
+                          : '/images/michael-dye-logo-dark.png'
+                      }
                       alt='Michael Dye'
                     />
                   </a>

@@ -5,43 +5,49 @@ import Header from '../layout/Header'
 import ButtonPrimary from '../buttons/ButtonPrimary'
 import { ToggleButton } from '../buttons'
 
-const Hero = ({ heading, subheading, handleThemeChange }) => (
-  <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
-    {/* <ToggleContainer>
-      <ToggleButton
-        onChange={handleThemeChange}
-        icons={{
-          checked: (
-            <FontAwesomeIcon icon={faSun} color='var(--colorDark)' size='xs' />
-          ),
-          unchecked: (
-            <FontAwesomeIcon
-              icon={faMoon}
-              color='var(--colorWhite)'
-              size='xs'
-            />
-          ),
-        }}
-        defaultChecked={true}
-      />
-    </ToggleContainer> */}
-    <Header />
-    {heading && (
-      <HeroContent>
-        <h1>{heading}</h1>
-        <p>{subheading}</p>
-        <ButtonContainer>
-          <ButtonPrimary as='a' href='/pdfs/resume.pdf'>
-            View Resume
-          </ButtonPrimary>
-          <ButtonPrimary as='a' href='#contact'>
-            Contact Me
-          </ButtonPrimary>
-        </ButtonContainer>
-      </HeroContent>
-    )}
-  </HeroSection>
-)
+const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
+  return (
+    <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
+      <ToggleContainer>
+        <ToggleButton
+          onChange={handleThemeChange}
+          icons={{
+            checked: (
+              <FontAwesomeIcon
+                icon={faSun}
+                color='var(--colorWhite)'
+                size='xs'
+              />
+            ),
+            unchecked: (
+              <FontAwesomeIcon
+                icon={faMoon}
+                color='var(--colorWhite)'
+                size='xs'
+              />
+            ),
+          }}
+          defaultChecked={true}
+        />
+      </ToggleContainer>
+      <Header isDark={isDark} />
+      {heading && (
+        <HeroContent>
+          <h1>{heading}</h1>
+          <p>{subheading}</p>
+          <ButtonContainer>
+            <ButtonPrimary dark as='a' href='/pdfs/resume.pdf'>
+              View Resume
+            </ButtonPrimary>
+            <ButtonPrimary dark as='a' href='#contact'>
+              Contact Me
+            </ButtonPrimary>
+          </ButtonContainer>
+        </HeroContent>
+      )}
+    </HeroSection>
+  )
+}
 
 const HeroSection = styled.section`
   background: var(--heroBackground);

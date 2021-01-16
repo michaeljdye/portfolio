@@ -64,12 +64,12 @@ const ToggleS = styled.div`
   }
 
   .react-toggle--checked .react-toggle-track {
-    background-color: var(--colorWhite);
+    background-color: var(--colorDark);
   }
 
   .react-toggle--checked:hover:not(.react-toggle--disabled)
     .react-toggle-track {
-    background-color: var(--colorWhite);
+    background-color: var(--colorDark);
   }
 
   .react-toggle-track-check {

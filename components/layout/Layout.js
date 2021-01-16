@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Head from 'next/head'
 import { css, Global } from '@emotion/core'
 import emotionNormalize from 'emotion-normalize'
@@ -7,10 +7,12 @@ import Hero from '../sections/Hero'
 import Footer from './Footer'
 
 const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
+  const [isDark, setIsDark] = useState(false)
   const containerRef = useRef()
 
   const handleThemeChange = () => {
     containerRef.current.classList.toggle('dark')
+    setIsDark(prevState => !prevState)
   }
 
   return (
@@ -41,9 +43,9 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --colorWhite: #ffffff;
             --colorTextLight: #bbb;
             --defaultPadding: min(10vw, 80px);
-            --heroBackground: url(/images/pattern-dark-triangle.jpg) center
+            --heroBackground: url(/images/pattern-light-triangle.jpg) center
               center;
-            --heroTextColor: var(--colorWhite);
+            --heroTextColor: var(--colorDark);
             --bioBackground: var(--colorLightGray);
             --bioColor: var(--colorDark);
             --appsBackground: var(----colorLightGray);
@@ -155,6 +157,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           heading={heading}
           subheading={subheading}
           handleThemeChange={handleThemeChange}
+          isDark={isDark}
         />
         {children}
         <Footer />

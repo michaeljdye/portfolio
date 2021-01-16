@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import Nav from './Nav'
 
-const Header = () => (
+const Header = ({ isDark }) => (
   <HeaderSection>
-    <Nav />
+    <Nav isDark={isDark} />
   </HeaderSection>
 )
 
