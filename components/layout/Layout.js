@@ -65,7 +65,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
               url(/images/pattern-light-triangle.jpg);
             --contactTextColor: var(--colorDark);
             --buttonColorDark: var(--colordark);
-            --navTextColor: var(--colorWhite);
+            --navTextColor: var(--colorDark);
           }
 
           .theme.dark {
