@@ -72,7 +72,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --heroBackground: url(/images/pattern-dark-triangle.jpg) center
               center;
             --heroTextColor: var(--colorWhite);
-            --bioBackground: var(--colorPrimaryDark);
+            --bioBackground: var(--colorGray);
             --bioColor: var(--colorWhite);
             --appsBackground: var(--colorGray);
             --appsColor: var(--colorWhite);
