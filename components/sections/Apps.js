@@ -15,7 +15,7 @@ const Apps = () => (
       const isReverse = i % 2 === 0 ? true : false
 
       return (
-        <OneByTwo reverse={isReverse}>
+        <OneByTwo key={scene.title} reverse={isReverse}>
           <SlideText reverse={isReverse}>
             <h3>{scene.title}</h3>
             <p>{scene.description}</p>
