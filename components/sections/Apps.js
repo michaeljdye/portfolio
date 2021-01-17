@@ -62,7 +62,6 @@ const Apps = () => (
 const AppsSection = styled.section`
   background: var(--appsBackground);
   padding: var(--defaultPadding) 0 0 0;
-  margin-bottom: 20px;
   color: var(--appsColor);
 
   ${above.tablet`

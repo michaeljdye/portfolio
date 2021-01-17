@@ -171,6 +171,10 @@ const MenuBtn = styled(Menu)`
       top: 40px;
       left: 20px;
     `}
+
+  path {
+    fill: var(--menuBtnColor);
+  }
 `
 
 const CloseButton = styled.button`
