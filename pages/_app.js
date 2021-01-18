@@ -4,7 +4,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
-
+import '@fortawesome/fontawesome-svg-core/styles.css'
 library.add(faChevronLeft, faChevronRight)
 
 function MyApp({ Component, pageProps }) {
