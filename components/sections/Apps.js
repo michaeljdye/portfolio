@@ -76,12 +76,11 @@ const SlideText = styled.div`
   align-items: center;
   background: var(--appSlideTextBackground);
   width: 100%;
-  height: 400px;
+  padding: 2rem 0;
   color: var(--appSlideText);
 
   ${above.phone`
     width: 50%;
-    height: auto;
   `}
 
   p {
@@ -95,17 +94,16 @@ const SlideImgContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 400px;
   text-align: center;
 
   ${above.phone`
-    display: block;
     width: 50%;
-    height: auto
   `}
 
   img {
     max-width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
   }
 `
 

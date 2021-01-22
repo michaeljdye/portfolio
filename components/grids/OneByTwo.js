@@ -8,7 +8,10 @@ export const OneByTwo = ({ children, reverse, background }) => {
 
 const OneByTwoS = styled.div`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'reverse')};
   background: var(--colorWhite);
+
+  ${below.phone`
+      flex-direction: column-reverse;
+  `}
 `
