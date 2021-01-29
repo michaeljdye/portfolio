@@ -36,8 +36,8 @@ const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
           <h1>{heading}</h1>
           <p>{subheading}</p>
           <ButtonContainer>
-            <ButtonPrimary dark as='a' href='/pdfs/resume.pdf'>
-              View Resume
+            <ButtonPrimary dark as='a' href='/#about'>
+              Learn More
             </ButtonPrimary>
             <ButtonPrimary dark as='a' href='#contact'>
               Contact Me
