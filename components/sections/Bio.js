@@ -15,15 +15,21 @@ const Bio = () => (
           hello, my name is <h2>MIchael Dye</h2>
         </SectionHeading>
         <p>
-          I use modern web technologies to build excellent user interfaces.
-          While I specialize in the frontend, I also have strong knowledge of
-          the backend, having built apps using Node.js, Express and MongoDB.
-        </p>
-        <p>
-          I enjoy learning new technologies and am continuously focused on
-          adding new libraries, frameworks, languages, and design patterns to my
-          toolbox. I also have plenty of experience building marketing sites for
-          clients on popular CMSs, such as WordPress and Drupal.
+          I am a <em>Full Stack Developer</em> with{' '}
+          <strong>7+ years in tech</strong> and <strong>3+ years</strong> of
+          experience building engaging, performant, and accessible websites and
+          applications. I have...
+          <ul>
+            <li>🔧 Built and shipped 4+ commercial SaaS applications</li>
+            <li>
+              👨‍💻 Developed features for enterprise marketing sites for Emma,
+              Campaign Monitor, Delivra, and Nissan.
+            </li>
+            <li>
+              👨‍💼 And led 100+ web development projects for enterprises and small
+              businesses.
+            </li>
+          </ul>
         </p>
       </BioContent>
     </BioInner>
@@ -62,12 +68,22 @@ const BioImg = styled.img`
 `
 
 const BioContent = styled.div`
-  width: 420px;
+  width: 450px;
   max-width: 100%;
 
   ${above.desktop`
       margin-left: auto;
   `}
+
+  ul {
+    list-style: none;
+    margin: 20px 0 00;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
 
   p {
     margin-bottom: 0;
