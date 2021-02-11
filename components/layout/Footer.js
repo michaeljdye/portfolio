@@ -26,7 +26,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href='https://www.linkedin.com/in/dyejoey/'>
+            <a href='https://www.linkedin.com/in/dyemichael/'>
               <FontAwesomeIcon icon={faLinkedinIn} />
               LinkedIn
             </a>
