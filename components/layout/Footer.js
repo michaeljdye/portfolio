@@ -20,7 +20,7 @@ const Footer = () => (
         <h3>Links</h3>
         <ul>
           <li>
-            <a href='https://github.com/JoeyDye'>
+            <a href='https://github.com/michaeljdye'>
               <FontAwesomeIcon icon={faGithub} />
               Github
             </a>
