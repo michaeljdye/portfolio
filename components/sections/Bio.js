@@ -1,22 +1,22 @@
-import styled from '@emotion/styled'
-import { SectionHeading } from '../headings'
-import { above } from '../../utils'
+import styled from "@emotion/styled";
+import { SectionHeading } from "../headings";
+import { above } from "../../utils";
 
 const Bio = () => (
-  <BioSection id='about'>
+  <BioSection id="about">
     <BioInner>
       <BioImg
-        src='/images/michael-dye-fullstack-developer.jpg'
-        alt='MIchael Dye'
+        src="/images/michael-dye-fullstack-developer.jpg"
+        alt="MIchael Dye"
       />
       <BioContent>
-        <SectionHeading align='right' isImage={true}>
-          <img src='/images/squiggly-line.png' alt='Squiggly line' />
+        <SectionHeading align="right" isImage={true}>
+          <img src="/images/squiggly-line.png" alt="Squiggly line" />
           hello, my name is <h2>MIchael Dye</h2>
         </SectionHeading>
         <p>
-          I am a <em>Full Stack Developer</em> with{' '}
-          <strong>7+ years in tech</strong> and <strong>3+ years</strong> of
+          I am a <em>Full Stack Developer</em> with{" "}
+          <strong>7+ years in tech</strong> and <strong>4+ years</strong> of
           experience building engaging, performant, and accessible websites and
           applications. I have...
           <ul>
@@ -34,13 +34,13 @@ const Bio = () => (
       </BioContent>
     </BioInner>
   </BioSection>
-)
+);
 
 const BioSection = styled.section`
   background: var(--bioBackground);
   padding: var(--defaultPadding) 0 0 0;
   color: var(--bioColor);
-`
+`;
 
 const BioInner = styled.div`
   display: flex;
@@ -54,7 +54,7 @@ const BioInner = styled.div`
     flex-direction: row;
     align-items: stretch;
   `}
-`
+`;
 
 const BioImg = styled.img`
   width: 450px;
@@ -65,7 +65,7 @@ const BioImg = styled.img`
   ${above.desktop`
     margin-bottom: 0;
   `}
-`
+`;
 
 const BioContent = styled.div`
   width: 450px;
@@ -93,6 +93,6 @@ const BioContent = styled.div`
   span {
     display: block;
   }
-`
+`;
 
-export default Bio
+export default Bio;

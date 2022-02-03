@@ -1,18 +1,17 @@
-import styled from '@emotion/styled'
-import scenes from '../../data/scenes.json'
-import { SectionHeading } from '../headings'
-import Slideshow from '../sliders/Slideshow'
-import { OneByTwo } from '../grids'
-import { ButtonPrimary } from '../buttons'
-import { above } from '../../utils'
+import styled from "@emotion/styled";
+import apps from "../../data/apps.json";
+import { SectionHeading } from "../headings";
+import { OneByTwo } from "../grids";
+import { ButtonPrimary } from "../buttons";
+import { above } from "../../utils";
 
 const Apps = () => (
-  <AppsSection id='apps'>
-    <SectionHeading marginBottom='80'>
+  <AppsSection id="apps">
+    <SectionHeading marginBottom="80">
       engage your users <h2>Web Apps</h2>
     </SectionHeading>
-    {scenes.map((scene, i) => {
-      const isReverse = i % 2 === 0 ? true : false
+    {apps.map((scene, i) => {
+      const isReverse = i % 2 === 0 ? true : false;
 
       return (
         <OneByTwo key={scene.title} reverse={isReverse}>
@@ -20,7 +19,7 @@ const Apps = () => (
             <h3>{scene.title}</h3>
             <p>{scene.description}</p>
             <Stack reverse={isReverse}>
-              {scene.stack.map(stackItem => (
+              {scene.stack.map((stackItem) => (
                 <li key={stackItem}>{stackItem}</li>
               ))}
             </Stack>
@@ -28,9 +27,9 @@ const Apps = () => (
               {scene.source && (
                 <ButtonPrimary
                   dark
-                  as='a'
-                  target='_blank'
-                  rel='nofollow noopenner'
+                  as="a"
+                  target="_blank"
+                  rel="nofollow noopenner"
                   href={scene.source}
                 >
                   View Source
@@ -39,9 +38,9 @@ const Apps = () => (
               {scene.demo && (
                 <ButtonPrimary
                   dark
-                  as='a'
-                  target='_blank'
-                  rel='nofollow noopenner'
+                  as="a"
+                  target="_blank"
+                  rel="nofollow noopenner"
                   href={scene.demo}
                 >
                   View App
@@ -50,14 +49,14 @@ const Apps = () => (
             </ButtonContainer>
           </SlideText>
           <SlideImgContainer>
-            <img src={scene.image} alt='' />
+            <img src={scene.image} alt="" />
           </SlideImgContainer>
         </OneByTwo>
-      )
+      );
     })}
     {/* <Slideshow scenes={scenes} /> */}
   </AppsSection>
-)
+);
 
 const AppsSection = styled.section`
   background: var(--appsBackground);
@@ -67,7 +66,7 @@ const AppsSection = styled.section`
   ${above.tablet`
       margin-bottom: 0;
     `}
-`
+`;
 
 const SlideText = styled.div`
   display: flex;
@@ -88,7 +87,7 @@ const SlideText = styled.div`
     max-width: 500px;
     text-align: center;
   }
-`
+`;
 
 const SlideImgContainer = styled.div`
   display: flex;
@@ -105,7 +104,7 @@ const SlideImgContainer = styled.div`
     max-height: 500px;
     margin: 0 auto;
   }
-`
+`;
 
 const Stack = styled.div`
   display: flex;
@@ -124,11 +123,11 @@ const Stack = styled.div`
   li + li {
     border-left: 1px solid
       ${({ reverse }) =>
-        reverse ? 'var(--colorWhite)' : 'var(--appStackText)'};
+        reverse ? "var(--colorWhite)" : "var(--appStackText)"};
     margin-left: 0.625rem;
     padding-left: 0.625rem;
   }
-`
+`;
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -138,6 +137,6 @@ const ButtonContainer = styled.div`
   a + a {
     margin-left: 1.25rem;
   }
-`
+`;
 
-export default Apps
+export default Apps;

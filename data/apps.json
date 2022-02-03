@@ -20,7 +20,8 @@
     "image": "/images/explore-the-nations.png",
     "width": 900,
     "offset": 40
-  },{
+  },
+  {
     "id": 2,
     "title": "Send2Win",
     "description": "Send2Win give users the chance to test their email knowledge by designing the perfect send.",
@@ -28,7 +29,8 @@
     "image": "/images/send2winMedium.png",
     "width": 525,
     "offset": 50
-  },{
+  },
+  {
     "id": 3,
     "title": "Space Explorer",
     "description": "Space Explorer allows you to tap into the NASA API to discover distant stars, planets and galaxies.",
@@ -36,6 +38,16 @@
     "image": "/images/space-explorer.png",
     "demo": "https://space-explorer-site.herokuapp.com/",
     "source": "https://github.com/michaeljdye/space-explorer",
+    "width": 900,
+    "offset": 40
+  },
+  {
+    "id": 4,
+    "title": "Bellhop Booking",
+    "description": "A website where you can book and move an mange the move via an intuitive dashboard.",
+    "stack": ["React", "Next.js", "Material UI", "GraphQL"],
+    "image": "/images/space-explorer.png",
+    "demo": "https://www.getbellhops.com/",
     "width": 900,
     "offset": 40
   }
