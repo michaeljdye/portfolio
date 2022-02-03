@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "title": "Bellhop Booking",
+    "title": "Bellhop Dashboard",
     "description": "A website where you can book and move an mange the move via an intuitive dashboard.",
     "stack": ["React", "Next.js", "Material UI", "GraphQL"],
     "image": "/images/space-explorer.png",
