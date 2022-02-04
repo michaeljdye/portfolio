@@ -127,9 +127,14 @@ const SiteDescription = styled.div`
 `;
 
 const Circle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: -1.625rem;
   background: var(--colorPrimary);
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   border: none;
   padding: 0.625rem;
