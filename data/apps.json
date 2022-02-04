@@ -43,11 +43,11 @@
   },
   {
     "id": 4,
-    "title": "Bellhop Dashboard",
-    "description": "A website where you can book and move an mange the move via an intuitive dashboard.",
+    "title": "Bellhop Customer Dashboard",
+    "description": "Bellhop Customer Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
     "stack": ["React", "Next.js", "Material UI", "GraphQL"],
     "image": "/images/space-explorer.png",
-    "demo": "https://www.getbellhops.com/",
+    "demo": "https://dashboard.bellhop.com/",
     "width": 900,
     "offset": 40
   }

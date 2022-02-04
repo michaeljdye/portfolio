@@ -1,42 +1,42 @@
-import { useState } from 'react'
-import styled from '@emotion/styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-import { SectionHeading } from '../headings'
-import { ButtonPrimary } from '../buttons'
-import { below, above } from '../../utils'
-import sites from '../../data/sites.json'
+import { useState } from "react";
+import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { SectionHeading } from "../headings";
+import { ButtonPrimary } from "../buttons";
+import { below, above } from "../../utils";
+import sites from "../../data/sites.json";
 
 const Sites = () => {
-  const [mktSites, setMktSites] = useState(sites)
+  const [mktSites, setMktSites] = useState(sites);
 
-  const handleUpdateIcon = currentId => {
-    setMktSites(prevSites =>
+  const handleUpdateIcon = (currentId) => {
+    setMktSites((prevSites) =>
       prevSites.map(({ open, id, ...rest }) =>
         id === currentId ? { ...rest, id, open: !open } : { ...rest, id, open }
       )
-    )
-  }
+    );
+  };
 
   return (
-    <SitesSection id='sites'>
+    <SitesSection id="sites">
       <SectionHeading>
         grow your business <h2>Marketing Sites</h2>
       </SectionHeading>
       <SitesList>
         {mktSites.map(({ id, title, description, slug, image, open }) => (
           <Site key={id}>
-            <img src={image} alt='Placeholder' />
+            <img src={image} alt="Placeholder" />
             <SiteDescription
               onMouseEnter={() => handleUpdateIcon(id)}
               onMouseLeave={() => handleUpdateIcon(id)}
             >
               <Circle>
-                <FontAwesomeIcon icon={open ? faMinus : faPlus} size='2x' />
+                <FontAwesomeIcon icon={open ? faMinus : faPlus} size="2x" />
               </Circle>
               <h3>{title}</h3>
               <p>{description}</p>
-              <ButtonPrimary as='a' href='/#contact'>
+              <ButtonPrimary as="a" href="/#contact">
                 Contact Me
               </ButtonPrimary>
             </SiteDescription>
@@ -44,14 +44,14 @@ const Sites = () => {
         ))}
       </SitesList>
     </SitesSection>
-  )
-}
+  );
+};
 
 const SitesSection = styled.section`
   background: var(--sitesBackground);
   padding: var(--defaultPadding) 0 0;
   color: var(--sitesTextColor);
-`
+`;
 
 const SitesList = styled.ul`
   display: flex;
@@ -63,11 +63,11 @@ const SitesList = styled.ul`
 
   ${above.phone`
     flex-direction: row;
+    flex-wrap: wrap;
   `}
-`
+`;
 
 const Site = styled.li`
-  --gap: 0.9375rem;
   position: relative;
   height: 28.125rem;
   width: 100%;
@@ -78,7 +78,7 @@ const Site = styled.li`
   overflow: hidden;
 
   ${above.phone`  
-    width: calc(100% - var(--gap));
+    width: calc(33.33%);
   `}
 
   img {
@@ -87,7 +87,7 @@ const Site = styled.li`
     object-fit: cover;
     object-position: top center;
   }
-`
+`;
 
 const SiteDescription = styled.div`
   position: absolute;
@@ -124,7 +124,7 @@ const SiteDescription = styled.div`
   p {
     font-size: 1.2rem;
   }
-`
+`;
 
 const Circle = styled.div`
   position: absolute;
@@ -134,6 +134,6 @@ const Circle = styled.div`
   border: none;
   padding: 0.625rem;
   color: var(--colorWhite);
-`
+`;
 
-export default Sites
+export default Sites;
