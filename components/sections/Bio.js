@@ -15,12 +15,15 @@ const Bio = () => (
           hello, my name is <h2>MIchael Dye</h2>
         </SectionHeading>
         <p>
-          I am a <em>Full Stack Developer</em> with{" "}
+          I am a <em>Frontend Software Engineer</em> with{" "}
           <strong>7+ years in tech</strong> and <strong>4+ years</strong> of
           experience building engaging, performant, and accessible websites and
           applications. I have...
           <ul>
-            <li>🔧 Built and shipped 4+ commercial SaaS applications</li>
+            <li>
+              🔧 Built fully revamped Bellhop CX experience, including new
+              booking flow, dashboard, and marketing site.
+            </li>
             <li>
               👨‍💻 Developed features for enterprise marketing sites for Emma,
               Campaign Monitor, Delivra, and Nissan.

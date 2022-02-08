@@ -1,5 +1,15 @@
 [
   {
+    "id": 4,
+    "title": "Bellhop Customer Dashboard",
+    "description": "Bellhop Customer Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
+    "stack": ["React", "Next.js", "Material UI", "GraphQL"],
+    "image": "/images/bellhop-dashboard.png",
+    "demo": "https://dashboard.bellhop.com/",
+    "width": 900,
+    "offset": 40
+  },
+  {
     "id": 0,
     "title": "OkMoveMe",
     "description": "OkMoveMe allows you to manage your move from one centralized dashboard, which includes checklists, moving resources and more.",
@@ -38,16 +48,6 @@
     "image": "/images/space-explorer.png",
     "demo": "https://space-explorer-site.herokuapp.com/",
     "source": "https://github.com/michaeljdye/space-explorer",
-    "width": 900,
-    "offset": 40
-  },
-  {
-    "id": 4,
-    "title": "Bellhop Customer Dashboard",
-    "description": "Bellhop Customer Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
-    "stack": ["React", "Next.js", "Material UI", "GraphQL"],
-    "image": "/images/space-explorer.png",
-    "demo": "https://dashboard.bellhop.com/",
     "width": 900,
     "offset": 40
   }
