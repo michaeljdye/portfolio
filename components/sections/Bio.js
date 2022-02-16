@@ -7,7 +7,7 @@ const Bio = () => (
     <BioInner>
       <BioImg
         src="/images/michael-dye-fullstack-developer.jpg"
-        alt="MIchael Dye"
+        alt="Michael Dye"
       />
       <BioContent>
         <SectionHeading align="right" isImage={true}>
@@ -15,7 +15,7 @@ const Bio = () => (
           hello, my name is <h2>MIchael Dye</h2>
         </SectionHeading>
         <p>
-          I am a <em>Frontend Software Engineer</em> with{" "}
+          I am a <em>Software Engineer</em> with{" "}
           <strong>7+ years in tech</strong> and <strong>4+ years</strong> of
           experience building engaging, performant, and accessible websites and
           applications. I have...
