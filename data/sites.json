@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Bellhop",
-    "description": "Maintained site, built landing pages, fixed bugs.",
+    "description": "Rebuilt site on Next.js and GraphCMS.",
     "slug": "cm",
     "image": "/images/bellhop.png",
     "open": false
