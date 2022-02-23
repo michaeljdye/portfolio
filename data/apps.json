@@ -39,16 +39,5 @@
     "image": "/images/send2winMedium.png",
     "width": 525,
     "offset": 50
-  },
-  {
-    "id": 3,
-    "title": "Space Explorer",
-    "description": "Space Explorer allows you to tap into the NASA API to discover distant stars, planets and galaxies.",
-    "stack": ["React", "Node.js", "Express", "MangoDB"],
-    "image": "/images/space-explorer.png",
-    "demo": "https://space-explorer-site.herokuapp.com/",
-    "source": "https://github.com/michaeljdye/space-explorer",
-    "width": 900,
-    "offset": 40
   }
 ]
