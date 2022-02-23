@@ -12,10 +12,10 @@ const Bio = () => (
       <BioContent>
         <SectionHeading align="right" isImage={true}>
           <img src="/images/squiggly-line.png" alt="Squiggly line" />
-          hello, my name is <h2>MIchael Dye</h2>
+          hello, my name is <h2>Michael Dye</h2>
         </SectionHeading>
         <p>
-          I am a <em>Software Engineer</em> with{" "}
+          I am a <em>Frontend Engineer</em> with{" "}
           <strong>7+ years in tech</strong> and <strong>4+ years</strong> of
           experience building engaging, performant, and accessible websites and
           applications. I have...
