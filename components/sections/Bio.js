@@ -16,12 +16,15 @@ const Bio = () => (
         </SectionHeading>
         <p>
           I am a <em>Frontend Engineer</em> with{" "}
-          <strong>7+ years in tech</strong> and <strong>4+ years</strong> of
+          <strong>9+ years in tech</strong> and <strong>5+ years</strong> of
           experience building engaging, performant, and accessible websites and
           applications. I have...
           <ul>
             <li>
-              🔧 Built fully revamped Bellhop CX experience, including new
+              🚀 Successfully migrated Udacity content platform from a legacy CRA based architecture to Next.js.
+            </li>
+            <li>
+              🔧 Built a fully revamped Bellhop CX experience, including new
               booking flow, dashboard, and marketing site.
             </li>
             <li>
