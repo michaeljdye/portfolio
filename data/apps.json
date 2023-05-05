@@ -1,6 +1,15 @@
 [
   {
-    "id": 4,
+    "id": 1,
+    "title": "Udacity Content Platform",
+    "description": "Udacity's content platform provides a rich set of content creation features instructors used to develop impactful programs for students.",
+    "stack": ["Typescript", "Next.js", "React", "Redux",  "Chakra UI", "GraphQL"],
+    "image": "/images/udacity.png",
+    "width": 900,
+    "offset": 40
+  },
+  {
+    "id": 2,
     "title": "Bellhop Customer Dashboard",
     "description": "Bellhop Customer Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
     "stack": ["React", "Next.js", "Material UI", "GraphQL"],
@@ -10,7 +19,7 @@
     "offset": 40
   },
   {
-    "id": 0,
+    "id": 3,
     "title": "OkMoveMe",
     "description": "OkMoveMe allows you to manage your move from one centralized dashboard, which includes checklists, moving resources and more.",
     "stack": ["React", "JS", "CSS"],
@@ -21,7 +30,7 @@
     "offset": 40
   },
   {
-    "id": 1,
+    "id": 4,
     "title": "Explore the Nations",
     "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location.",
     "stack": ["React", "JS", "CSS"],
@@ -32,7 +41,7 @@
     "offset": 40
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "Send2Win",
     "description": "Send2Win give users the chance to test their email knowledge by designing the perfect send.",
     "stack": ["React", "JS", "Firebase"],
