@@ -14,7 +14,7 @@ const CTA = props => {
       <ButtonPrimary
         dark
         as='a'
-        href='https://github.com/JoeyDye'
+        href='https://github.com/MichaelJDye'
         target='_blank'
         rel='noreferrer nofollow'
       >
