@@ -15,7 +15,7 @@ const Bio = () => (
           hello, my name is <h2>Michael Dye</h2>
         </SectionHeading>
         <p>
-          I am a <em>Frontend Engineer</em> with{" "}
+          I am a <em>software Engineer</em> with{" "}
           <strong>9+ years in tech</strong> and <strong>5+ years</strong> of
           experience building engaging, performant, and accessible websites and
           applications. I have...

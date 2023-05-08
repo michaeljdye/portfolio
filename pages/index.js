@@ -11,7 +11,7 @@ import Contact from "../components/forms/Contact";
 const Home = () => (
   <Layout
     pageTitle="Michael Dye"
-    siteTitle="Senior Frontend Engineer"
+    siteTitle="Senior Engineer"
     heading="Build. Ship. Repeat"
     subheading="I am a growth-driven developer dedicated to building a better web."
   >
