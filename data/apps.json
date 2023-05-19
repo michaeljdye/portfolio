@@ -10,8 +10,8 @@
   },
   {
     "id": 2,
-    "title": "Bellhop Customer Dashboard",
-    "description": "Bellhop Customer Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
+    "title": "Bellhop Moving Dashboard",
+    "description": "Bellhop moving Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
     "stack": ["React", "Next.js", "Material UI", "GraphQL"],
     "image": "/images/bellhop-dashboard.png",
     "demo": "https://dashboard.bellhop.com/",
