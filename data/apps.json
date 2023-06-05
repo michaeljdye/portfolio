@@ -3,7 +3,14 @@
     "id": 1,
     "title": "Udacity Content Platform",
     "description": "Udacity's content platform provides a rich set of content creation features instructors used to develop impactful programs for students.",
-    "stack": ["Typescript", "Next.js", "React", "Redux",  "Chakra UI", "GraphQL"],
+    "stack": [
+      "Typescript",
+      "Next.js",
+      "React",
+      "Redux",
+      "Chakra UI",
+      "GraphQL"
+    ],
     "image": "/images/udacity.png",
     "width": 900,
     "offset": 40
@@ -37,5 +44,16 @@
     "image": "/images/send2winMedium.png",
     "width": 525,
     "offset": 50
+  },
+  {
+    "id": 5,
+    "title": "Explore the Nations",
+    "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location.",
+    "stack": ["React", "JS", "CSS"],
+    "demo": "https://explorethenations-86j0hrveh.now.sh/",
+    "source": "https://github.com/JoeyDye/explore-the-nations",
+    "image": "/images/explore-the-nations.png",
+    "width": 900,
+    "offset": 40
   }
 ]
