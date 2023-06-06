@@ -3,14 +3,7 @@
     "id": 1,
     "title": "Udacity Content Platform",
     "description": "Udacity's content platform provides a rich set of content creation features instructors used to develop impactful programs for students.",
-    "stack": [
-      "Typescript",
-      "Next.js",
-      "React",
-      "Redux",
-      "Chakra UI",
-      "GraphQL"
-    ],
+    "stack": ["Typescript", "Next.js", "GraphQL"],
     "image": "/images/udacity.png",
     "width": 900,
     "offset": 40
@@ -19,7 +12,7 @@
     "id": 2,
     "title": "Bellhop Moving Dashboard",
     "description": "Bellhop moving Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
-    "stack": ["React", "Next.js", "Material UI", "GraphQL"],
+    "stack": ["React", "Next.js", "GraphQL"],
     "image": "/images/bellhop-dashboard.png",
     "demo": "https://dashboard.bellhop.com/",
     "width": 900,
