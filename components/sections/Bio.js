@@ -11,29 +11,19 @@ const Bio = () => (
           <img src="/images/squiggly-line.png" alt="Squiggly line" />
           hello, my name is <h2>Michael Dye</h2>
         </SectionHeading>
+        <p>Hey there! 👋</p>
         <p>
-          I am a <em>software Engineer</em> with{" "}
-          <strong>9+ years in tech</strong> and <strong>5+ years</strong> of
-          experience building engaging, performant, and accessible websites and
-          applications. I have...
-          <ul>
-            <li>
-              🚀 Successfully migrated Udacity content platform from a legacy
-              CRA based architecture to Next.js.
-            </li>
-            <li>
-              🔧 Built a fully revamped Bellhop CX experience, including new
-              booking flow, dashboard, and marketing site.
-            </li>
-            <li>
-              👨‍💻 Developed features for enterprise marketing sites for Emma,
-              Campaign Monitor, Delivra, and Nissan.
-            </li>
-            <li>
-              👨‍💼 And led 100+ web development projects for enterprises and small
-              businesses.
-            </li>
-          </ul>
+          I'm a Senior Software Engineer with more than 5 years of experience.
+          I've been lucky enough to collaborate with some absolutely fantastic
+          teams, creating mind-blowing products along the way. I call Nashville,
+          TN my home, where I live with my lovely wife, awesome daughter, and
+          the most cuddly cat you can imagine.
+        </p>
+        <p>
+          Besides hanging out with my loved ones, you'll often find me strumming
+          my guitar, diving into a good book, exploring the great outdoors,
+          skateboarding, or getting my workout on at the gym. Life's an
+          adventure, and I'm loving every moment of it!
         </p>
       </BioContent>
     </BioInner>
