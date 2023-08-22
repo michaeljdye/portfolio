@@ -5,10 +5,7 @@ import { above } from "../../utils";
 const Bio = () => (
   <BioSection id="about">
     <BioInner>
-      <BioImg
-        src="/images/michael-dye-fullstack-developer.jpg"
-        alt="Michael Dye"
-      />
+      <BioImg src="/images/michael-dye-li.jpeg" alt="Michael Dye" />
       <BioContent>
         <SectionHeading align="right" isImage={true}>
           <img src="/images/squiggly-line.png" alt="Squiggly line" />
@@ -21,7 +18,8 @@ const Bio = () => (
           applications. I have...
           <ul>
             <li>
-              🚀 Successfully migrated Udacity content platform from a legacy CRA based architecture to Next.js.
+              🚀 Successfully migrated Udacity content platform from a legacy
+              CRA based architecture to Next.js.
             </li>
             <li>
               🔧 Built a fully revamped Bellhop CX experience, including new
