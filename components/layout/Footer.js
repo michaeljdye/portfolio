@@ -34,7 +34,7 @@ const Footer = () => (
           <li>
             <a href="https://medium.com/@michaeldye">
               <FontAwesomeIcon icon={faMedium} />
-              Twitter
+              Medium
             </a>
           </li>
         </ul>
