@@ -121,9 +121,7 @@ const Stack = styled.div`
   }
 
   li + li {
-    border-left: 1px solid
-      ${({ reverse }) =>
-        reverse ? "var(--colorWhite)" : "var(--appStackText)"};
+    border-left: 1px solid var(--appStackText);
     margin-left: 0.625rem;
     padding-left: 0.625rem;
   }
