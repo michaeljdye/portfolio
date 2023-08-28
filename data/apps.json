@@ -32,10 +32,11 @@
   },
   {
     "id": 4,
-    "title": "Send2Win",
-    "description": "Send2Win give users the chance to test their email knowledge by designing the perfect send.",
-    "stack": ["React", "JS", "Firebase"],
-    "image": "/images/send2winMedium.png",
+    "title": "Space Explorer",
+    "description": "Space Explorer is a web app that lets users search for space images, save them to their favorites, and check out cool exoplanets.",
+    "stack": ["React", "Express", "MongoDB"],
+    "image": "/images/space-explorer.png",
+    "source": "https://github.com/michaeljdye/space-explorer",
     "width": 525,
     "offset": 50
   },
