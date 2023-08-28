@@ -1,39 +1,39 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 import {
   faGithub,
-  faTwitter,
+  faMediumM as faMedium,
   faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons'
-import Obfuscate from 'react-obfuscate'
-import { faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { above } from '../../utils'
+} from "@fortawesome/free-brands-svg-icons";
+import Obfuscate from "react-obfuscate";
+import { faEnvelope, faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { above } from "../../utils";
 
 const Footer = () => (
   <FooterSection>
     <FooterContent>
       <FooterLogo
-        src='/images/michael-dye-logo.png'
-        alt='MIchael Dye Fullstack Developer'
+        src="/images/michael-dye-logo.png"
+        alt="MIchael Dye Fullstack Developer"
       />
       <div>
         <h3>Links</h3>
         <ul>
           <li>
-            <a href='https://github.com/michaeljdye'>
+            <a href="https://github.com/michaeljdye">
               <FontAwesomeIcon icon={faGithub} />
               Github
             </a>
           </li>
           <li>
-            <a href='https://www.linkedin.com/in/dyemichael/'>
+            <a href="https://www.linkedin.com/in/dyemichael/">
               <FontAwesomeIcon icon={faLinkedinIn} />
               LinkedIn
             </a>
           </li>
           <li>
-            <a href='https://twitter.com/joey_m_dye'>
-              <FontAwesomeIcon icon={faTwitter} />
+            <a href="https://medium.com/@michaeldye">
+              <FontAwesomeIcon icon={faMedium} />
               Twitter
             </a>
           </li>
@@ -44,7 +44,7 @@ const Footer = () => (
         <ul>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
-            <Obfuscate email='joeymdye@gmail.com'>Email me</Obfuscate>
+            <Obfuscate email="joeymdye@gmail.com">Email me</Obfuscate>
           </li>
           <li>
             <FontAwesomeIcon icon={faLocationArrow} />
@@ -57,12 +57,12 @@ const Footer = () => (
       <p>© {new Date().getFullYear()} MIchael Dye | All Rights Reserved.</p>
     </FooterCopyright>
   </FooterSection>
-)
+);
 
 const FooterSection = styled.div`
   background: var(--colorGray);
   color: var(--colorWhite);
-`
+`;
 
 const FooterContent = styled.div`
   display: flex;
@@ -79,7 +79,7 @@ const FooterContent = styled.div`
     text-align: center;
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       background: var(--colorPrimary);
       width: 30%;
@@ -114,7 +114,7 @@ const FooterContent = styled.div`
       color: var(--colorPrimary);
     }
   }
-`
+`;
 
 const FooterLogo = styled.img`
   width: 100%;
@@ -125,7 +125,7 @@ const FooterLogo = styled.img`
   ${above.tablet`
     margin: 0;
   `}
-`
+`;
 
 const FooterCopyright = styled.div`
   background: var(--colorDark);
@@ -141,7 +141,7 @@ const FooterCopyright = styled.div`
     font-size: 0.875rem;
     text-align: center;
   }
-`
+`;
 
 const FooterContact = styled.div`
   li:first-of-type {
@@ -151,6 +151,6 @@ const FooterContact = styled.div`
       color: var(--colorPrimary);
     }
   }
-`
+`;
 
-export default Footer
+export default Footer;
