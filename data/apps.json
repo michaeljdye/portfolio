@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Udacity Content Platform",
-    "description": "Udacity's content platform provides a rich set of content creation features instructors used to develop impactful programs for students.",
+    "description": "Udacity's content platform provides a rich set of content creation features instructors use to develop impactful programs for students.",
     "stack": ["Typescript", "Next.js", "GraphQL"],
     "image": "/images/udacity.png",
     "demo": "https://www.udacity.com/",
