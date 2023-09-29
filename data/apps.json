@@ -36,6 +36,7 @@
     "description": "Space Explorer is a web app that lets users search for space images, save them to their favorites, and check out cool exoplanets.",
     "stack": ["React", "Express", "MongoDB"],
     "image": "/images/space-explorer.png",
+    "demo": "https://space-explorer-app.onrender.com/",
     "source": "https://github.com/michaeljdye/space-explorer",
     "width": 525,
     "offset": 50
