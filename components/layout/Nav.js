@@ -1,27 +1,27 @@
-import { useState, Fragment } from 'react'
-import { motion } from 'framer-motion'
-import styled from '@emotion/styled'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Menu } from '../svgs'
-import { below } from '../../utils'
+import { useState, Fragment } from "react";
+import { motion } from "framer-motion";
+import styled from "@emotion/styled";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Menu } from "../svgs";
+import { below } from "../../utils";
 
 const links = [
-  { title: 'About', href: '/#about' },
-  { title: 'Web Apps', href: '#apps' },
-  { title: 'Websites', href: '#sites' },
-  { title: 'Contact', href: '#contact' },
-]
+  { title: "About", href: "/#about" },
+  { title: "Web Apps", href: "#apps" },
+  { title: "Websites", href: "#sites" },
+  { title: "Contact", href: "#contact" },
+];
 
 const variants = {
   open: { x: 0 },
   closed: {
-    x: '-100%',
+    x: "-100%",
     transition: {
       delay: 0.2,
     },
   },
-}
+};
 
 const ulVariants = {
   open: {
@@ -29,10 +29,10 @@ const ulVariants = {
       staggerChildren: 0.3,
       delayChildren: 0.2,
       staggerDirection: 1, // 1 forward, -1 backward,
-      when: 'afterChildren',
+      when: "afterChildren",
     },
   },
-}
+};
 
 const liVariants = {
   open: {
@@ -40,11 +40,11 @@ const liVariants = {
     y: 0,
   },
   closed: { opacity: 0 },
-}
+};
 
 const Nav = ({ isDark }) => {
-  const [isNavOpen, setIsNavOpen] = useState(false)
-  const router = useRouter()
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <Navigation>
@@ -55,16 +55,16 @@ const Nav = ({ isDark }) => {
               <NavItem>
                 <NavLink href={href}>{title}</NavLink>
               </NavItem>
-              <NavItem className='logo'>
-                <Link href='/'>
+              <NavItem className="logo">
+                <Link href="/">
                   <a>
                     <Logo
                       src={
                         isDark
-                          ? '/images/michael-dye-logo.png'
-                          : '/images/michael-dye-logo-dark.png'
+                          ? "/images/michael-dye-logo.png"
+                          : "/images/michael-dye-logo-dark.png"
                       }
-                      alt='Michael Dye'
+                      alt="Michael Dye"
                     />
                   </a>
                 </Link>
@@ -82,16 +82,16 @@ const Nav = ({ isDark }) => {
 
       <MobileNav
         variants={variants}
-        initial='closed'
-        animate={isNavOpen ? 'open' : 'closed'}
+        initial="closed"
+        animate={isNavOpen ? "open" : "closed"}
         transition={{ damping: 300 }}
       >
         <motion.ul variants={ulVariants}>
           {links.map(({ title, href }) => (
             <motion.li key={title} variants={liVariants}>
               <a
-                onClick={e => {
-                  setIsNavOpen(false, router.push(href))
+                onClick={(e) => {
+                  setIsNavOpen(false, router.push(href));
                 }}
               >
                 {title}
@@ -102,15 +102,15 @@ const Nav = ({ isDark }) => {
         <CloseButton onClick={() => setIsNavOpen(false)}>X</CloseButton>
       </MobileNav>
     </Navigation>
-  )
-}
+  );
+};
 
 const Navigation = styled.nav`
   position: relative;
   width: 1200px;
   max-width: 90%;
   margin: 0 auto;
-`
+`;
 
 const NavItems = styled.ul`
   display: flex;
@@ -123,7 +123,7 @@ const NavItems = styled.ul`
   ${below.phone`
     justify-content: center;
   `}
-`
+`;
 
 const NavItem = styled.li`
   text-transform: uppercase;
@@ -140,7 +140,7 @@ const NavItem = styled.li`
       display: none;
     }
   `}
-`
+`;
 
 const NavLink = styled.a`
   text-decoration: none;
@@ -151,7 +151,7 @@ const NavLink = styled.a`
     border-bottom: 3px solid var(--colorPrimary);
     padding-bottom: 5px;
   }
-`
+`;
 
 const Logo = styled.img`
   max-width: 300px;
@@ -160,7 +160,7 @@ const Logo = styled.img`
   ${below.tablet`
     max-width: 180px;
   `}
-`
+`;
 
 const MenuBtn = styled(Menu)`
   display: none;
@@ -175,11 +175,11 @@ const MenuBtn = styled(Menu)`
   path {
     fill: var(--menuBtnColor);
   }
-`
+`;
 
 const CloseButton = styled.button`
   margin-left: auto;
-`
+`;
 
 const MobileNav = styled(motion.nav)`
   display: flex;
@@ -232,6 +232,6 @@ const MobileNav = styled(motion.nav)`
     font-size: 2rem;
     cursor: pointer;
   }
-`
+`;
 
-export default Nav
+export default Nav;

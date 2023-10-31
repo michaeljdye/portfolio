@@ -1,13 +1,13 @@
-import styled from '@emotion/styled'
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Header from '../layout/Header'
-import ButtonPrimary from '../buttons/ButtonPrimary'
-import { ToggleButton } from '../buttons'
+import styled from "@emotion/styled";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Header from "../layout/Header";
+import ButtonPrimary from "../buttons/ButtonPrimary";
+import { ToggleButton } from "../buttons";
 
 const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
   return (
-    <HeroSection bottomPadding={heading ? 'var(--defaultPadding)' : null}>
+    <HeroSection bottomPadding={heading ? "var(--defaultPadding)" : null}>
       <ToggleContainer>
         <ToggleButton
           onChange={handleThemeChange}
@@ -15,19 +15,19 @@ const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
             checked: (
               <FontAwesomeIcon
                 icon={faSun}
-                color='var(--colorWhite)'
-                size='xs'
+                color="var(--colorWhite)"
+                size="xs"
               />
             ),
             unchecked: (
               <FontAwesomeIcon
                 icon={faMoon}
-                color='var(--colorWhite)'
-                size='xs'
+                color="var(--colorWhite)"
+                size="xs"
               />
             ),
           }}
-          defaultChecked={true}
+          defaultChecked={false}
         />
       </ToggleContainer>
       <Header isDark={isDark} />
@@ -36,25 +36,25 @@ const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
           <h1>{heading}</h1>
           <p>{subheading}</p>
           <ButtonContainer>
-            <ButtonPrimary dark as='a' href='/#about'>
+            <ButtonPrimary dark as="a" href="/#about">
               Learn More
             </ButtonPrimary>
-            <ButtonPrimary dark as='a' href='#contact'>
+            <ButtonPrimary dark as="a" href="#contact">
               Contact Me
             </ButtonPrimary>
           </ButtonContainer>
         </HeroContent>
       )}
     </HeroSection>
-  )
-}
+  );
+};
 
 const HeroSection = styled.section`
   background: var(--heroBackground);
   background-blend-mode: overlay;
-  padding: 2vw 0 ${({ bottomPadding = '2vw' }) => bottomPadding};
+  padding: 2vw 0 ${({ bottomPadding = "2vw" }) => bottomPadding};
   border-bottom: 0.375rem solid var(--colorPrimary);
-`
+`;
 
 const HeroContent = styled.div`
   display: flex;
@@ -78,7 +78,7 @@ const HeroContent = styled.div`
     margin: 0 0 1.25rem;
     font-size: max(2.5vw, 1.3rem);
   }
-`
+`;
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -86,10 +86,10 @@ const ButtonContainer = styled.div`
   a + a {
     margin-left: 1.25rem;
   }
-`
+`;
 
 const ToggleContainer = styled.div`
   margin: 10px 0 0 20px;
-`
+`;
 
-export default Hero
+export default Hero;

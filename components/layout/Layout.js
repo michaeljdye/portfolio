@@ -1,19 +1,19 @@
-import { useRef, useState } from 'react'
-import Head from 'next/head'
-import { css, Global } from '@emotion/core'
-import emotionNormalize from 'emotion-normalize'
-import { below } from '../../utils/breakpoints'
-import Hero from '../sections/Hero'
-import Footer from './Footer'
+import { useRef, useState } from "react";
+import Head from "next/head";
+import { css, Global } from "@emotion/core";
+import emotionNormalize from "emotion-normalize";
+import { below } from "../../utils/breakpoints";
+import Hero from "../sections/Hero";
+import Footer from "./Footer";
 
 const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
-  const [isDark, setIsDark] = useState(false)
-  const containerRef = useRef()
+  const [isDark, setIsDark] = useState(true);
+  const containerRef = useRef();
 
   const handleThemeChange = () => {
-    containerRef.current.classList.toggle('dark')
-    setIsDark(prevState => !prevState)
-  }
+    containerRef.current.classList.toggle("dark");
+    setIsDark((prevState) => !prevState);
+  };
 
   return (
     <>
@@ -22,8 +22,8 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           {pageTitle} | {siteTitle}
         </title>
         <meta
-          name='description'
-          content='I am a fullstack developer from Nashville, TN.'
+          name="description"
+          content="I am a fullstack developer from Nashville, TN."
         />
       </Head>
       <Global
@@ -108,7 +108,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             margin: 0;
             background: white;
             min-height: 100%;
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Montserrat", sans-serif;
           }
 
           *,
@@ -122,7 +122,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           h3,
           h4,
           h5 {
-            font-family: 'Roboto Slab', serif;
+            font-family: "Roboto Slab", serif;
             font-weight: 400;
             line-height: 1.15;
           }
@@ -154,7 +154,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           }
         `}
       />
-      <div ref={containerRef} className='theme'>
+      <div ref={containerRef} className="theme dark">
         <Hero
           heading={heading}
           subheading={subheading}
@@ -165,7 +165,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

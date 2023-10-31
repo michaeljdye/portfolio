@@ -11,22 +11,11 @@
   },
   {
     "id": 2,
-    "title": "Bellhop Moving Dashboard",
-    "description": "Bellhop moving Dashboard allows you to modify, reschedule, and review your move details all in one convenient place.",
+    "title": "Bellhop Booking Flow",
+    "description": "Bellhop's booking flow allows customers to easily book their next move, includes service options, pricing, move details, and payment.",
     "stack": ["React", "Next.js", "GraphQL"],
-    "image": "/images/bellhop-dashboard.png",
-    "demo": "https://dashboard.bellhop.com/",
-    "width": 900,
-    "offset": 40
-  },
-  {
-    "id": 3,
-    "title": "OkMoveMe",
-    "description": "OkMoveMe allows you to manage your move from one centralized dashboard, which includes checklists, moving resources and more.",
-    "stack": ["React", "JS", "CSS"],
-    "demo": "https://www.okmoveme.com/",
-    "source": "",
-    "image": "/images/okmoveme.png",
+    "image": "/images/bellhop-booking-flow.png",
+    "demo": "https://www.getbellhops.com/book/service/",
     "width": 900,
     "offset": 40
   },
