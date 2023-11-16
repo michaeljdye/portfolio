@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { above } from "../../utils";
 
 const Footer = () => (
-  <FooterSection>
+  <FooterSection id="footer">
     <FooterContent>
       <FooterLogo
         src="/images/michael-dye-logo.png"
@@ -60,6 +60,9 @@ const Footer = () => (
 );
 
 const FooterSection = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background: var(--colorGray);
   color: var(--colorWhite);
 `;

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import { css, Global } from "@emotion/core";
 import emotionNormalize from "emotion-normalize";
@@ -8,7 +8,26 @@ import Footer from "./Footer";
 
 const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
   const [isDark, setIsDark] = useState(true);
+  const [footerHeight, setFooterHeight] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      document.querySelector("#footer").offsetHeight
+  );
   const containerRef = useRef();
+
+  const handleResize = () => {
+    let height = document.querySelector("#footer").offsetHeight;
+
+    setFooterHeight(height);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false);
+
+    return () => {
+      window.removeEventListener("resize", handleResize, false);
+    };
+  }, []);
 
   const handleThemeChange = () => {
     containerRef.current.classList.toggle("dark");
@@ -95,6 +114,11 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --navTextColor: var(--colorWhite);
           }
 
+          .theme {
+            position: relative;
+            min-height: 100vh;
+          }
+
           ${emotionNormalize}
 
           html {
@@ -115,6 +139,10 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           *:before,
           *:after {
             box-sizing: inherit;
+          }
+
+          main {
+            padding-bottom: ${footerHeight - 5}px;
           }
 
           h1,
@@ -161,7 +189,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           handleThemeChange={handleThemeChange}
           isDark={isDark}
         />
-        {children}
+        <main>{children}</main>
         <Footer />
       </div>
     </>
