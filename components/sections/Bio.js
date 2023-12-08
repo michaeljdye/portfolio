@@ -13,11 +13,11 @@ const Bio = () => (
         </SectionHeading>
         <p>Hey there! 👋</p>
         <p>
-          I'm a Senior Software Engineer with more than 5 years of experience.
-          I've been lucky enough to collaborate with some absolutely fantastic
-          teams, creating mind-blowing products along the way. I call Nashville,
-          TN my home, where I live with my lovely wife, awesome daughter, and
-          the most cuddly cat you can imagine.
+          I'm a Software Engineer with more than 7 years of experience. I've
+          been lucky enough to collaborate with some absolutely fantastic teams,
+          creating mind-blowing products along the way. I call Nashville, TN my
+          home, where I live with my lovely wife, awesome daughter, and the most
+          cuddly cat you can imagine.
         </p>
         <p>
           Besides hanging out with my loved ones, you'll often find me strumming
