@@ -27,7 +27,7 @@ const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
               />
             ),
           }}
-          defaultChecked={false}
+          defaultChecked={true}
         />
       </ToggleContainer>
       <Header isDark={isDark} />

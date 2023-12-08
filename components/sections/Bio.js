@@ -5,7 +5,7 @@ import { above } from "../../utils";
 const Bio = () => (
   <BioSection id="about">
     <BioInner>
-      <BioImg src="/images/michael-dye-li.jpeg" alt="Michael Dye" />
+      <BioImg src="/images/michael-dye-profile.JPG" alt="Michael Dye" />
       <BioContent>
         <SectionHeading align="right" isImage={true}>
           <img src="/images/squiggly-line.png" alt="Squiggly line" />

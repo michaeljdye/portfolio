@@ -7,7 +7,7 @@ import Hero from "../sections/Hero";
 import Footer from "./Footer";
 
 const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [footerHeight, setFooterHeight] = useState(
     () =>
       typeof window !== "undefined" &&
@@ -182,7 +182,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
           }
         `}
       />
-      <div ref={containerRef} className="theme dark">
+      <div ref={containerRef} className="theme">
         <Hero
           heading={heading}
           subheading={subheading}
