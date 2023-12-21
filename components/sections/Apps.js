@@ -28,7 +28,7 @@ const Apps = () => (
                 <ButtonPrimary
                   dark
                   as="a"
-                  target="_blank"
+                  target={"_blank"}
                   rel="nofollow noopenner"
                   href={scene.source}
                 >
@@ -39,7 +39,7 @@ const Apps = () => (
                 <ButtonPrimary
                   dark
                   as="a"
-                  target="_blank"
+                  target={scene.demo.startsWith("https") ? "_blank" : "_self"}
                   rel="nofollow noopenner"
                   href={scene.demo}
                 >

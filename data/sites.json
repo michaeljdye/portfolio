@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Bellhop",
     "description": "Rebuilt site on Next.js and GraphCMS.",
-    "slug": "cm",
+    "slug": "bellhop",
     "image": "/images/bellhop.png",
     "open": false
   },
