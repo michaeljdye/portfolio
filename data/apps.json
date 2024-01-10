@@ -15,7 +15,7 @@
     "description": "Bellhop's booking flow allows customers to easily book their next move, includes service options, pricing, move details, and payment.",
     "stack": ["React", "Next.js", "GraphQL"],
     "image": "/images/bellhop-booking-flow.png",
-    "demo": "/project/bellhop",
+    "demo": "https://www.getbellhops.com/book/service/",
     "width": 900,
     "offset": 40
   },
