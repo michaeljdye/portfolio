@@ -20,19 +20,31 @@ const Footer = () => (
         <h3>Links</h3>
         <ul>
           <li>
-            <a href="https://github.com/michaeljdye">
+            <a
+              href="https://github.com/michaeljdye"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
               Github
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/dyemichael/">
+            <a
+              href="https://www.linkedin.com/in/dyemichael/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
               LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://medium.com/@michaeldye">
+            <a
+              href="https://medium.com/@michaeldye"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faMedium} />
               Medium
             </a>
