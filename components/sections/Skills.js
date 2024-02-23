@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 import {
   faJs,
   faNodeJs,
@@ -7,25 +7,28 @@ import {
   faHtml5,
   faPython,
   faPhp,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { above, below } from '../../utils'
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { above, below } from "../../utils";
+import { Reveal } from "../animations/Reveal";
 
 const Skills = () => {
-  const icons = [faNodeJs, faPython, faPhp, faReact, faCss3, faHtml5]
+  const icons = [faNodeJs, faPython, faPhp, faReact, faCss3, faHtml5];
 
   return (
-    <SkillsSection>
-      <SkillsList>
-        {icons.map((icon, i) => (
-          <li key={i}>
-            <FontAwesomeIcon icon={icon} />
-          </li>
-        ))}
-      </SkillsList>
-    </SkillsSection>
-  )
-}
+    <Reveal width="100%">
+      <SkillsSection>
+        <SkillsList>
+          {icons.map((icon, i) => (
+            <li key={i}>
+              <FontAwesomeIcon icon={icon} />
+            </li>
+          ))}
+        </SkillsList>
+      </SkillsSection>
+    </Reveal>
+  );
+};
 
 const SkillsSection = styled.div`
   display: flex;
@@ -33,7 +36,7 @@ const SkillsSection = styled.div`
   background: var(--skillsBackground);
   padding: 1.25rem 0;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
-`
+`;
 
 const SkillsList = styled.ul`
   --gap: 1.25rem;
@@ -68,6 +71,6 @@ const SkillsList = styled.ul`
       font-size: 6rem;
     `}
   }
-`
+`;
 
-export default Skills
+export default Skills;

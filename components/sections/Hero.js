@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../layout/Header";
 import ButtonPrimary from "../buttons/ButtonPrimary";
 import { ToggleButton } from "../buttons";
+import { Reveal } from "../animations/Reveal";
 
 const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
   return (
@@ -32,18 +33,20 @@ const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
       </ToggleContainer>
       <Header isDark={isDark} />
       {heading && (
-        <HeroContent>
-          <h1>{heading}</h1>
-          <p>{subheading}</p>
-          <ButtonContainer>
-            <ButtonPrimary dark as="a" href="/#about">
-              Learn More
-            </ButtonPrimary>
-            <ButtonPrimary dark as="a" href="#contact">
-              Contact Me
-            </ButtonPrimary>
-          </ButtonContainer>
-        </HeroContent>
+        <Reveal width="100%">
+          <HeroContent>
+            <h1>{heading}</h1>
+            <p>{subheading}</p>
+            <ButtonContainer>
+              <ButtonPrimary dark as="a" href="/#about">
+                Learn More
+              </ButtonPrimary>
+              <ButtonPrimary dark as="a" href="#contact">
+                Contact Me
+              </ButtonPrimary>
+            </ButtonContainer>
+          </HeroContent>
+        </Reveal>
       )}
     </HeroSection>
   );

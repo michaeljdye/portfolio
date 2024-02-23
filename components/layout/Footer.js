@@ -8,63 +8,66 @@ import Obfuscate from "react-obfuscate";
 import { faEnvelope, faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { above } from "../../utils";
+import { Reveal } from "../animations/Reveal";
 
 const Footer = () => (
   <FooterSection id="footer">
-    <FooterContent>
-      <FooterLogo
-        src="/images/michael-dye-logo.png"
-        alt="MIchael Dye Fullstack Developer"
-      />
-      <div>
-        <h3>Links</h3>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/michaeljdye"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/dyemichael/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/@michaeldye"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faMedium} />
-              Medium
-            </a>
-          </li>
-        </ul>
-      </div>
-      <FooterContact>
-        <h3>Contact</h3>
-        <ul>
-          <li>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <Obfuscate email="joeymdye@gmail.com">Email me</Obfuscate>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faLocationArrow} />
-            Nashville, TN
-          </li>
-        </ul>
-      </FooterContact>
-    </FooterContent>
+    <Reveal width="100%">
+      <FooterContent>
+        <FooterLogo
+          src="/images/michael-dye-logo.png"
+          alt="MIchael Dye Fullstack Developer"
+        />
+        <div>
+          <h3>Links</h3>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/michaeljdye"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+                Github
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/dyemichael/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@michaeldye"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faMedium} />
+                Medium
+              </a>
+            </li>
+          </ul>
+        </div>
+        <FooterContact>
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <Obfuscate email="joeymdye@gmail.com">Email me</Obfuscate>
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faLocationArrow} />
+              Nashville, TN
+            </li>
+          </ul>
+        </FooterContact>
+      </FooterContent>
+    </Reveal>
     <FooterCopyright>
       <p>© {new Date().getFullYear()} MIchael Dye | All Rights Reserved.</p>
     </FooterCopyright>

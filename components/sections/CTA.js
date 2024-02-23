@@ -1,28 +1,29 @@
-import styled from '@emotion/styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ButtonPrimary } from '../buttons'
-import { above } from '../../utils/breakpoints'
+import styled from "@emotion/styled";
+import { ButtonPrimary } from "../buttons";
+import { Reveal } from "../animations/Reveal";
 
-const CTA = props => {
+const CTA = (props) => {
   return (
-    <CTASection>
-      <h3>Check out what I've been working on.</h3>
-      <p>
-        Visit my GitHub page to see all of my personal projects and
-        contributions.
-      </p>
-      <ButtonPrimary
-        dark
-        as='a'
-        href='https://github.com/MichaelJDye'
-        target='_blank'
-        rel='noreferrer nofollow'
-      >
-        View GitHub
-      </ButtonPrimary>
-    </CTASection>
-  )
-}
+    <Reveal width="100%">
+      <CTASection>
+        <h3>Check out what I've been working on.</h3>
+        <p>
+          Visit my GitHub page to see all of my personal projects and
+          contributions.
+        </p>
+        <ButtonPrimary
+          dark
+          as="a"
+          href="https://github.com/MichaelJDye"
+          target="_blank"
+          rel="noreferrer nofollow"
+        >
+          View GitHub
+        </ButtonPrimary>
+      </CTASection>
+    </Reveal>
+  );
+};
 
 const CTASection = styled.div`
   display: flex;
@@ -43,6 +44,6 @@ const CTASection = styled.div`
     max-width: 750px;
     margin: 0 auto 1.25rem;
   }
-`
+`;
 
-export default CTA
+export default CTA;

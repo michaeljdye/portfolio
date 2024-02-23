@@ -4,54 +4,59 @@ import { SectionHeading } from "../headings";
 import { OneByTwo } from "../grids";
 import { ButtonPrimary } from "../buttons";
 import { above } from "../../utils";
+import { Reveal } from "../animations/Reveal";
 
 const Apps = () => (
   <AppsSection id="apps">
-    <SectionHeading marginBottom="80">
-      engage your users <h2>Web Apps</h2>
-    </SectionHeading>
+    <Reveal width="100%">
+      <SectionHeading marginBottom="80">
+        engage your users <h2>Web Apps</h2>
+      </SectionHeading>
+    </Reveal>
     {apps.map((scene, i) => {
       const isReverse = i % 2 === 0 ? true : false;
 
       return (
-        <OneByTwo key={scene.title} reverse={isReverse}>
-          <SlideText reverse={isReverse}>
-            <h3>{scene.title}</h3>
-            <p>{scene.description}</p>
-            <Stack reverse={isReverse}>
-              {scene.stack.map((stackItem) => (
-                <li key={stackItem}>{stackItem}</li>
-              ))}
-            </Stack>
-            <ButtonContainer>
-              {scene.source && (
-                <ButtonPrimary
-                  dark
-                  as="a"
-                  target={"_blank"}
-                  rel="nofollow noopenner"
-                  href={scene.source}
-                >
-                  View Source
-                </ButtonPrimary>
-              )}
-              {scene.demo && (
-                <ButtonPrimary
-                  dark
-                  as="a"
-                  target={scene.demo.startsWith("https") ? "_blank" : "_self"}
-                  rel="nofollow noopenner"
-                  href={scene.demo}
-                >
-                  View App
-                </ButtonPrimary>
-              )}
-            </ButtonContainer>
-          </SlideText>
-          <SlideImgContainer>
-            <img src={scene.image} alt="" />
-          </SlideImgContainer>
-        </OneByTwo>
+        <Reveal width="100%">
+          <OneByTwo key={scene.title} reverse={isReverse}>
+            <SlideText reverse={isReverse}>
+              <h3>{scene.title}</h3>
+              <p>{scene.description}</p>
+              <Stack reverse={isReverse}>
+                {scene.stack.map((stackItem) => (
+                  <li key={stackItem}>{stackItem}</li>
+                ))}
+              </Stack>
+              <ButtonContainer>
+                {scene.source && (
+                  <ButtonPrimary
+                    dark
+                    as="a"
+                    target={"_blank"}
+                    rel="nofollow noopenner"
+                    href={scene.source}
+                  >
+                    View Source
+                  </ButtonPrimary>
+                )}
+                {scene.demo && (
+                  <ButtonPrimary
+                    dark
+                    as="a"
+                    target={scene.demo.startsWith("https") ? "_blank" : "_self"}
+                    rel="nofollow noopenner"
+                    href={scene.demo}
+                  >
+                    View App
+                  </ButtonPrimary>
+                )}
+              </ButtonContainer>
+            </SlideText>
+            <SlideImgContainer>
+              <img src={scene.image} alt="" />
+            </SlideImgContainer>
+          </OneByTwo>
+        </Reveal>
       );
     })}
     {/* <Slideshow scenes={scenes} /> */}

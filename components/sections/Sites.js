@@ -6,6 +6,7 @@ import { SectionHeading } from "../headings";
 import { ButtonPrimary } from "../buttons";
 import { below, above } from "../../utils";
 import sites from "../../data/sites.json";
+import { Reveal } from "../animations/Reveal";
 
 const Sites = () => {
   const [mktSites, setMktSites] = useState(sites);
@@ -19,31 +20,33 @@ const Sites = () => {
   };
 
   return (
-    <SitesSection id="sites">
-      <SectionHeading>
-        grow your business <h2>Marketing Sites</h2>
-      </SectionHeading>
-      <SitesList>
-        {mktSites.map(({ id, title, description, slug, image, open }) => (
-          <Site key={id}>
-            <img src={image} alt="Placeholder" />
-            <SiteDescription
-              onMouseEnter={() => handleUpdateIcon(id)}
-              onMouseLeave={() => handleUpdateIcon(id)}
-            >
-              <Circle>
-                <FontAwesomeIcon icon={open ? faMinus : faPlus} size="2x" />
-              </Circle>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <ButtonPrimary as="a" href="/#contact">
-                Contact Me
-              </ButtonPrimary>
-            </SiteDescription>
-          </Site>
-        ))}
-      </SitesList>
-    </SitesSection>
+    <Reveal width="100%">
+      <SitesSection id="sites">
+        <SectionHeading>
+          grow your business <h2>Marketing Sites</h2>
+        </SectionHeading>
+        <SitesList>
+          {mktSites.map(({ id, title, description, slug, image, open }) => (
+            <Site key={id}>
+              <img src={image} alt="Placeholder" />
+              <SiteDescription
+                onMouseEnter={() => handleUpdateIcon(id)}
+                onMouseLeave={() => handleUpdateIcon(id)}
+              >
+                <Circle>
+                  <FontAwesomeIcon icon={open ? faMinus : faPlus} size="2x" />
+                </Circle>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <ButtonPrimary as="a" href="/#contact">
+                  Contact Me
+                </ButtonPrimary>
+              </SiteDescription>
+            </Site>
+          ))}
+        </SitesList>
+      </SitesSection>
+    </Reveal>
   );
 };
 
