@@ -1,76 +1,119 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { above } from '../../utils/breakpoints'
+import styled from "@emotion/styled";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export const ButtonPrimary = ({
-  color = 'light',
+  color = "light",
   icon = faChevronRight,
   children,
+  isDark,
   ...rest
 }) => (
-  <Button {...rest} color={color}>
-    {children}
-    <FontAwesomeIcon icon={icon} />
-  </Button>
-)
+  <ButtonContainer isDark={isDark} {...rest}>
+    <Mask isDark={isDark}>{children}</Mask>
+    <Button isDark={isDark}>{children}</Button>
+  </ButtonContainer>
+);
+
+const Mask = styled.span`
+  position: absolute;
+  color: ${({ isDark }) => (isDark ? "var(--colorWhite)" : "var(--colorDark)")};
+  text-align: center;
+  width: 101%;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 17px;
+  padding: 0px 20px;
+  overflow: hidden;
+`;
+
+const ButtonContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border: 1px solid
+    ${({ isDark }) => (isDark ? "var(--colorWhite)" : "var(--colorDark)")};
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+`;
 
 const Button = styled.button`
-  display: inline-block;
-  background: transparent;
-  border: 2px solid var(--colorPrimary);
-  padding: 0.6em;
-  color: ${({ dark }) =>
-    dark ? 'var(--buttonColorDark)' : 'var(--colorWhite)'};
-  font-weight: 500;
-  font-size: 0.875rem;
+  width: 101%;
+  height: 100%;
   text-transform: uppercase;
-  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background: ${({ isDark }) =>
+    isDark ? "var(--colorWhite)" : "var(--colorDark)"};
+  padding: 0px 20px;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: $x1 $y1;
+  mask-size: 3000% 100%;
+  border: none;
+  color: ${({ isDark }) => (isDark ? "var(--colorDark)" : "var(--colorWhite)")};
   cursor: pointer;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  transition-property: color;
-  transition-duration: 0.3s;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
 
-  ${above.desktop`
-    font-size: 1.125rem;
-  `}
-
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--colorPrimary);
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
+  &:hover {
+    -webkit-animation: ani 0.7s steps(29) forwards;
+    animation: ani 0.7s steps(29) forwards;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: var(--colorDark);
+  @-webkit-keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
   }
 
-  &:hover:before,
-  &:focus:before,
-  &:active:before {
-    transform: scaleX(1);
+  @keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
   }
 
-  svg {
-    margin-left: 5px;
-    transition: all 0.3s ease;
-  }
-`
+  @-webkit-keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
 
-export default ButtonPrimary
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+
+  @keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+`;
+
+export default ButtonPrimary;

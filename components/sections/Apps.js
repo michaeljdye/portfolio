@@ -5,63 +5,71 @@ import { OneByTwo } from "../grids";
 import { ButtonPrimary } from "../buttons";
 import { above } from "../../utils";
 import { Reveal } from "../animations/Reveal";
+import { useContext } from "react";
+import { ThemeContext } from "../layout/Layout";
 
-const Apps = () => (
-  <AppsSection id="apps">
-    <Reveal width="100%">
-      <SectionHeading marginBottom="80">
-        engage your users <h2>Web Apps</h2>
-      </SectionHeading>
-    </Reveal>
-    {apps.map((scene, i) => {
-      const isReverse = i % 2 === 0 ? true : false;
+const Apps = () => {
+  const isDark = useContext(ThemeContext);
 
-      return (
-        <Reveal width="100%">
-          <OneByTwo key={scene.title} reverse={isReverse}>
-            <SlideText reverse={isReverse}>
-              <h3>{scene.title}</h3>
-              <p>{scene.description}</p>
-              <Stack reverse={isReverse}>
-                {scene.stack.map((stackItem) => (
-                  <li key={stackItem}>{stackItem}</li>
-                ))}
-              </Stack>
-              <ButtonContainer>
-                {scene.source && (
-                  <ButtonPrimary
-                    dark
-                    as="a"
-                    target={"_blank"}
-                    rel="nofollow noopenner"
-                    href={scene.source}
-                  >
-                    View Source
-                  </ButtonPrimary>
-                )}
-                {scene.demo && (
-                  <ButtonPrimary
-                    dark
-                    as="a"
-                    target={scene.demo.startsWith("https") ? "_blank" : "_self"}
-                    rel="nofollow noopenner"
-                    href={scene.demo}
-                  >
-                    View App
-                  </ButtonPrimary>
-                )}
-              </ButtonContainer>
-            </SlideText>
-            <SlideImgContainer>
-              <img src={scene.image} alt="" />
-            </SlideImgContainer>
-          </OneByTwo>
-        </Reveal>
-      );
-    })}
-    {/* <Slideshow scenes={scenes} /> */}
-  </AppsSection>
-);
+  return (
+    <AppsSection id="apps">
+      <Reveal width="100%">
+        <SectionHeading marginBottom="80">
+          engage your users <h2>Web Apps</h2>
+        </SectionHeading>
+      </Reveal>
+      {apps.map((scene, i) => {
+        const isReverse = i % 2 === 0 ? true : false;
+
+        return (
+          <Reveal width="100%">
+            <OneByTwo key={scene.title} reverse={isReverse}>
+              <SlideText reverse={isReverse}>
+                <h3>{scene.title}</h3>
+                <p>{scene.description}</p>
+                <Stack reverse={isReverse}>
+                  {scene.stack.map((stackItem) => (
+                    <li key={stackItem}>{stackItem}</li>
+                  ))}
+                </Stack>
+                <ButtonContainer>
+                  {scene.source && (
+                    <ButtonPrimary
+                      isDark={isDark}
+                      as="a"
+                      target={"_blank"}
+                      rel="nofollow noopenner"
+                      href={scene.source}
+                    >
+                      View Source
+                    </ButtonPrimary>
+                  )}
+                  {scene.demo && (
+                    <ButtonPrimary
+                      isDark={isDark}
+                      as="a"
+                      target={
+                        scene.demo.startsWith("https") ? "_blank" : "_self"
+                      }
+                      rel="nofollow noopenner"
+                      href={scene.demo}
+                    >
+                      View App
+                    </ButtonPrimary>
+                  )}
+                </ButtonContainer>
+              </SlideText>
+              <SlideImgContainer>
+                <img src={scene.image} alt="" />
+              </SlideImgContainer>
+            </OneByTwo>
+          </Reveal>
+        );
+      })}
+      {/* <Slideshow scenes={scenes} /> */}
+    </AppsSection>
+  );
+};
 
 const AppsSection = styled.section`
   background: var(--appsBackground);
@@ -136,6 +144,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  width: 50%;
 
   a + a {
     margin-left: 1.25rem;

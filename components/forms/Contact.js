@@ -5,13 +5,12 @@ import { ErrorMessage as ErrMessage } from "@hookform/error-message";
 import styled from "@emotion/styled";
 import { SectionHeading } from "../headings";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Recaptcha from "react-google-recaptcha";
-import { ButtonPrimary } from "../buttons";
+import { ButtonSecondary } from "../buttons/ButtonSecondary";
 import { above } from "../../utils/breakpoints";
 import { Reveal } from "../animations/Reveal";
 
-const Contact = () => {
+const Contact = ({ isDark }) => {
   const [submissionState, setSubmissionState] = useState("pending");
   const { register, errors, handleSubmit } = useForm();
 
@@ -107,9 +106,9 @@ const Contact = () => {
                 as="small"
               />{" "}
             </div>
-            <ButtonPrimary dark icon={faPaperPlane}>
+            <ButtonSecondary isDark={isDark} icon={faPaperPlane}>
               Send
-            </ButtonPrimary>
+            </ButtonSecondary>
             <Recaptcha
               ref={(e) => (recaptchaInstance = e)}
               sitekey="6LcWIvsZAAAAAGcTrG0Uv7QEKiAcJ01otF0EBQ_h"

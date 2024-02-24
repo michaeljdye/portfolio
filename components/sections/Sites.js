@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { SectionHeading } from "../headings";
-import { ButtonPrimary } from "../buttons";
-import { below, above } from "../../utils";
+import { ButtonSecondary } from "../buttons/ButtonSecondary";
+import { above } from "../../utils";
 import sites from "../../data/sites.json";
 import { Reveal } from "../animations/Reveal";
+import { ThemeContext } from "../layout/Layout";
 
 const Sites = () => {
+  const isDark = useContext(ThemeContext);
   const [mktSites, setMktSites] = useState(sites);
 
   const handleUpdateIcon = (currentId) => {
@@ -38,9 +40,9 @@ const Sites = () => {
                 </Circle>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <ButtonPrimary as="a" href="/#contact">
+                <ButtonSecondary isDark={isDark} as="a" href="/#contact">
                   Contact Me
-                </ButtonPrimary>
+                </ButtonSecondary>
               </SiteDescription>
             </Site>
           ))}

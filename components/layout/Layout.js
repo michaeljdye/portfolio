@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import { css, Global } from "@emotion/core";
 import emotionNormalize from "emotion-normalize";
-import { below } from "../../utils/breakpoints";
 import Hero from "../sections/Hero";
 import Footer from "./Footer";
+
+export const ThemeContext = createContext("light");
 
 const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
   const [isDark, setIsDark] = useState(false);
@@ -35,7 +36,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
   };
 
   return (
-    <>
+    <ThemeContext.Provider value={isDark}>
       <Head>
         <title>
           {pageTitle} | {siteTitle}
@@ -83,7 +84,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
             --contactBackground: rgba(0, 0, 0, 0.1)
               url(/images/pattern-light-triangle.jpg);
             --contactTextColor: var(--colorDark);
-            --buttonColorDark: var(--colordark);
+            --buttonColorDark: var(--colorDark);
             --menuBtnColor: var(--colorDark);
             --navTextColor: var(--colorDark);
           }
@@ -192,7 +193,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
         <main>{children}</main>
         <Footer />
       </div>
-    </>
+    </ThemeContext.Provider>
   );
 };
 

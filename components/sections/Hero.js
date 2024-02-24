@@ -5,8 +5,12 @@ import Header from "../layout/Header";
 import ButtonPrimary from "../buttons/ButtonPrimary";
 import { ToggleButton } from "../buttons";
 import { Reveal } from "../animations/Reveal";
+import { useContext } from "react";
+import { ThemeContext } from "../layout/Layout";
 
-const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
+const Hero = ({ heading, subheading, handleThemeChange }) => {
+  const isDark = useContext(ThemeContext);
+
   return (
     <HeroSection bottomPadding={heading ? "var(--defaultPadding)" : null}>
       <ToggleContainer>
@@ -38,10 +42,10 @@ const Hero = ({ isDark, heading, subheading, handleThemeChange }) => {
             <h1>{heading}</h1>
             <p>{subheading}</p>
             <ButtonContainer>
-              <ButtonPrimary dark as="a" href="/#about">
+              <ButtonPrimary isDark={isDark} as="a" href="/#about">
                 Learn More
               </ButtonPrimary>
-              <ButtonPrimary dark as="a" href="#contact">
+              <ButtonPrimary isDark={isDark} as="a" href="#contact">
                 Contact Me
               </ButtonPrimary>
             </ButtonContainer>
