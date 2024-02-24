@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { motion } from "framer-motion";
 import styled from "@emotion/styled";
 import Link from "next/link";
@@ -44,7 +44,14 @@ const liVariants = {
 
 const Nav = ({ isDark }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const darkLogo = "/images/michael-dye-logo-dark.png";
+  const lightLogo = "/images/michael-dye-logo.png";
+  const [logo, setLogo] = useState(darkLogo);
   const router = useRouter();
+
+  useEffect(() => {
+    setLogo(isDark ? lightLogo : darkLogo);
+  }, [isDark]);
 
   return (
     <Navigation>
@@ -55,17 +62,14 @@ const Nav = ({ isDark }) => {
               <NavItem>
                 <NavLink href={href}>{title}</NavLink>
               </NavItem>
-              <NavItem className="logo">
+              <NavItem
+                className="logo"
+                onMouseEnter={() => setLogo(isDark ? darkLogo : lightLogo)}
+                onMouseLeave={() => setLogo(isDark ? lightLogo : darkLogo)}
+              >
                 <Link href="/">
                   <a>
-                    <Logo
-                      src={
-                        isDark
-                          ? "/images/michael-dye-logo.png"
-                          : "/images/michael-dye-logo-dark.png"
-                      }
-                      alt="Michael Dye"
-                    />
+                    <Logo src={logo} alt="Michael Dye" />
                   </a>
                 </Link>
               </NavItem>
