@@ -36,7 +36,7 @@ const CTASection = styled.div`
   align-items: center;
   justify-content: center;
   background: var(--ctaBackground);
-  padding: var(--defaultPadding) 0;
+  padding: var(--defaultPadding) 10px;
   text-align: center;
   color: var(--ctaTextColor);
 
