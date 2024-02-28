@@ -106,9 +106,7 @@ const Contact = ({ isDark }) => {
                 as="small"
               />{" "}
             </div>
-            <ButtonSecondary isDark={isDark} icon={faPaperPlane}>
-              Send
-            </ButtonSecondary>
+            <ButtonSecondary icon={faPaperPlane}>Send</ButtonSecondary>
             <Recaptcha
               ref={(e) => (recaptchaInstance = e)}
               sitekey="6LcWIvsZAAAAAGcTrG0Uv7QEKiAcJ01otF0EBQ_h"
