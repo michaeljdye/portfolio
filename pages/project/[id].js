@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import Layout from "../../components/layout/Layout";
-import SimpleImageSlider from "react-simple-image-slider";
 import { useRouter } from "next/router";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 const projects = {
   bellhop: 7,
@@ -19,20 +20,16 @@ const Home = () => {
       }))
     : [];
 
-  console.log("images", images);
-
   return (
     <Layout pageTitle="Michael Dye" siteTitle="Frontend Engineer">
       <SliderContainer>
-        {images.length ? (
-          <SimpleImageSlider
-            width={896}
-            height={504}
-            images={images}
-            showBullets={true}
-            showNavs={true}
-          />
-        ) : null}
+        <Carousel>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img alt="" src={image.url} />
+            </div>
+          ))}
+        </Carousel>
       </SliderContainer>
     </Layout>
   );
@@ -43,13 +40,12 @@ const SliderContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
-`;
+  max-width: 1200px;
+  margin: 0 auto;
 
-const SummaryContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  .carousel-root {
+    width: 100%;
+  }
 `;
 
 export default Home;
