@@ -41,7 +41,7 @@ const Apps = () => {
                       rel="nofollow noopenner"
                       href={scene.source}
                     >
-                      View Source
+                      View Src
                     </ButtonPrimary>
                   )}
                   {scene.demo && (
