@@ -38,9 +38,7 @@ const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
   return (
     <ThemeContext.Provider value={isDark}>
       <Head>
-        <title>
-          {pageTitle} | {siteTitle}
-        </title>
+        <title>{`${pageTitle} | ${siteTitle}`}</title>
         <meta
           name="description"
           content="I am a fullstack developer from Nashville, TN."

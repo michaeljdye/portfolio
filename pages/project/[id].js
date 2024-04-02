@@ -6,10 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-
-const projects = {
-  bellhop: 7,
-};
+import projects from "../../data/projects";
 
 const Home = () => {
   const {
