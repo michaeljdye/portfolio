@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Bellhop",
     "description": "Rebuilt site on Next.js and GraphCMS.",
-    "slug": "bellhop",
+    "slug": "https://www.getbellhops.com/",
     "image": "/images/bellhop.png",
     "open": false
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Nissan Stadium",
     "description": "Developed Nissan Stadium site from ground up.",
-    "slug": "nissan",
+    "slug": "https://nissanstadium.com/",
     "image": "/images/nissan-stadium.png",
     "open": false
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "title": "Campaign Monitor",
     "description": "Maintained site, built landing pages, fixed bugs.",
-    "slug": "cm",
+    "slug": "https://www.campaignmonitor.com/",
     "image": "/images/cm-lp-2.png",
     "open": false
   }

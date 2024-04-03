@@ -40,8 +40,14 @@ const Sites = () => {
                 </Circle>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <ButtonSecondary isDark={isDark} as="a" href="/#contact">
-                  Contact Me
+                <ButtonSecondary
+                  isDark={isDark}
+                  as="a"
+                  href={slug}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View Site
                 </ButtonSecondary>
               </SiteDescription>
             </Site>
