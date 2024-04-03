@@ -23,7 +23,7 @@ const Apps = () => {
 
         return (
           <Reveal width="100%">
-            <OneByTwo key={scene.title} reverse={isReverse}>
+            <OneByTwo reverse={isReverse}>
               <SlideText reverse={isReverse}>
                 <h3>{scene.title}</h3>
                 <p>{scene.description}</p>
