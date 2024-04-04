@@ -35,7 +35,7 @@
     "title": "Explore the Nations",
     "description": "Explore The Nations features some of the top restaurants in The Nations. The app works with the Yelp and Google maps APIs to retrieve dynamic data about each location.",
     "stack": ["React", "JS", "CSS"],
-    "demo": "https://explorethenations-86j0hrveh.now.sh/",
+    "demo": "https://explore-the-nations-rcnso7jmt-michaels-projects-aec7c49b.vercel.app/",
     "source": "https://github.com/JoeyDye/explore-the-nations",
     "image": "/images/explore-the-nations.png",
     "width": 900,
