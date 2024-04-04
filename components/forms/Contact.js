@@ -10,7 +10,7 @@ import { ButtonSecondary } from "../buttons/ButtonSecondary";
 import { above } from "../../utils/breakpoints";
 import { Reveal } from "../animations/Reveal";
 
-const Contact = ({ isDark }) => {
+const Contact = () => {
   const [submissionState, setSubmissionState] = useState("pending");
   const { register, errors, handleSubmit } = useForm();
 

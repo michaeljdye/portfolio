@@ -8,7 +8,7 @@ import {
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { above, below } from "../../utils";
+import { above } from "../../utils";
 import { Reveal } from "../animations/Reveal";
 
 const faGrapQl = {

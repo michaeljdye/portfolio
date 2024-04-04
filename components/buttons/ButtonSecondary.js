@@ -2,19 +2,26 @@ import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { above } from "../../utils/breakpoints";
+import { useContext } from "react";
+import { ThemeContext } from "../layout/Layout";
 
 export const ButtonSecondary = ({
   color = "light",
   icon = faChevronRight,
   children,
-  isDark,
   ...rest
-}) => (
-  <Button {...rest} isDark={isDark}>
-    {children}
-    <FontAwesomeIcon icon={icon} />
-  </Button>
-);
+}) => {
+  const isDark = useContext(ThemeContext);
+
+  console.log("isDark", isDark);
+
+  return (
+    <Button {...rest} isDark={isDark}>
+      {children}
+      <FontAwesomeIcon icon={icon} />
+    </Button>
+  );
+};
 
 const Button = styled.button`
   display: inline-block;
@@ -22,7 +29,7 @@ const Button = styled.button`
   border: 2px solid var(--colorPrimary);
   padding: 0.6em;
   color: ${({ isDark }) =>
-    isDark ? "var(--buttonColorDark)" : "var(--colorWhite)"};
+    isDark ? "var(--colorWhite)" : "var(--buttonColorDark)"};
   font-weight: 500;
   font-size: 0.875rem;
   text-transform: uppercase;
