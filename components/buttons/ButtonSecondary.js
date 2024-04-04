@@ -13,8 +13,6 @@ export const ButtonSecondary = ({
 }) => {
   const isDark = useContext(ThemeContext);
 
-  console.log("isDark", isDark);
-
   return (
     <Button {...rest} isDark={isDark}>
       {children}
