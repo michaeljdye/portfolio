@@ -8,7 +8,7 @@ const Bio = () => {
     <BioSection id="about">
       <Reveal width="100%">
         <BioInner>
-          <BioImg src="/images/michael-dye-profile.JPG" alt="Michael Dye" />
+          <BioImg src="/images/michael-dye-profile.jpg" alt="Michael Dye" />
           <BioContent>
             <SectionHeading align="right" isImage={true}>
               <img src="/images/squiggly-line.png" alt="Squiggly line" />

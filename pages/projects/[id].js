@@ -8,7 +8,7 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import projects from "../../data/projects";
 
-const Home = () => {
+const Projects = () => {
   const {
     query: { id },
   } = useRouter();
@@ -71,4 +71,4 @@ const BackButton = styled.div`
   }
 `;
 
-export default Home;
+export default Projects;
