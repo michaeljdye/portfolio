@@ -1,3 +1,5 @@
+import Card from "../components/cards/Card";
+import { ThreeCol } from "../components/grids";
 import Layout from "../components/layout/Layout";
 import { getSortedPostsData } from "../lib/posts";
 
@@ -6,17 +8,19 @@ const Posts = ({ allPostsData }) => {
     <Layout>
       <section>
         <h2>Blog</h2>
-        <ul>
+        <p>Posts coming soon!</p>
+        {/* <ThreeCol>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
+              <Card
+                title={title}
+                subtitle={date}
+                image="none"
+                description="lorem ipsum"
+              />
             </li>
           ))}
-        </ul>
+        </ThreeCol> */}
       </section>
     </Layout>
   );

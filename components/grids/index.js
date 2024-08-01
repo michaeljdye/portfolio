@@ -1,1 +1,2 @@
-export * from './OneByTwo'
+export * from "./OneByTwo";
+export * from "./ThreeCol";

@@ -8,9 +8,9 @@ import { below } from "../../utils";
 
 const links = [
   { title: "About", href: "/#about" },
-  { title: "Web Apps", href: "#apps" },
-  { title: "Websites", href: "#sites" },
-  { title: "Contact", href: "#contact" },
+  { title: "Web Apps", href: "/#apps" },
+  { title: "Blog", href: "/posts" },
+  { title: "Contact", href: "/#contact" },
 ];
 
 const variants = {
