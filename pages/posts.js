@@ -5,9 +5,13 @@ import { getSortedPostsData } from "../lib/posts";
 
 const Posts = ({ allPostsData }) => {
   return (
-    <Layout>
+    <Layout pageTitle="Blog">
       <section>
-        <h2>Blog</h2>
+        <div
+          style={{ display: "flex", justifyContent: "center", padding: "20px" }}
+        >
+          <h2>Blog</h2>
+        </div>
         <p>Posts coming soon!</p>
         {/* <ThreeCol>
           {allPostsData.map(({ id, date, title }) => (

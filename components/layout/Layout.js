@@ -7,7 +7,13 @@ import Footer from "./Footer";
 
 export const ThemeContext = createContext("light");
 
-const Layout = ({ children, pageTitle, siteTitle, heading, subheading }) => {
+const Layout = ({
+  children,
+  pageTitle,
+  siteTitle = "Michael Dye",
+  heading,
+  subheading,
+}) => {
   const [isDark, setIsDark] = useState(false);
   const [footerHeight, setFooterHeight] = useState(
     () =>
