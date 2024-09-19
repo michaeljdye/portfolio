@@ -20,7 +20,7 @@ const Bio = () => {
               been lucky enough to collaborate with some absolutely fantastic
               teams, creating mind-blowing products along the way. I call
               Nashville, TN my home, where I live with my lovely wife, awesome
-              daughter, and the most cuddly cat you can imagine.
+              kids, and the most cuddly cat you can imagine.
             </p>
             <p>
               Besides hanging out with my loved ones, you'll often find me
