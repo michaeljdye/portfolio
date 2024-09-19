@@ -16,7 +16,7 @@ const Footer = () => (
       <FooterContent>
         <FooterLogo
           src="/images/michael-dye-logo.png"
-          alt="MIchael Dye Fullstack Developer"
+          alt="Michael Dye Frontend Engineer"
         />
         <div>
           <h3>Links</h3>
