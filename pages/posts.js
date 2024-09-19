@@ -13,7 +13,7 @@ const Posts = ({ allPostsData }) => {
           <h2>Blog</h2>
         </div>
         <p>Posts coming soon!</p>
-        {/* <ThreeCol>
+        <ThreeCol>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Card
@@ -24,7 +24,7 @@ const Posts = ({ allPostsData }) => {
               />
             </li>
           ))}
-        </ThreeCol> */}
+        </ThreeCol>
       </section>
     </Layout>
   );
