@@ -20,6 +20,8 @@ const Projects = () => {
       }))
     : [];
 
+  console.log("images", images);
+
   return (
     <Layout pageTitle="Michael Dye" siteTitle="Frontend Engineer">
       <Container>
